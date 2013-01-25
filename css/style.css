@@ -5,3 +5,40 @@ body{
 	background-image: url("../images/background.png");
 	/*font-family: "Source Sans Pro", sans-serif;*/
 }
+
+#wrapper{
+	/*background-color: red;*/ /*make the div visible*/
+}
+
+/*__________________________________________________________*/
+/*index.html*/
+
+div.link{
+	position: absolute;
+	width: 33%;
+	height: 33%;
+	text-align: center;
+	display: inline-block;
+}
+
+div #music{
+/*	background-color: red;
+*/	top: 50%;
+	left: 10%;
+}
+
+div #games{
+/*	background-color: green;
+*/	top: 10%;
+	left: 33%;
+}
+
+div #writing{
+/*	background-color: blue;
+*/	top: 50%;
+	right: 10%;
+}
+
+#links img{
+	max-height: 100%;
+}
