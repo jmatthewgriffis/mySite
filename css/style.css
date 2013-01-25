@@ -2,12 +2,26 @@
 /*All pages*/
 
 body{
-	background-image: url("../images/background.png");
+	background: url("../images/background.png");
 	/*font-family: "Source Sans Pro", sans-serif;*/
 }
 
 #wrapper{
 	/*background-color: red;*/ /*make the div visible*/
+}
+
+/*Pseudo class selectors*/
+a:link{
+
+}
+a:visited{
+
+}
+a:hover{
+	
+}
+a:active{
+
 }
 
 /*__________________________________________________________*/
@@ -21,24 +35,41 @@ div.link{
 	display: inline-block;
 }
 
-div #music{
-/*	background-color: red;
-*/	top: 50%;
-	left: 10%;
-}
-
-div #games{
-/*	background-color: green;
-*/	top: 10%;
-	left: 33%;
-}
-
-div #writing{
-/*	background-color: blue;
-*/	top: 50%;
-	right: 10%;
-}
-
 #links img{
 	max-height: 100%;
+}
+
+div #indexMusicLink{
+	top: 50%;
+	left: 10%;
+	background: url("../images/music.png") no-repeat center center;
+	background-size: contain;
+}
+
+div #indexMusicLink:hover{
+	background: url("../images/games.png") no-repeat center center;
+	background-size: contain;
+}
+
+div #indexGamesLink{
+	top: 10%;
+	left: 33%;
+	background: url("../images/games.png") no-repeat center center;
+	background-size: contain;
+}
+
+div #indexGamesLink:hover{
+	background: url("../images/writing.png") no-repeat center center;
+	background-size: contain;
+}
+
+div #indexWritingLink{
+	top: 50%;
+	right: 10%;background: url("../images/writing.png") no-repeat center center;
+	background-size: contain;
+}
+
+div #indexWritingLink:hover{
+	background: url("../images/music.png") no-repeat center center;
+	background-size: contain;
 }
