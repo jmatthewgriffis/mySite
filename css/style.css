@@ -47,7 +47,7 @@ div #indexMusicLink{
 }
 
 div #indexMusicLink:hover{
-	background: url("../images/games.png") no-repeat center center;
+	background: url("../images/music_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
@@ -59,7 +59,7 @@ div #indexGamesLink{
 }
 
 div #indexGamesLink:hover{
-	background: url("../images/writing.png") no-repeat center center;
+	background: url("../images/games_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
