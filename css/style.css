@@ -35,6 +35,15 @@ a:hover{
 a:active{
 
 }
+footer{
+	position: fixed;
+	z-index: 1;
+	width: 75%;
+	bottom: 0%;
+	margin: auto;
+	text-align: center;
+}
+
 
 /*__________________________________________________________*/
 /*index.html*/
