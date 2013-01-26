@@ -47,19 +47,27 @@ footer section #leftHalf{
 	float: left;
 	text-align: right;
 	width: 50%;
-	background-color: red;
+	/*background-color: red;*/
+}
+
+footer section #leftHalf p{
+	margin: 1.5%; /*Matches margin of firstIcon below.*/
 }
 
 footer section #rightHalf{
 	float: right;
 	text-align: left;
 	width: 50%;
-	background-color: green;
+	/*background-color: green;*/
+}
+
+footer #firstIcon{
+	margin-left: 1.5%; /*Matches margin of leftHalf p above.*/
 }
 
 footer #footerTxt{
 	clear: both;
-	background-color: blue;
+	/*background-color: blue;*/
 }
 
 footer a{
@@ -67,12 +75,13 @@ footer a{
 }
 
 footer img{
-	max-width: 6%;
+	width: 6%;
 }
 
 footer img:hover{
-/*	margin: 0 1.5%;
-*/}
+	position: relative;
+	bottom: 0.5em;
+}
 
 /*__________________________________________________________*/
 /*index.html*/

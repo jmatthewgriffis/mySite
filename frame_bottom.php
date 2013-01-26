@@ -17,7 +17,7 @@ echo '
 
 				<!--LinkedIn-->
 				<a target="_blank" href="http://www.linkedin.com/pub/j-matthew-griffis/11/961/7ba">
-					<img src="images/logo_linkedin.png" alt="linkedin logo" title="LinkedIn" />
+					<img id="firstIcon" src="images/logo_linkedin.png" alt="linkedin logo" title="LinkedIn" />
 				</a>
 
 				<!--Facebook-->
