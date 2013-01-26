@@ -65,11 +65,12 @@ div #indexGamesLink:hover{
 
 div #indexWritingLink{
 	top: 50%;
-	right: 10%;background: url("../images/writing.png") no-repeat center center;
+	right: 10%;
+	background: url("../images/writing.png") no-repeat center center;
 	background-size: contain;
 }
 
 div #indexWritingLink:hover{
-	background: url("../images/music.png") no-repeat center center;
+	background: url("../images/writing_hover.png") no-repeat center center;
 	background-size: contain;
 }
