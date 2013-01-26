@@ -40,10 +40,39 @@ footer{
 	z-index: 1;
 	width: 75%;
 	bottom: 0%;
-	margin: auto;
 	text-align: center;
 }
 
+footer section #leftHalf{
+	float: left;
+	text-align: right;
+	width: 50%;
+	background-color: red;
+}
+
+footer section #rightHalf{
+	float: right;
+	text-align: left;
+	width: 50%;
+	background-color: green;
+}
+
+footer #footerTxt{
+	clear: both;
+	background-color: blue;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+footer img{
+	max-width: 6%;
+}
+
+footer img:hover{
+/*	margin: 0 1.5%;
+*/}
 
 /*__________________________________________________________*/
 /*index.html*/
