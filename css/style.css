@@ -3,14 +3,26 @@
 
 body{
 	background: url("../images/background.png");
-	/*font-family: "Source Sans Pro", sans-serif;*/
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 #wrapper{
-	/*background-color: red;*/ /*make the div visible*/
+	width: 75%;
+	height: 4000px;
+	margin: auto;
+	/*border: 3px dashed blue;*/ /*Make wrapper visible.*/
 }
 
-/*Pseudo class selectors*/
+div.background{
+	position: fixed;
+	z-index: -1;
+	top: 15%;
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	opacity: 0.1;
+}
+
 a:link{
 
 }
@@ -71,6 +83,30 @@ div #indexWritingLink{
 }
 
 div #indexWritingLink:hover{
+	background: url("../images/writing_hover.png") no-repeat center center;
+	background-size: contain;
+}
+
+/*__________________________________________________________*/
+/*games.html*/
+
+div #games.background{
+	background: url("../images/games_hover.png") no-repeat center center;
+	background-size: contain;
+}
+
+/*__________________________________________________________*/
+/*music.html*/
+
+div #music.background{
+	background: url("../images/music_hover.png") no-repeat center center;
+	background-size: contain;
+}
+
+/*__________________________________________________________*/
+/*writing.html*/
+
+div #writing.background{
 	background: url("../images/writing_hover.png") no-repeat center center;
 	background-size: contain;
 }
