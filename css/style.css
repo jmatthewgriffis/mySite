@@ -8,7 +8,7 @@ body{
 
 #wrapper{
 	width: 75%;
-	height: 4000px;
+	/*height: 4000px;*/ /*Force a scrollable screen.*/
 	margin: auto;
 	/*border: 3px dashed blue;*/ /*Make wrapper visible.*/
 }
@@ -91,7 +91,7 @@ div #indexWritingLink:hover{
 /*games.html*/
 
 div #games.background{
-	background: url("../images/games_hover.png") no-repeat center center;
+	background: url("../images/games.png") no-repeat center center;
 	background-size: contain;
 }
 
@@ -99,7 +99,7 @@ div #games.background{
 /*music.html*/
 
 div #music.background{
-	background: url("../images/music_hover.png") no-repeat center center;
+	background: url("../images/music.png") no-repeat center center;
 	background-size: contain;
 }
 
@@ -107,6 +107,6 @@ div #music.background{
 /*writing.html*/
 
 div #writing.background{
-	background: url("../images/writing_hover.png") no-repeat center center;
+	background: url("../images/writing.png") no-repeat center center;
 	background-size: contain;
 }
