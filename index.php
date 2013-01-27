@@ -1,4 +1,5 @@
 <?php include("frame_top.php"); ?>
+<?php include("frame_nav.php"); ?>
 
 	<div id="index">		
 
