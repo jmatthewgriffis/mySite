@@ -9,7 +9,7 @@ echo '
 
 			<section id="leftHalf">
 
-				<p>&copy; 2012-2013 John Matthew Griffis</p>
+				<p id="copyright">&copy; 2012-2013 John Matthew Griffis</p>
 			
 			</section><!--end leftHalf-->
 
@@ -48,9 +48,8 @@ echo '
 
 			<p>Lovingly handcrafted from pulverized SNES games,  
 			leftover riffs from the Kind of Blue sessions, 
-			<br>
 			a towel stolen from Douglas Adams, 
-			and the arcane dual-fisted jiu-jitsu of HTML/CSS.
+			and the dual-fisted jiu-jitsu of HTML/CSS.
 			</p>
 
 		</section><!--end footerTxt-->

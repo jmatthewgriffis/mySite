@@ -4,48 +4,37 @@
 
 echo '
 
-<nav>
+<header>
 
-	<section id="navLogo">
-
-	<h1>J. Matthew Griffis
-	<br>
-	one man. three names. unlimited humor.
+	<h1>
+		<a href="index.php">J. Matthew Griffis</a> | one man. three names. unlimited humor.
 	</h1>
 
-	</section><!--end navLogo-->
+</header>
 
-	<section id="navLinks">
+<nav>
 
-		<ul>
+	<ul>
 
-			<li>
-				<a href="index.php">
-					<p>Home</p>
-				</a>
-			</li>
+		<li>
+			<a href="games.php">
+				<p>games</p>
+			</a>
+		</li>
 
-			<li>
-				<a href="games.php">
-					<p>Games</p>
-				</a>
-			</li>
+		<li>
+			<a href="music.php">
+				<p>music</p>
+			</a>
+		</li>
 
-			<li>
-				<a href="music.php">
-					<p>Music</p>
-				</a>
-			</li>
+		<li>
+			<a href="writing.php">
+				<p>writing</p>
+			</a>
+		</li>
 
-			<li>
-				<a href="writing.php">
-					<p>Writing</p>
-				</a>
-			</li>
-
-		</ul>
-
-	</section><!--end navLinks-->
+	</ul>
 
 </nav>
 
