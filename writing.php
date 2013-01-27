@@ -1,11 +1,11 @@
 <?php include("frame_top.php"); ?>
-<?php include("frame_nav.php"); ?>
+<?php include("frame_header_and_nav.php"); ?>
 
 	<div id="writing">
 
-		<div class="background" id="writing">
+		<div class="background" id="writingPic">
 		</div><!--end background-->
 
 	</div><!--end writing-->
 
-<?php include("frame_bottom.php"); ?>
+<?php include("frame_footer_and_bottom.php"); ?>

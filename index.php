@@ -1,5 +1,4 @@
 <?php include("frame_top.php"); ?>
-<?php include("frame_nav.php"); ?>
 
 	<div id="index">		
 
@@ -20,4 +19,4 @@
 
 	</div><!--end index-->
 
-<?php include("frame_bottom.php"); ?>
+<?php include("frame_footer_and_bottom.php"); ?>

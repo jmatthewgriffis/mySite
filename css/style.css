@@ -6,7 +6,7 @@ body{
 	font-family: "Source Sans Pro", sans-serif;
 }
 
-#wrapper{
+div#wrapper{
 	width: 75%;
 	/*height: 4000px;*/ /*Force a scrollable screen.*/
 	margin: auto;
@@ -15,7 +15,7 @@ body{
 
 div.background{
 	position: fixed;
-	z-index: -1;
+	z-index: -3;
 	top: 15%;
 	left: 15%;
 	width: 70%;
@@ -23,70 +23,97 @@ div.background{
 	opacity: 0.1;
 }
 
-a:link{
+a{
+	text-decoration: none;
+}
 
-}
-a:visited{
+a:link{}
 
-}
-a:hover{
-	
-}
-a:active{
+a:visited{}
 
+a:hover{}
+
+a:active{}
+
+nav{
+	position: fixed;
+	z-index: -1;
+	width: 75%;
+	top: 0%;
+	background-color: yellow;
 }
+
+nav section#navLogo{
+	float: left;
+	width: 50%;
+	background-color: red;
+}
+
+nav section#navLinks{
+	float: right;
+	width: 50%;
+	background-color: green;
+}
+
+nav section#navLinks ul li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 0 0.7em;
+}
+
+nav section#navLinks ul li a p{
+	text-align: center;
+	margin:auto;
+}
+
 footer{
 	position: fixed;
-	z-index: 1;
+	z-index: -2;
 	width: 75%;
 	bottom: 0%;
 	text-align: center;
-}
-
-footer section #leftHalf{
-	float: left;
-	text-align: right;
-	width: 50%;
-	/*background-color: red;*/
-}
-
-footer section #leftHalf p{
-	margin: 1.5%; /*Matches margin of firstIcon below.*/
-}
-
-footer section #rightHalf{
-	float: right;
-	text-align: left;
-	width: 50%;
-	/*background-color: green;*/
-}
-
-footer #firstIcon{
-	margin-left: 1.5%; /*Matches margin of leftHalf p above.*/
-}
-
-footer #footerTxt{
-	clear: both;
-	/*background-color: blue;*/
-}
-
-footer a{
-	text-decoration: none;
 }
 
 footer img{
 	width: 6%;
 }
 
-footer img:hover{
+footer section#legalAndLogo section#leftHalf{
+	float: left;
+	text-align: right;
+	width: 50%;
+	/*background-color: red;*/
+}
+
+footer section#legalAndLogo section#leftHalf p{
+	margin: 1.5%; /*Matches margin of firstIcon below.*/
+}
+
+footer section#legalAndLogo section#rightHalf{
+	float: right;
+	text-align: left;
+	width: 50%;
+	/*background-color: green;*/
+}
+
+footer section#legalAndLogo section#rightHalf a:first-child{
+	margin-left: 1.5%; /*Matches margin of leftHalf p above.*/
+}
+
+footer section#legalAndLogo section#rightHalf a img:hover{
 	position: relative;
 	bottom: 0.5em;
+}
+
+footer section#footerTxt{
+	clear: both;
+	/*background-color: blue;*/
 }
 
 /*__________________________________________________________*/
 /*index.html*/
 
-div.link{
+div#index a div.link{
 	position: absolute;
 	z-index: 2;
 	width: 33%;
@@ -95,42 +122,38 @@ div.link{
 	display: inline-block;
 }
 
-#links img{
-	max-height: 100%;
-}
-
-div #indexMusicLink{
+div#index a div#indexMusicLink{
 	top: 50%;
 	left: 10%;
 	background: url("../images/music.png") no-repeat center center;
 	background-size: contain;
 }
 
-div #indexMusicLink:hover{
+div#index a div#indexMusicLink:hover{
 	background: url("../images/music_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
-div #indexGamesLink{
+div#index a div#indexGamesLink{
 	top: 10%;
 	left: 33%;
 	background: url("../images/games.png") no-repeat center center;
 	background-size: contain;
 }
 
-div #indexGamesLink:hover{
+div#index a div#indexGamesLink:hover{
 	background: url("../images/games_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
-div #indexWritingLink{
+div#index a div#indexWritingLink{
 	top: 50%;
 	right: 10%;
 	background: url("../images/writing.png") no-repeat center center;
 	background-size: contain;
 }
 
-div #indexWritingLink:hover{
+div#index a div#indexWritingLink:hover{
 	background: url("../images/writing_hover.png") no-repeat center center;
 	background-size: contain;
 }
@@ -138,7 +161,7 @@ div #indexWritingLink:hover{
 /*__________________________________________________________*/
 /*games.html*/
 
-div #games.background{
+div#games div#gamesPic{
 	background: url("../images/games.png") no-repeat center center;
 	background-size: contain;
 }
@@ -146,7 +169,7 @@ div #games.background{
 /*__________________________________________________________*/
 /*music.html*/
 
-div #music.background{
+div#music div#musicPic{
 	background: url("../images/music.png") no-repeat center center;
 	background-size: contain;
 }
@@ -154,7 +177,7 @@ div #music.background{
 /*__________________________________________________________*/
 /*writing.html*/
 
-div #writing.background{
+div#writing div#writingPic{
 	background: url("../images/writing.png") no-repeat center center;
 	background-size: contain;
 }
