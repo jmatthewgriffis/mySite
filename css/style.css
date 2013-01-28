@@ -27,24 +27,35 @@ a{
 	text-decoration: none;
 }
 
-a:link{}
+header a:link,
+nav a:link,
+a:link{
+	color: blue;
+}
 
-a:visited{}
+header a:visited,
+nav a:visited{
+	color: blue;
+}
 
-a:hover{}
+header a:hover,
+nav a:hover,
+a:hover{
+	color: red;
+}
 
 a:active{}
 
 header{
 	position: fixed;
 	z-index: 4;
-	max-width: 55%;
+	max-width: 50%;
 	min-height: 8%;
 	top: 0%;
 	left: 12.5%;
 	padding: 0;
-/*	background-color: gray;
-*/}
+	/*background-color: gray;*/
+}
 
 header h1{
 	font-size: 1.5em;
@@ -53,28 +64,29 @@ header h1{
 nav{
 	position: fixed;
 	z-index: 3;
-	max-width: 20%;
-/*	min-height: 8%;
-*/	top: 0%;
+	max-width: 25%;
+	/*min-height: 8%;*/
+	top: 0%;
 	right: 12.5%;
-/*	background-color: yellow;
-*/}
+	/*background-color: yellow;*/
+}
 
 nav ul{
-/*	border: 1px solid black;
-*/	padding-left: 0;
+	/*border: 1px solid black;*/
+	padding-left: 0;
 }
 
 nav ul li{
-/*	border: 1px solid black;
-*/	display: inline-block;
+	/*border: 1px solid black;*/
+	display: inline-block;
 	list-style-type: none;
-	padding: 0 0.7em;
+	padding: 0 0.5em;
 }
 
-nav ul li a p{
-/*	border: 1px solid black;
-*/	margin:auto;
+nav ul li a h2{
+	/*border: 1px solid black;*/
+	margin:auto;
+	font-size: 1.15em;
 }
 
 footer{

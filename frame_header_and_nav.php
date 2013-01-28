@@ -18,19 +18,31 @@ echo '
 
 		<li>
 			<a href="games.php">
-				<p>games</p>
+				<h2>games</h2>
 			</a>
 		</li>
 
 		<li>
 			<a href="music.php">
-				<p>music</p>
+				<h2>music</h2>
 			</a>
 		</li>
 
 		<li>
 			<a href="writing.php">
-				<p>writing</p>
+				<h2>writing</h2>
+			</a>
+		</li>
+
+		<li>
+			<a href="about.php">
+				<h2>about</h2>
+			</a>
+		</li>
+
+		<li>
+			<a target="_blank" href="http://www.wagononahill.com/kg-archive.html">
+				<h2>blog</h2>
 			</a>
 		</li>
 
