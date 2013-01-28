@@ -21,6 +21,8 @@ echo '
 
   <div id="wrapper">
 
+  	<div id="content">
+
 '
 
 ?>

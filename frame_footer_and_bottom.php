@@ -9,7 +9,7 @@ echo '
 
 			<section id="leftHalf">
 
-				<p id="copyright">&copy; 2012-2013 John Matthew Griffis</p>
+				<p id="copyright">Copyright &copy; 2012-2013 John Matthew Griffis</p>
 			
 			</section><!--end leftHalf-->
 

@@ -8,9 +8,21 @@ body{
 
 div#wrapper{
 	width: 75%;
-	height: 4000px; /*Force a scrollable screen.*/
 	margin: auto;
 	/*border: 3px dashed blue;*/ /*Make wrapper visible.*/
+}
+
+div#window{
+	position: fixed;
+	top:11%;
+	bottom: 11%;
+	width: 75%;
+	overflow: auto;
+	/*border: 1px solid black;*/
+}
+
+div#window div.content{
+	/*height: 4000px;*/ /*Force a scrollable screen.*/
 }
 
 div.background{
@@ -50,7 +62,6 @@ header{
 	position: fixed;
 	z-index: 4;
 	max-width: 50%;
-	min-height: 8%;
 	top: 0%;
 	left: 12.5%;
 	padding: 0;
@@ -65,7 +76,6 @@ nav{
 	position: fixed;
 	z-index: 3;
 	max-width: 25%;
-	/*min-height: 8%;*/
 	top: 0%;
 	right: 12.5%;
 	/*background-color: yellow;*/
@@ -77,10 +87,11 @@ nav ul{
 }
 
 nav ul li{
-	/*border: 1px solid black;*/
+/*	border: 1px solid black;
+*/	width: 4em;
 	display: inline-block;
 	list-style-type: none;
-	padding: 0 0.5em;
+	text-align: center;
 }
 
 nav ul li a h2{
@@ -130,12 +141,12 @@ footer section#legalAndLogo section#rightHalf a img:hover{
 
 footer section#footerTxt{
 	clear: both;
-	font-size: 0.6em; /*Fits the descriptive sentence on one line in a 1024px window.*/
+	font-size: 0.6em; /*Fits the sentence on one line in a 1024px window.*/
 	/*background-color: blue;*/
 }
 
 /*__________________________________________________________*/
-/*index.html*/
+/*index.php*/
 
 div#index a div.link{
 	position: absolute;
@@ -183,7 +194,7 @@ div#index a div#indexWritingLink:hover{
 }
 
 /*__________________________________________________________*/
-/*games.html*/
+/*games.php*/
 
 div#games div#gamesPic{
 	background: url("../images/games.png") no-repeat center center;
@@ -191,7 +202,7 @@ div#games div#gamesPic{
 }
 
 /*__________________________________________________________*/
-/*music.html*/
+/*music.php*/
 
 div#music div#musicPic{
 	background: url("../images/music.png") no-repeat center center;
@@ -199,9 +210,26 @@ div#music div#musicPic{
 }
 
 /*__________________________________________________________*/
-/*writing.html*/
+/*writing.php*/
 
 div#writing div#writingPic{
 	background: url("../images/writing.png") no-repeat center center;
 	background-size: contain;
+}
+
+/*__________________________________________________________*/
+/*about.php*/
+
+div#about div#mePic{
+	/*position: absolute;
+	top:0;
+	background: url("../images/me2.jpg") no-repeat center center;
+	background-size: contain;
+	width: 458px;
+	height: 611px;*/
+}
+
+div#about div#mePic:hover{
+	/*background: url("../images/me.jpg") no-repeat center center;
+	background-size: contain;*/
 }

@@ -1,7 +1,7 @@
 <?php include("frame_top.php"); ?>
 <?php include("frame_header_and_nav.php"); ?>
 
-	<div id="writing">
+	<div class="content" id="writing">
 
 		<div class="background" id="writingPic">
 		</div><!--end background-->
