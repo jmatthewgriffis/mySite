@@ -2,8 +2,6 @@
 http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page 
 for guidance on sticking the footer to the bottom of the page.*/
 
-/*CHECK Z-INDEX!!!*/
-
 /*__________________________________________________________*/
 /*All pages*/
 
@@ -69,8 +67,7 @@ header{
 	height: 2em;
 	top: 0%;
 	margin: 0;
-	/*padding: 0.5em;*/
-	/*background-color: gray;*/
+	padding: 0.5em;
 	/*border: 1px solid blue;*/
 }
 
@@ -86,8 +83,7 @@ nav{
 	height: 2em;
 	top: 0;
 	right: 0;
-	/*padding: 0.5em;*/
-	/*background-color: yellow;*/
+	padding: 0.5em;
 	/*border: 1px solid red;*/
 }
 
@@ -122,14 +118,14 @@ footer{
 }
 
 footer img{
-	width: 6%;
+	width: 5%;
 }
 
 footer section#legalAndLogo section#leftHalf{
 	float: left;
 	text-align: right;
 	width: 50%;
-	/*background-color: red;*/
+	/*border: 1px solid black*/
 }
 
 footer section#legalAndLogo section#leftHalf p{
@@ -140,7 +136,7 @@ footer section#legalAndLogo section#rightHalf{
 	float: right;
 	text-align: left;
 	width: 50%;
-	/*background-color: green;*/
+	/*border: 1px solid black*/
 }
 
 footer section#legalAndLogo section#rightHalf a:first-child{
@@ -155,7 +151,7 @@ footer section#legalAndLogo section#rightHalf a img:hover{
 footer section#footerTxt{
 	clear: both;
 	font-size: 0.6em; /*Fits the sentence on one line in a 1024px window.*/
-	/*background-color: blue;*/
+	/*border: 1px solid black*/
 }
 
 /*__________________________________________________________*/
