@@ -1,6 +1,6 @@
 <?php include("frame_top.php"); ?>
 
-	<div id="index">		
+	<div class="content" id="index">		
 
 		<a href="music.php">
 			<div class="link" id="indexMusicLink">
