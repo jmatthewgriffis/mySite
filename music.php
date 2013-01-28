@@ -1,7 +1,7 @@
 <?php include("frame_top.php"); ?>
 <?php include("frame_header_and_nav.php"); ?>
 
-	<div class="content" id="music">
+	<div id="music">
 
 		<div class="background" id="musicPic">
 		</div><!--end background-->

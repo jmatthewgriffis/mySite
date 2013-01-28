@@ -1,9 +1,7 @@
 <?php include("frame_top.php"); ?>
 <?php include("frame_header_and_nav.php"); ?>
 
-	<div id="window">
-
-	<div class="content" id="about">
+	<div id="about">
 		
 		<!-- <div class="background" id="aboutPic">
 		</div> --><!--end background-->
@@ -16,7 +14,5 @@
 		</div><!--end mePic-->
 
 	</div><!--end about-->
-
-	</div><!--end window-->
 
 <?php include("frame_footer_and_bottom.php"); ?>
