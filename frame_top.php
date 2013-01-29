@@ -29,6 +29,8 @@ echo '
 
   <div id="wrapper">
 
+  	<!--<a name="top">-->
+
 '
 
 ?>

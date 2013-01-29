@@ -50,6 +50,8 @@ echo '
 
 </nav>
 
+<!--<a id="jumpToTop" href="#top">top</a>-->
+
 '
 
 ?>

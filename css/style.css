@@ -24,7 +24,7 @@ div#wrapper{
 }
 
 div.content{
-	padding: 2.5em 0 3.5em 0;
+	padding: 3.5em 0.5% 3.5em 0.5%;
 }
 
 div.background{
@@ -153,6 +153,15 @@ footer section#footerTxt{
 	font-size: 0.6em; /*Fits the sentence on one line in a 1024px window.*/
 	/*border: 1px solid black*/
 }
+
+/*a#jumpToTop{
+	position: fixed;
+	z-index: 10000;
+	bottom: 2%;
+	right: 2%;
+	padding: 0.25em;
+	border: 1px solid black;
+}*/
 
 /*__________________________________________________________*/
 /*index.php*/
