@@ -17,6 +17,10 @@ body{
 	font-family: "Source Sans Pro", sans-serif;
 }
 
+p {
+	font-size: 1em;
+}
+
 div#wrapper{
 	position: relative;
 	min-height: 100%;
