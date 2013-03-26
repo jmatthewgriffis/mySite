@@ -1,9 +1,9 @@
-/*Thanks to 
+/* Thanks to 
 http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page 
-for guidance on sticking the footer to the bottom of the page.*/
+for guidance on sticking the footer to the bottom of the page. */
 
 /*__________________________________________________________*/
-/*All pages*/
+/* All pages */
 
 html,
 body{
@@ -32,8 +32,8 @@ div.content{
 }
 
 div.background{
-	position: fixed;
-	z-index: 1;
+	position: absolute;
+	z-index: -1;
 	top: 15%;
 	left: 15%;
 	width: 70%;
@@ -64,21 +64,31 @@ a:hover{
 
 a:active{}
 
+/*__________________________________________________________*/
+/* Header */
+
 header{
 	position: absolute;
 	z-index: 4;
 	max-width: 66%;
-	height: 2em;
+	height: auto;
 	top: 0%;
 	margin: 0;
 	padding: 0.5em;
 	/*border: 1px solid blue;*/
 }
 
+header section {
+	display:inline-block;
+}
+
 header h1{
 	margin:0;
 	font-size: 1.5em;
 }
+
+/*__________________________________________________________*/
+/* Nav */
 
 nav{
 	position: absolute;
@@ -110,6 +120,9 @@ nav ul li a h2{
 	font-size: 1.15em;
 	/*border: 1px solid black;*/
 }
+
+/*__________________________________________________________*/
+/* Footer */
 
 footer{
 	position: absolute;
@@ -168,7 +181,7 @@ footer section#footerTxt{
 }*/
 
 /*__________________________________________________________*/
-/*index.php*/
+/* index.php */
 
 div#index a div.link{
 	position: absolute;
@@ -216,7 +229,7 @@ div#index a div#indexWritingLink:hover{
 }
 
 /*__________________________________________________________*/
-/*games.php*/
+/* games.php */
 
 div#games div#gamesPic{
 	background: url("../images/games.png") no-repeat center center;
@@ -224,7 +237,7 @@ div#games div#gamesPic{
 }
 
 /*__________________________________________________________*/
-/*music.php*/
+/* music.php */
 
 div#music div#musicPic{
 	background: url("../images/music.png") no-repeat center center;
@@ -232,7 +245,7 @@ div#music div#musicPic{
 }
 
 /*__________________________________________________________*/
-/*writing.php*/
+/* writing.php */
 
 div#writing div#writingPic{
 	background: url("../images/writing.png") no-repeat center center;
@@ -240,7 +253,7 @@ div#writing div#writingPic{
 }
 
 /*__________________________________________________________*/
-/*about.php*/
+/* about.php */
 
 div#about div#mePic{
 	/*position: absolute;

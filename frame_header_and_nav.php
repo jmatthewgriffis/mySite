@@ -7,7 +7,7 @@ echo '
 <header>
 
 	<h1>
-		<a href="index.php">J. Matthew Griffis</a> | one man. three names. unlimited humor.
+		<section><a href="index.php">J. Matthew Griffis</a> |</section> <section>one man.</section> <section>three names.</section> <section>unlimited humor.</section>
 	</h1>
 
 </header>
