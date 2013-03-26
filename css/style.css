@@ -28,7 +28,8 @@ div#wrapper{
 }
 
 div.content{
-	padding: 3.5em 0.5% 3.5em 0.5%;
+	clear:both;
+	padding: 0.5em 0.5% 3.5em 0.5%;
 }
 
 div.background{
@@ -68,40 +69,35 @@ a:active{}
 /* Header */
 
 header{
-	position: absolute;
 	z-index: 4;
-	max-width: 66%;
-	height: auto;
-	top: 0%;
-	margin: 0;
-	padding: 0.5em;
+	width: 100%;
 	/*border: 1px solid blue;*/
 }
 
-header section {
+header h1 section {
 	display:inline-block;
 }
 
 header h1{
-	margin:0;
+	display: inline-block;
+	width:63.5%;
+	margin-left:0.5%;
 	font-size: 1.5em;
+	/*border: 1px solid green;*/
 }
 
 /*__________________________________________________________*/
 /* Nav */
 
 nav{
-	position: absolute;
+	display:inline-block;
+	width:34%;
 	z-index: 3;
-	max-width: 33%%;
-	height: 2em;
-	top: 0;
-	right: 0;
-	padding: 0.5em;
 	/*border: 1px solid red;*/
 }
 
 nav ul{
+	float:right;
 	padding-left: 0;
 	margin: auto;
 	/*border: 1px solid black;*/

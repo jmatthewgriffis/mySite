@@ -9,7 +9,7 @@ echo '
  
  <head>
   
-  <title>J. Matthew Griffis - one man, three names, unlimited humor</title>
+  <title>J. Matthew Griffis | one man. three names. unlimited humor.</title>
   <link href="css/style.css" rel="stylesheet" />
 
   <!--Add Google Web Font-->

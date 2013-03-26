@@ -10,9 +10,7 @@ echo '
 		<section><a href="index.php">J. Matthew Griffis</a> |</section> <section>one man.</section> <section>three names.</section> <section>unlimited humor.</section>
 	</h1>
 
-</header>
-
-<nav>
+	<nav>
 
 	<ul>
 
@@ -49,6 +47,8 @@ echo '
 	</ul>
 
 </nav>
+
+</header>
 
 <!--<a id="jumpToTop" href="#top">top</a>-->
 
