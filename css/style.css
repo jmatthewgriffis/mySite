@@ -66,7 +66,7 @@ a:hover{
 a:active{}
 
 /*__________________________________________________________*/
-/* Header */
+/* Header (contains Nav) */
 
 header{
 	z-index: 4;
@@ -87,7 +87,7 @@ header h1{
 }
 
 /*__________________________________________________________*/
-/* Nav */
+/* Nav (contained in Header) */
 
 nav{
 	display:inline-block;
@@ -127,38 +127,30 @@ footer{
 	width: 100%;
 	height: 3.5em;
 	text-align: center;
+	font-size: 0.75em;
 	/*border: 1px solid red;*/
 }
 
+footer p {
+	padding: 0;
+	margin: 0;
+}
+
 footer img{
-	width: 5%;
+	width: 2em;
 }
 
-footer section#legalAndLogo section#leftHalf{
-	float: left;
-	text-align: right;
-	width: 50%;
-	/*border: 1px solid black*/
+footer section#legalAndLogo {
+	/*border: 1px solid green;*/
 }
 
-footer section#legalAndLogo section#leftHalf p{
-	margin: 1.5%; /*Matches margin of firstIcon below.*/
-}
-
-footer section#legalAndLogo section#rightHalf{
-	float: right;
-	text-align: left;
-	width: 50%;
-	/*border: 1px solid black*/
-}
-
-footer section#legalAndLogo section#rightHalf a:first-child{
-	margin-left: 1.5%; /*Matches margin of leftHalf p above.*/
-}
-
-footer section#legalAndLogo section#rightHalf a img:hover{
+footer section#legalAndLogo a img:hover{
 	position: relative;
-	bottom: 0.5em;
+	bottom: 0.25em;
+}
+
+footer section#legalAndLogo a:first-child{
+	margin-left: 1.5%; /*Matches margin of leftHalf p above.*/
 }
 
 footer section#footerTxt{
