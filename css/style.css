@@ -171,6 +171,34 @@ footer section#footerTxt{
 /*__________________________________________________________*/
 /* index.php */
 
+section#welcome {
+	position:absolute;
+	top:0.5em;
+	right: 0.5em;
+	width: 31em;
+	font-size: 0.75em;
+	/*border: dashed 1px black;*/
+	background-color: #FAEBD7; /* AntiqueWhite */
+}
+
+span.color1 {
+	color:black;
+}
+
+span.color2 {
+	color:black;
+}
+
+section#welcome img {
+	float:right;
+	height: 6em;
+}
+
+section#welcome h1 {
+	margin:auto;
+	padding: 0 0.5em;
+}
+
 div#index a div.link{
 	position: absolute;
 	z-index: 5;

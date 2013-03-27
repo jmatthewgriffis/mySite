@@ -1,6 +1,11 @@
 <?php include("frame_top.php"); ?>
 
-	<div class="content" id="index">		
+	<div class="content" id="index">
+
+		<section id="welcome">
+			<a href="about.php"><img src="../images/me3.jpg" alt="I'm J. Matthew Griffis and this is my website." title="I hope you're excited, too."/></a>
+			<h1>My name is <span class="color1">J. Matthew Griffis</span> and you've found my <span class="color2">webstudio</span>! C'mon in, there's food in the fridge.</h1>
+		</section>
 
 		<a href="music.php">
 			<div class="link" id="indexMusicLink">
