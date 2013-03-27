@@ -183,7 +183,7 @@ div#index a div.link{
 div#index a div#indexMusicLink{
 	top: 50%;
 	left: 10%;
-	background: url("../images/music.png") no-repeat center center;
+	background: url("../images/music_gray.png") no-repeat center center;
 	background-size: contain;
 }
 
@@ -195,7 +195,7 @@ div#index a div#indexMusicLink:hover{
 div#index a div#indexGamesLink{
 	top: 10%;
 	left: 33%;
-	background: url("../images/games.png") no-repeat center center;
+	background: url("../images/games_gray.png") no-repeat center center;
 	background-size: contain;
 }
 
@@ -207,7 +207,7 @@ div#index a div#indexGamesLink:hover{
 div#index a div#indexWritingLink{
 	top: 50%;
 	right: 10%;
-	background: url("../images/writing.png") no-repeat center center;
+	background: url("../images/writing_gray.png") no-repeat center center;
 	background-size: contain;
 }
 
