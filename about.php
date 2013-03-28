@@ -8,7 +8,7 @@
 
 		<article id="whatPage">
 			<h2><img src="images/people/me3.jpg" alt="This is the About page." title="There's no link - you're already here!"/></a>
-			You require larger pics of me<br>with bio and contact info.</h2>
+			You need larger images of me<br>with bio and contact info.</h2>
 		</article>
 
 <section style="float:left;">

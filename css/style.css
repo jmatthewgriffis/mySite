@@ -39,7 +39,10 @@ div#wrapper{
 
 section.content{
 	clear:both;
+	margin:auto;
 	padding: 0.5em 0.5% 3.5em 0.5%;
+	text-align: center;
+	/*border: solid 1px black;*/
 }
 
 div.background{
@@ -78,7 +81,7 @@ a:hover{
 a:active{}
 
 article#whatPage {
-	margin-bottom: 0.5em;
+	margin-bottom: 2em;
 }
 
 article#whatPage img {
@@ -93,6 +96,7 @@ article#whatPage h2 {
 	padding-left: 0.25em;
 	background:rgb(159, 139, 78);
 	background:rgba(159, 139, 78, 0.7);
+	text-align: left;
 	/*border:solid 1px black;*/
 }
 
@@ -114,9 +118,11 @@ article.music {
 article.thing {
 	clear:both;
 	display: inline-block;
-	width: 48%;
-	padding: 0.5em;
-	margin: 1em 0;
+	width: 40em;
+	/*width: 46%;*/
+	/*padding: 0.5em;*/
+	/*margin: 1em 2em 1em 0;*/
+	text-align: left;
 	border: solid 1px black;
 }
 
@@ -267,6 +273,7 @@ footer section#footerTxt{
 
 #welcome h1 {
 	margin:auto;
+	text-align: left;
 }
 
 section#index a div.link{
