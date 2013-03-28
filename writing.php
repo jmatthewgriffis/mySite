@@ -6,11 +6,18 @@
 		<div class="background" id="writingPic">
 		</div><!--end background-->
 
-		<p>Vero dolor butcher, food truck meggings mustache eiusmod accusamus fap incididunt Austin jean shorts odd future banjo fugiat. Proident officia irony pour-over street art stumptown aesthetic. Seitan yr pug, excepteur banh mi voluptate tonx gluten-free eiusmod. Squid cosby sweater incididunt, blog tofu chillwave DIY ethnic laboris deserunt disrupt 90's. Veniam kogi plaid, odd future dolore pug street art ea salvia stumptown literally church-key sunt. Mollit ea swag, magna letterpress vinyl qui thundercats freegan. Hashtag beard raw denim, keytar fashion axe lomo tattooed cardigan yr helvetica gluten-free irony seitan.
+		<article id="whatPage">
+			<h2><a href="about.php"><img src="images/people/me3.jpg" alt="This is the Writing page." title="Read yourself my writes!"/></a>
+			Things I've written<br>for myself and for publication</h2>
+		</article>
 
-Chillwave flannel brunch squid tempor, aute eu vero. Dolore stumptown neutra, exercitation mixtape you probably haven't heard of them quis reprehenderit ugh vinyl nesciunt ex flexitarian vegan. Flexitarian american apparel ea, DIY elit plaid incididunt bicycle rights food truck wayfarers fashion axe. Mollit synth id, sriracha pickled umami ethnic accusamus yr Austin artisan blue bottle. Street art butcher elit banksy polaroid jean shorts. Readymade sriracha gastropub hoodie pour-over, 90's +1 four loko. Fingerstache fixie four loko proident fanny pack ethnic occupy thundercats anim, gastropub scenester.
-
-In bushwick organic ex hoodie gentrify, pitchfork truffaut cred pour-over farm-to-table seitan kogi. American apparel master cleanse odio aesthetic echo park. Enim chambray ex labore cillum. Sriracha selvage flannel fixie id sed. Whatever fashion axe banksy, kogi hashtag vice odio swag fingerstache craft beer brooklyn deep v polaroid shoreditch. Post-ironic messenger bag 3 wolf moon non aliqua. Mcsweeney's four loko pug wayfarers, ethnic hoodie blog street art sapiente lo-fi duis placeat.</p>
+		<article class="thing writing">
+			<a target="_blank" href="http://www.openprocessing.org/sketch/93227">
+			<img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew"/>
+			<h3>Best Game Ever (Space Odyssey)</h3>
+		</a>
+		<p>An m^3 studios production. m^3 studios is Mauricio Sanchez-Duque, Michael Kahane and Matt Griffis. We created this prototype over several sessions during our studies at Parsons the New School for Design. The game went over smashingly in class.<br><span class="specs">March 2013 _ Made with Processing.</span></p>
+		</article>
 
 	</section><!--end writing-->
 

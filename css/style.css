@@ -1,6 +1,16 @@
-/* Thanks to 
+/* Thanks to: 
 http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page 
-for guidance on sticking the footer to the bottom of the page. */
+for guidance on sticking the footer to the bottom of the page.
+
+http://colorschemedesigner.com/
+for generating a complementary color scheme for me using:
+#F5F4F1 (background color from a JPG as base) - off-white
+#9F8B4E - rgb(159, 139, 78) - brown
+#325066 - rgb(50,80,102) - blue
+#7C7B7D - rgb(124,123,125) - gray
+
+
+ */
 
 /*__________________________________________________________*/
 /* All pages */
@@ -33,7 +43,7 @@ section.content{
 }
 
 div.background{
-	position: absolute;
+	position: fixed;
 	z-index: -1;
 	top: 15%;
 	left: 15%;
@@ -67,11 +77,47 @@ a:hover{
 
 a:active{}
 
+article#whatPage {
+	margin-bottom: 0.5em;
+}
+
+article#whatPage img {
+	float:right;
+	height: 2.5em;
+}
+
+article#whatPage h2 {
+	width:16em;
+	font-size: 1.4em;
+	margin:auto;
+	padding-left: 0.25em;
+	background:rgb(159, 139, 78);
+	background:rgba(159, 139, 78, 0.7);
+	/*border:solid 1px black;*/
+}
+
+article.game {
+	background:rgb(50,80,102);
+	background:rgba(50,80,102, 0.6);
+}
+
+article.writing {
+	background:rgb(50,80,102);
+	background:rgba(50,80,102, 0.6);
+}
+
+article.music {
+	background:rgb(50,80,102);
+	background:rgba(50,80,102, 0.6);
+}
+
 article.thing {
+	clear:both;
 	display: inline-block;
 	width: 48%;
 	padding: 0.5em;
-	border: solid 1px blue;
+	margin: 1em 0;
+	border: solid 1px black;
 }
 
 article.thing img, h3 {
@@ -89,6 +135,11 @@ article.thing h3 {
 	width:100%;
 	border-top: solid 1px black;
 	border-bottom: solid 1px black;
+}
+
+span.specs {
+	color: red;
+	font-size: 0.8em;
 }
 
 /*__________________________________________________________*/
@@ -204,7 +255,8 @@ footer section#footerTxt{
 	width: 24em;
 	font-size: 1em;
 	padding-left: 0.5em;
-	background-color: #FAEBD7; /* AntiqueWhite */
+	background:rgb(159, 139, 78); /* Brownish, #9F8B4E */
+	background:rgba(159, 139, 78, 0.7); /* add the alpha */
 }
 
 #welcome img {

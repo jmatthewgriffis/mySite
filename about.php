@@ -6,6 +6,11 @@
 		<!-- <div class="background" id="aboutPic">
 		</div> --><!--end background-->
 
+		<article id="whatPage">
+			<h2><img src="images/people/me3.jpg" alt="This is the About page." title="There's no link - you're already here!"/></a>
+			You require larger pics of me<br>with bio and contact info.</h2>
+		</article>
+
 <section style="float:left;">
 		<img src="images/people/me.jpg" alt="picture of me" title="You found me!" />
 		<br>
