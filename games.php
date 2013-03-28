@@ -1,22 +1,27 @@
 <?php include("frame_top.php"); ?>
 <?php include("frame_header_and_nav.php"); ?>
 
-	<div class="content" id="games">
+	<section id="games" class="content">
 		
 		<div class="background" id="gamesPic">
 		</div><!--end background-->
 
-		<p>Vero dolor butcher, food truck meggings mustache eiusmod accusamus fap incididunt Austin jean shorts odd future banjo fugiat. Proident officia irony pour-over street art stumptown aesthetic. Seitan yr pug, excepteur banh mi voluptate tonx gluten-free eiusmod. Squid cosby sweater incididunt, blog tofu chillwave DIY ethnic laboris deserunt disrupt 90's. Veniam kogi plaid, odd future dolore pug street art ea salvia stumptown literally church-key sunt. Mollit ea swag, magna letterpress vinyl qui thundercats freegan. Hashtag beard raw denim, keytar fashion axe lomo tattooed cardigan yr helvetica gluten-free irony seitan.
+		<article class="thing">
+			<a target="_blank" href="http://www.openprocessing.org/sketch/93227">
+			<img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew"/>
+			<h3>Best Game Ever (Space Odyssey)</h3>
+		</a>
+		<p>Best Game Ever is the best game ever. It's also known as Space Odyssey (an m^3 studios production). m^3 studios is Mauricio Sanchez-Duque, Michael Kahane and Matt Griffis. We created this game for the Play project in our Major Studio 2 class, as part of our studies for the MFA in Design and Technology at Parsons the New School for Design. I coded the player movement, Mauricio coded the enemy movement and supplied the art, and Michael coded the life, collision detection and bullet systems and made other enhancements. The game went over smashingly in class.</p>
+		</article>
 
-Chillwave flannel brunch squid tempor, aute eu vero. Dolore stumptown neutra, exercitation mixtape you probably haven't heard of them quis reprehenderit ugh vinyl nesciunt ex flexitarian vegan. Flexitarian american apparel ea, DIY elit plaid incididunt bicycle rights food truck wayfarers fashion axe. Mollit synth id, sriracha pickled umami ethnic accusamus yr Austin artisan blue bottle. Street art butcher elit banksy polaroid jean shorts. Readymade sriracha gastropub hoodie pour-over, 90's +1 four loko. Fingerstache fixie four loko proident fanny pack ethnic occupy thundercats anim, gastropub scenester.
+		<article class="thing">
+			<a target="_blank" href="http://www.openprocessing.org/sketch/93227">
+			<img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew"/>
+			<h3>Best Game Ever (Space Odyssey)</h3>
+		</a>
+		<p>Best Game Ever is the best game ever. It's also known as Space Odyssey (an m^3 studios production). m^3 studios is Mauricio Sanchez-Duque, Michael Kahane and Matt Griffis. We created this game for the Play project in our Major Studio 2 class, as part of our studies for the MFA in Design and Technology at Parsons the New School for Design. I coded the player movement, Mauricio coded the enemy movement and supplied the art, and Michael coded the life, collision detection and bullet systems and made other enhancements. The game went over smashingly in class.</p>
+		</article>
 
-In bushwick organic ex hoodie gentrify, pitchfork truffaut cred pour-over farm-to-table seitan kogi. American apparel master cleanse odio aesthetic echo park. Enim chambray ex labore cillum. Sriracha selvage flannel fixie id sed. Whatever fashion axe banksy, kogi hashtag vice odio swag fingerstache craft beer brooklyn deep v polaroid shoreditch. Post-ironic messenger bag 3 wolf moon non aliqua. Mcsweeney's four loko pug wayfarers, ethnic hoodie blog street art sapiente lo-fi duis placeat.</p>
-
-<section id="content">
-<article style="display:inline-block;"><p>Yo check this out.</p></article>
-<article style="display:inline-block;"><p>Nah dawg check this.</p></article>
-</section> <!--end content-->
-
-	</div><!--end games-->
+	</section><!--end games-->
 
 <?php include("frame_footer_and_bottom.php"); ?>

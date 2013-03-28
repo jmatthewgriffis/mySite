@@ -1,7 +1,7 @@
 <?php include("frame_top.php"); ?>
 <?php include("frame_header_and_nav.php"); ?>
 
-	<div class="content" id="writing">
+	<section id="writing" class="content">
 
 		<div class="background" id="writingPic">
 		</div><!--end background-->
@@ -12,6 +12,6 @@ Chillwave flannel brunch squid tempor, aute eu vero. Dolore stumptown neutra, ex
 
 In bushwick organic ex hoodie gentrify, pitchfork truffaut cred pour-over farm-to-table seitan kogi. American apparel master cleanse odio aesthetic echo park. Enim chambray ex labore cillum. Sriracha selvage flannel fixie id sed. Whatever fashion axe banksy, kogi hashtag vice odio swag fingerstache craft beer brooklyn deep v polaroid shoreditch. Post-ironic messenger bag 3 wolf moon non aliqua. Mcsweeney's four loko pug wayfarers, ethnic hoodie blog street art sapiente lo-fi duis placeat.</p>
 
-	</div><!--end writing-->
+	</section><!--end writing-->
 
 <?php include("frame_footer_and_bottom.php"); ?>

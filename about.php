@@ -1,15 +1,15 @@
 <?php include("frame_top.php"); ?>
 <?php include("frame_header_and_nav.php"); ?>
 
-	<div class="content" id="about">
+	<section id="about" class="content">
 		
 		<!-- <div class="background" id="aboutPic">
 		</div> --><!--end background-->
 
 <section style="float:left;">
-		<img src="images/me.jpg" alt="picture of me" title="You found me!" />
+		<img src="images/people/me.jpg" alt="picture of me" title="You found me!" />
 		<br>
-		<img src="images/me2.jpg" alt="picture of me" title="You found me!" />
+		<img src="images/people/me2.jpg" alt="picture of me" title="You found me!" />
 	</section>
 	<section>
 
@@ -22,6 +22,6 @@ In bushwick organic ex hoodie gentrify, pitchfork truffaut cred pour-over farm-t
 		<div id="mePic" style="clear:both;">
 		</div><!--end mePic-->
 
-	</div><!--end about-->
+	</section><!--end about-->
 
 <?php include("frame_footer_and_bottom.php"); ?>

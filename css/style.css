@@ -13,7 +13,7 @@ body{
 }
 
 body{
-	background: url("../images/background.png");
+	background: url("../images/background/background.png");
 	font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -27,7 +27,7 @@ div#wrapper{
 	/*border: 1px solid blue;*/ /*Make wrapper visible.*/
 }
 
-div.content{
+section.content{
 	clear:both;
 	padding: 0.5em 0.5% 3.5em 0.5%;
 }
@@ -53,17 +53,43 @@ a:link{
 }
 
 header a:visited,
-nav a:visited{
+nav a:visited,
+article.thing a:visited{
 	color: blue;
 }
 
 header a:hover,
 nav a:hover,
+article.thing a:hover,
 a:hover{
 	color: red;
 }
 
 a:active{}
+
+article.thing {
+	display: inline-block;
+	width: 48%;
+	padding: 0.5em;
+	border: solid 1px blue;
+}
+
+article.thing img, h3 {
+	display:inline;
+}
+
+article.thing img {
+	width:30%;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+	float:left;
+}
+
+article.thing h3 {
+	width:100%;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+}
 
 /*__________________________________________________________*/
 /* Header (contains Nav) */
@@ -171,35 +197,27 @@ footer section#footerTxt{
 /*__________________________________________________________*/
 /* index.php */
 
-section#welcome {
+#welcome {
 	position:absolute;
 	top:0.5em;
 	right: 0.5em;
-	width: 31em;
-	font-size: 0.75em;
-	/*border: dashed 1px black;*/
+	width: 24em;
+	font-size: 1em;
+	padding-left: 0.5em;
 	background-color: #FAEBD7; /* AntiqueWhite */
 }
 
-span.color1 {
-	color:black;
-}
-
-span.color2 {
-	color:black;
-}
-
-section#welcome img {
+#welcome img {
 	float:right;
-	height: 6em;
+	height: 5em;
+	margin-left: 0.5em;
 }
 
-section#welcome h1 {
+#welcome h1 {
 	margin:auto;
-	padding: 0 0.5em;
 }
 
-div#index a div.link{
+section#index a div.link{
 	position: absolute;
 	z-index: 5;
 	width: 33%;
@@ -208,70 +226,70 @@ div#index a div.link{
 	display: inline-block;
 }
 
-div#index a div#indexMusicLink{
+section#index a div#indexMusicLink{
 	top: 50%;
 	left: 10%;
-	background: url("../images/music_gray.png") no-repeat center center;
+	background: url("../images/background/music_gray.png") no-repeat center center;
 	background-size: contain;
 }
 
-div#index a div#indexMusicLink:hover{
-	background: url("../images/music_hover.png") no-repeat center center;
+section#index a div#indexMusicLink:hover{
+	background: url("../images/background/music_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
-div#index a div#indexGamesLink{
+section#index a div#indexGamesLink{
 	top: 10%;
 	left: 33%;
-	background: url("../images/games_gray.png") no-repeat center center;
+	background: url("../images/background/games_gray.png") no-repeat center center;
 	background-size: contain;
 }
 
-div#index a div#indexGamesLink:hover{
-	background: url("../images/games_hover.png") no-repeat center center;
+section#index a div#indexGamesLink:hover{
+	background: url("../images/background/games_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
-div#index a div#indexWritingLink{
+section#index a div#indexWritingLink{
 	top: 50%;
 	right: 10%;
-	background: url("../images/writing_gray.png") no-repeat center center;
+	background: url("../images/background/writing_gray.png") no-repeat center center;
 	background-size: contain;
 }
 
-div#index a div#indexWritingLink:hover{
-	background: url("../images/writing_hover.png") no-repeat center center;
+section#index a div#indexWritingLink:hover{
+	background: url("../images/background/writing_hover.png") no-repeat center center;
 	background-size: contain;
 }
 
 /*__________________________________________________________*/
 /* games.php */
 
-div#games div#gamesPic{
-	background: url("../images/games.png") no-repeat center center;
+section#games div#gamesPic{
+	background: url("../images/background/games.png") no-repeat center center;
 	background-size: contain;
 }
 
 /*__________________________________________________________*/
 /* music.php */
 
-div#music div#musicPic{
-	background: url("../images/music.png") no-repeat center center;
+section#music div#musicPic{
+	background: url("../images/background/music.png") no-repeat center center;
 	background-size: contain;
 }
 
 /*__________________________________________________________*/
 /* writing.php */
 
-div#writing div#writingPic{
-	background: url("../images/writing.png") no-repeat center center;
+section#writing div#writingPic{
+	background: url("../images/background/writing.png") no-repeat center center;
 	background-size: contain;
 }
 
 /*__________________________________________________________*/
 /* about.php */
 
-div#about div#mePic{
+section#about div#mePic{
 	/*position: absolute;
 	top:0;
 	background: url("../images/me2.jpg") no-repeat center center;
@@ -280,7 +298,7 @@ div#about div#mePic{
 	height: 611px;*/
 }
 
-div#about div#mePic:hover{
+section#about div#mePic:hover{
 	/*background: url("../images/me.jpg") no-repeat center center;
 	background-size: contain;*/
 }
