@@ -8,16 +8,15 @@
 
 		<article id="whatPage">
 			<h2><a href="about.php"><img src="images/people/me3.jpg" alt="This is the Writing page." title="Read yourself my writes!"/></a>
-			Things I've written<br>for myself and for publication</h2>
+				Things I've written<br>for myself and for publication</h2>
 		</article>
 
 		<!--the work-->
 
-		<article class="thing game">
-			<a href="images/games/space_odyssey.png"><img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew"/></a>
-			<a target="_blank" href="http://www.openprocessing.org/sketch/93227"><h3>Space Odyssey</h3></a>
-			<p class="specs">March 2013<br>Made with Processing</p>
-			<p>4 players work together on the same keyboard to shoot down the enemy before he consumes them all! Mauricio Sanchez-Duque, Michael Kahane and I created this prototype for our studies at Parsons the New School for Design. The game went over smashingly in class.</p>
+		<article class="thing writing">
+			<a href="writing/capture_the_kingdom_design_doc.pdf"><h3>Capture the Kingdom</h3></a>
+			<p class="specs">December 2011</p>
+			<p>I wrote this design document for a game called <span class="italics">Capture the Kingdom</span> as part of my application to graduate school. Sadly, the game exists only in my mind and on paper. Maybe someday...</p>
 		</article>
 
 	</section><!--end writing-->

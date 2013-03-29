@@ -40,7 +40,7 @@ echo '
 
 		<li>
 			<a target="_blank" href="http://www.wagononahill.com/kg-archive.html">
-				<h2>g-blog</h2>
+				<h2>-blog-</h2>
 			</a>
 		</li>
 

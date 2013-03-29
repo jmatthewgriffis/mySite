@@ -8,6 +8,9 @@ for generating a complementary color scheme for me using:
 #9F8B4E - rgb(159, 139, 78) - brown
 #325066 - rgb(50,80,102) - blue
 #7C7B7D - rgb(124,123,125) - gray
+and then, using the blue as a new base:
+#326E53 - rgb(50,110,83) - green
+#9F6049 - rgb(159,96,73) - red
 
 
  */
@@ -97,22 +100,7 @@ article#whatPage h2 {
 	background:rgb(159, 139, 78);
 	background:rgba(159, 139, 78, 0.7);
 	text-align: left;
-	/*border:solid 1px black;*/
-}
-
-article.game {
-	background:rgb(50,80,102);
-	background:rgba(50,80,102, 0.6);
-}
-
-article.writing {
-	background:rgb(50,80,102);
-	background:rgba(50,80,102, 0.6);
-}
-
-article.music {
-	background:rgb(50,80,102);
-	background:rgba(50,80,102, 0.6);
+	border:solid 1px black;
 }
 
 article.thing {
@@ -123,6 +111,25 @@ article.thing {
 	margin: 1em;
 	text-align: left;
 	border: solid 1px black;
+}
+
+article.game {
+	background:rgb(50,80,102);
+	background:rgba(50,80,102, 0.6);
+}
+
+article.writing {
+	background:rgb(50,110,83);
+	background:rgba(50,110,83,0.6);
+}
+
+article.music {
+	background:rgb(159,96,73);
+	background:rgba(159,96,73,0.6);
+}
+
+article.music, article.writing {
+	padding-top: 0.5em;
 }
 
 article.thing img, h3 {
@@ -136,11 +143,18 @@ article.thing img {
 }
 
 article.thing h3 {
-	border-top: solid 1px black;
 	border-bottom: solid 1px black;
 }
 
+article.writing h3 {
+	margin-left: 0.5em;
+}
+
 article.thing p {
+	margin: 0.5em;
+}
+
+article.game p {
 	margin: 1em 0 0.5em 0;
 }
 
@@ -150,6 +164,15 @@ article.thing p.specs {
 	color: silver;
 	font-size: 0.9em;
 	margin:0 0.5em 0 0;
+}
+
+article.thing audio {
+	float:left;
+	margin: 0 0.5em;
+}
+
+span.italics {
+	font-style: italic;
 }
 
 /*__________________________________________________________*/
@@ -267,6 +290,7 @@ footer section#footerTxt{
 	padding-left: 0.5em;
 	background:rgb(159, 139, 78); /* Brownish, #9F8B4E */
 	background:rgba(159, 139, 78, 0.7); /* add the alpha */
+	border: solid 1px black;
 }
 
 #welcome img {

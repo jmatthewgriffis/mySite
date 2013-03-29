@@ -8,7 +8,7 @@
 
 		<article id="whatPage">
 			<h2><a href="about.php"><img src="images/people/me3.jpg" alt="This is the Games page." title="Check out my games!"/></a>
-			Games I've made<br>on my own and with others</h2>
+				Games I've made<br>on my own and with others</h2>
 		</article>
 
 		<!--the work-->
@@ -24,7 +24,7 @@
 			<a href="images/games/howtoplay.png"><img src="images/games/howtoplay.png" alt="How to Play" title="So mysterious..."/></a>
 			<a target="_blank" href="http://www.openprocessing.org/sketch/79599"><h3>How to Play</h3></a>
 			<p class="specs">November 2012<br>Made with Processing</p>
-			<p>How the heck do you play this? You may think you know, but I doubt it. I created this examination of how games instruct their players for my studies at Parsons the New School for Design. Good luck reaching the end credits. Seriously, it's confounding.</p>
+			<p>How the heck do you play this? You may think you know, but I doubt it. I created this examination of how games instruct their players for my studies at Parsons the New School for Design. Good luck reaching the end credits. Seriously, it may be completely opaque.</p>
 		</article>
 
 	</section><!--end games-->
