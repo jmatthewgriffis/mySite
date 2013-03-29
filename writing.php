@@ -14,9 +14,33 @@
 		<!--the work-->
 
 		<article class="thing writing">
+			<a target="_blank" href="http://www.openprocessing.org/sketch/91842"><h3>The Forgotten Sonnet</h3></a>
+			<p class="specs">Made with Processing | <a href="writing/forgotten_sonnet_documentation.pdf">Documentation</a> | March 2013</p>
+			<p>A work in the style of <span class="italics">Cent mille milliards de poemes</span> by Raymond Queneau and inspired by my favorite Shakespeare sonnet. Refresh your browser for one of 268,435,456 unique poems.</p>
+		</article>
+
+		<article class="thing writing">
+			<a href="writing/cut_up_method_short_story.pdf"><h3>Incident with a <span class="italics">Szemrowice</span></h3></a>
+			<p class="specs">February 2013</p>
+			<p>A short story using the "Cut Up Method" for my studies at Parsons the New School for Design. Wikipedia's "Random article" gave me phrases, which I redefined and repurposed for the story.</p>
+		</article>
+
+		<article class="thing writing">
+			<a href="writing/choose_your_own_chatventure_the_chattening.pdf"><h3>The Chattening</h3></a>
+			<p class="specs"><a href="writing/chattening_documentation.pdf">Documentation</a> | September 2012</p>
+			<p>I created this unusual PDF for my studies at Parsons the New School for Design and recorded the project's convoluted history. Full title: <span class="italics">Choose Your Own Chatventure: The Chattening</span></p>
+		</article>
+
+		<article class="thing writing">
 			<a href="writing/capture_the_kingdom_design_doc.pdf"><h3>Capture the Kingdom</h3></a>
 			<p class="specs">December 2011</p>
 			<p>I wrote this design document for a game called <span class="italics">Capture the Kingdom</span> as part of my application to graduate school. Sadly, the game exists only in my mind and on paper. Maybe someday...</p>
+		</article>
+
+		<article class="thing writing">
+			<a href="writing/santa_coal.pdf"><h3>Santa Can't Get Coal</h3></a>
+			<p class="specs">July 2011</p>
+			<p>I wrote this humor piece for submission to the <span class="italics">Shouts and Murmers</span> section of the <span class="italics">New Yorker</span>. Unfortunately E.B. White submitted something the same month* (*this may not be true).</p>
 		</article>
 
 	</section><!--end writing-->

@@ -3,7 +3,6 @@
 *.MOV
 *.mp3
 *.ogg
-*.pdf
 
 # Some general ignore patterns
 build/

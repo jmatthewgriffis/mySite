@@ -23,8 +23,15 @@
 		<article class="thing game">
 			<a href="images/games/howtoplay.png"><img src="images/games/howtoplay.png" alt="How to Play" title="So mysterious..."/></a>
 			<a target="_blank" href="http://www.openprocessing.org/sketch/79599"><h3>How to Play</h3></a>
-			<p class="specs">November 2012<br>Made with Processing</p>
+			<p class="specs"><a href="writing/how_to_play_documentation.pdf">Documentation</a> | November 2012<br>Made with Processing</p>
 			<p>How the heck do you play this? You may think you know, but I doubt it. I created this examination of how games instruct their players for my studies at Parsons the New School for Design. Good luck reaching the end credits. Seriously, it may be completely opaque.</p>
+		</article>
+
+		<article class="thing game">
+			<a href="images/games/platformal_ware.png"><img src="images/games/platformal_ware.png" alt="Platformal Ware" title="A foggy day in Platform Town."/></a>
+			<a href="games/platformal_ware_-_a_demo.zip"><h3>Platformal Ware</h3></a>
+			<p class="specs">December 2011<br>Made with GameMaker</p>
+			<p>Avatar? Platforms? You know what to do. I created this PC-only game demo as part of my application to graduate school, little suspecting that everyone uses a Mac. I composed and performed the soundtrack, too (<a href="music.php">available here</a> in a platform-agnostic set of formats).</p>
 		</article>
 
 	</section><!--end games-->
