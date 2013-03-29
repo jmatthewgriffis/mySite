@@ -81,7 +81,7 @@ a:hover{
 a:active{}
 
 article#whatPage {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 article#whatPage img {
@@ -118,10 +118,9 @@ article.music {
 article.thing {
 	clear:both;
 	display: inline-block;
-	width: 40em;
-	/*width: 46%;*/
-	/*padding: 0.5em;*/
-	/*margin: 1em 2em 1em 0;*/
+	width: 41em;
+	padding: 0em;
+	margin: 1em;
 	text-align: left;
 	border: solid 1px black;
 }
@@ -131,21 +130,26 @@ article.thing img, h3 {
 }
 
 article.thing img {
-	width:30%;
+	width:11em;
 	margin-right: 0.5em;
-	margin-bottom: 0.5em;
 	float:left;
 }
 
 article.thing h3 {
-	width:100%;
 	border-top: solid 1px black;
 	border-bottom: solid 1px black;
 }
 
-span.specs {
-	color: red;
-	font-size: 0.8em;
+article.thing p {
+	margin: 1em 0 0.5em 0;
+}
+
+article.thing p.specs {
+	float:right;
+	text-align: right;
+	color: silver;
+	font-size: 0.9em;
+	margin:0 0.5em 0 0;
 }
 
 /*__________________________________________________________*/

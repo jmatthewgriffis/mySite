@@ -11,12 +11,13 @@
 			Music I've dreamed up<br>composed and performed</h2>
 		</article>
 
-		<article class="thing music">
-			<a target="_blank" href="http://www.openprocessing.org/sketch/93227">
-			<img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew"/>
-			<h3>Best Game Ever (Space Odyssey)</h3>
-		</a>
-		<p>An m^3 studios production. m^3 studios is Mauricio Sanchez-Duque, Michael Kahane and Matt Griffis. We created this prototype over several sessions during our studies at Parsons the New School for Design. The game went over smashingly in class.<br><span class="specs">March 2013 _ Made with Processing.</span></p>
+		<!--the work-->
+
+		<article class="thing game">
+			<a href="images/games/space_odyssey.png"><img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew"/></a>
+			<a target="_blank" href="http://www.openprocessing.org/sketch/93227"><h3>Space Odyssey</h3></a>
+			<p class="specs">March 2013<br>Made with Processing</p>
+			<p>4 players work together on the same keyboard to shoot down the enemy before he consumes them all! Mauricio Sanchez-Duque, Michael Kahane and I created this prototype for our studies at Parsons the New School for Design. The game went over smashingly in class.</p>
 		</article>
 
 	</section><!--end music-->
