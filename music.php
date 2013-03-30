@@ -23,7 +23,7 @@
 			</audio>
 			<h3>Space Pollution...2/2</h3>
 			<p class="specs">February 2013</p>
-			<p>This is the music for stage 2 of group project <a href="games.php">Space Pollution Needs Solution</a>. I composed, performed and recorded the music using a Casio electronic keyboard, an iPhone, and GarageBand. Forgive the background noise - recording conditions were not ideal.</p>
+			<p>This is the music for stage 2 of group project <a href="games.php"><span class="italics">Space Pollution Needs Solution</span></a>. I composed, performed and recorded the music using a Casio electronic keyboard, an iPhone, and GarageBand. Forgive the background noise - recording conditions were not ideal.</p>
 		</article>
 
 		<article class="thing music">
@@ -34,7 +34,7 @@
 			</audio>
 			<h3>Space Pollution...1/2</h3>
 			<p class="specs">February 2013</p>
-			<p>This is the music for <a target="_blank" href="http://www.openprocessing.org/sketch/90457">stage 1</a> of group project <a href="games.php">Space Pollution Needs Solution</a>. I composed, performed and recorded the music using a Casio electronic keyboard, an iPhone, and GarageBand. Forgive the background noise - recording conditions were not ideal.</p>
+			<p>This is the music for <a target="_blank" href="http://www.openprocessing.org/sketch/90457">stage 1</a> of group project <a href="games.php"><span class="italics">Space Pollution Needs Solution</span></a>. I composed, performed and recorded the music using a Casio electronic keyboard, an iPhone, and GarageBand. Forgive the background noise - recording conditions were not ideal.</p>
 		</article>
 
 		<article class="thing music">
