@@ -376,16 +376,75 @@ section#writing div#writingPic{
 /*__________________________________________________________*/
 /* about.php */
 
-section#about div#mePic{
-	/*position: absolute;
-	top:0;
-	background: url("../images/me2.jpg") no-repeat center center;
-	background-size: contain;
-	width: 458px;
-	height: 611px;*/
+section#about {
+	margin: 0 0.5em;
 }
 
-section#about div#mePic:hover{
-	/*background: url("../images/me.jpg") no-repeat center center;
-	background-size: contain;*/
+section#about article#whatPage {
+	margin-bottom: 1em;
+}
+
+section#notDomain {
+	display:inline-block;
+	vertical-align: top;
+	width:57em;
+	padding:0;
+}
+
+section#about article#mePics{
+	display:inline-block;
+	vertical-align: top;
+	width:26em;
+	height:32.4em;
+	margin:1em;
+	background: url("../images/people/me_and_she.jpg") no-repeat center center;
+	background-size: contain;
+	/*border:solid 1px black;*/
+}
+
+section#about article#mePics:hover{
+	background: url("../images/people/me2.jpg") no-repeat center center;
+	background-size: contain;
+}
+
+section#about article#text {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	width:26em;
+	margin:1em;
+}
+
+section#about article#text p {
+	margin:0;
+}
+
+section#about article#text section#logos {
+	/*text-align: center;*/
+	margin-bottom: 0.5em;
+}
+
+section#about article#text section#logos img {
+	width:2em;
+}
+
+section#about article#domain {
+	display: inline-block;
+	width:26em;
+	margin:1em;
+	padding:0.25em 0.5em;
+	background:rgb(124,123,125);
+	background:rgba(124,123,125,0.7);
+	/*border:solid 1px black;*/
+}
+
+section#about article#domain img {
+	width:100%;
+	margin:0;
+}
+
+section#about article#domain p {
+	text-align: left;
+	margin:0;
+	color:white;
 }
