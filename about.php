@@ -13,7 +13,7 @@
 
 		<section id="notDomain">
 
-			<article id="mePics" title="Don't look at me!">
+			<article id="mePics" title="You found me!">
 			</article> <!--end mePics-->
 
 			<article id="text">
@@ -49,25 +49,40 @@
 
 				</section> <!--end logos-->
 
-				<p>Vero dolor butcher, food truck meggings mustache eiusmod accusamus fap incididunt Austin jean shorts odd future banjo fugiat. Proident officia irony pour-over street art stumptown aesthetic. Seitan yr pug, excepteur banh mi voluptate tonx gluten-free eiusmod. Squid cosby sweater incididunt, blog tofu chillwave DIY ethnic laboris deserunt disrupt 90's. Veniam kogi plaid, odd future dolore pug street art ea salvia stumptown literally church-key sunt. Mollit ea swag, magna letterpress vinyl qui thundercats freegan. Hashtag beard raw denim, keytar fashion axe lomo tattooed cardigan yr helvetica gluten-free irony seitan.
-
-		Chillwave flannel brunch squid tempor, aute eu vero. Dolore stumptown neutra, exercitation mixtape you probably haven't heard of them quis reprehenderit ugh vinyl nesciunt ex flexitarian vegan. Flexitarian american apparel ea, DIY elit plaid incididunt bicycle rights food truck wayfarers fashion axe. Mollit synth id, sriracha pickled umami ethnic accusamus yr Austin artisan blue bottle. Street art butcher elit banksy polaroid jean shorts. Readymade sriracha gastropub hoodie pour-over, 90's +1 four loko. Fingerstache fixie four loko proident fanny pack ethnic occupy thundercats anim, gastropub scenester.
-
-		In bushwick organic ex hoodie gentrify, pitchfork truffaut cred pour-over farm-to-table seitan kogi. American apparel master cleanse odio aesthetic echo park. Enim chambray ex labore cillum. Sriracha selvage flannel fixie id sed. Whatever fashion axe banksy, kogi hashtag vice odio swag fingerstache craft beer brooklyn deep v polaroid shoreditch. Post-ironic messenger bag 3 wolf moon non aliqua. Mcsweeney's four loko pug wayfarers, ethnic hoodie blog street art sapiente lo-fi duis placeat.</p>
+				<p>
+					Being a veteran of the theatre I am well aware that the traditional bio format is the third-person, and being a man of tradition I...hang on, this is the first-person. Ha ha, oops.
+					<br><br>My name is John Matthew Griffis. I go by "Matt" and wear many hats. These very stylish hats include:
+					<ul>
+						<li>Game designer</li>
+						<li>Writer</li>
+						<li>Musician</li>
+						<li>Composer</li>
+						<li>Vocalist</li>
+					</ul>
+					<ul>
+						<li>Web designer</li>
+						<li>Actor</li>
+						<li>Teacher</li>
+						<li>Tennis player</li>
+						<li>Amateur chef</li>
+					</ul><br>
+					You can see examples of my games, music and writing at this very website. Or <a target="_blank" href="https://github.com/jmatthewgriffis/mySite">view the site's source code</a>. If you want to see me teach, come to Parsons. If you want to see me act, find me time to do a show while I'm at Parsons. If you want to see my tennis skills, find me a court. If you want to taste my cooking, we should really get to know each other better.
+					<br><br>I studied the liberal arts under the Great Books Program at St. John's College in Santa Fe, New Mexico. I am currently pursuing a Master of Fine Arts in Design and Technology at Parsons the New School for Design in New York City.
+				</p>
 
 			</article> <!--end text-->
 
-			<article style="display:inline-block; vertical-align:top; margin:1em; border:solid 1px black;"><p>Yo it's dummy text.</p></article>
+			<article id="yesyesno">
+				<img src="images/people/connecting-light-students.jpg" alt="Connecting Light project group photo" title="Even prettier in reality than in the picture." />
+				<p>When I first came to Parsons in August of 2012 I had the privilege of helping with a project called <a target="_blank" href="http://connectinglight.info/">Connecting Light</a>. This was an initiative by New York-based digital arts collective <a target="_blank" href="http://yesyesno.com/">YesYesNo</a> (including founding member and Parsons faculty Zach Lieberman) to set up a digital art installation along the Hadrian's Wall World Heritage Site in Northern England. I and many other volunteers from Parsons and elsewhere helped assemble and then test the signaling balloons in Brooklyn's Prospect Park. That's me in the back at the center, happy I got to play with balloons despite being a grown man.</p>
+			</article> <!--end yesyesno-->
 
 		</section> <!--end notDomain-->
 
 		<article id="domain">
-			<p>Domain Map | February 2013</p>
+			<p>Incomprehensible Domain Map | February 2013</p>
 			<img src="images/background/domain_map.png" alt="Domain Map" title="My interests, encoded" />
 		</article> <!--end domain-->
-
-		<div id="mePic" style="clear:both;">
-		</div><!--end mePic-->
 
 	</section><!--end about-->
 

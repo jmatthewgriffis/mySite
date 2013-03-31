@@ -70,13 +70,15 @@ a:link{
 
 header a:visited,
 nav a:visited,
-article.thing a:visited{
+article.thing a:visited,
+section#about a:visited{
 	color: blue;
 }
 
 header a:hover,
 nav a:hover,
 article.thing a:hover,
+section#about a:hover,
 a:hover{
 	color: red;
 }
@@ -389,6 +391,7 @@ section#notDomain {
 	vertical-align: top;
 	width:57em;
 	padding:0;
+	/*border:solid 1px black;*/
 }
 
 section#about article#mePics{
@@ -397,13 +400,13 @@ section#about article#mePics{
 	width:26em;
 	height:32.4em;
 	margin:1em;
-	background: url("../images/people/me_and_she.jpg") no-repeat center center;
+	background: url("../images/people/me2.jpg") no-repeat center center;
 	background-size: contain;
 	/*border:solid 1px black;*/
 }
 
 section#about article#mePics:hover{
-	background: url("../images/people/me2.jpg") no-repeat center center;
+	background: url("../images/people/me_and_she.jpg") no-repeat center center;
 	background-size: contain;
 }
 
@@ -426,6 +429,31 @@ section#about article#text section#logos {
 
 section#about article#text section#logos img {
 	width:2em;
+}
+
+section#about article#text ul {
+	display:inline-block;
+}
+
+section#about article#yesyesno {
+	display: inline-block;
+	vertical-align: top;
+	width:53em;
+	margin:1em;
+	padding:0.5em;
+	background:rgb(124,123,125);
+	background:rgba(124,123,125,0.7);
+	/*border:solid 1px black;*/
+}
+
+section#about article#yesyesno img {
+	width:100%;
+	margin-bottom: 0.5em;
+}
+
+section#about article#yesyesno p {
+	text-align: left;
+	margin:0;
 }
 
 section#about article#domain {
