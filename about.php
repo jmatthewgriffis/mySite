@@ -74,7 +74,7 @@
 
 			<article id="yesyesno">
 				<img src="images/people/connecting-light-students.jpg" alt="Connecting Light project group photo" title="Even prettier in reality than in the picture." />
-				<p>When I first came to Parsons in August of 2012 I had the privilege of helping with a project called <a target="_blank" href="http://connectinglight.info/">Connecting Light</a>. This was an initiative by New York-based digital arts collective <a target="_blank" href="http://yesyesno.com/">YesYesNo</a> (including founding member and Parsons faculty Zach Lieberman) to set up a digital art installation along the Hadrian's Wall World Heritage Site in Northern England. I and many other volunteers from Parsons and elsewhere helped assemble and then test the signaling balloons in Brooklyn's Prospect Park. That's me in the back at the center, happy I got to play with balloons despite being a grown man.</p>
+				<p>When I first came to Parsons in August of 2012 I had the privilege of helping with a project called <a target="_blank" href="http://connectinglight.info/">Connecting Light</a>. This was an initiative by New York-based digital arts collective <a target="_blank" href="http://yesyesno.com/">YesYesNo</a> (including founding member and Parsons faculty Zach Lieberman) to set up a digital art installation along the Hadrian's Wall World Heritage Site in Northern England. I and many other volunteers from Parsons and elsewhere helped assemble and then test the signaling balloons in Brooklyn's Prospect Park. That's me at the back in the center, happy I got to play with balloons despite being a grown man.</p>
 			</article> <!--end yesyesno-->
 
 		</section> <!--end notDomain-->
