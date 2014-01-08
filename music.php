@@ -15,6 +15,19 @@
 
 		<!--big thanks to media.io for providing audio conversion-->
 
+		<!-- What Lies Beyond -->
+		<article class="thing music">
+			<audio controls>
+				<source src="music/what_lies_beyond.mp3" type="audio/mpeg">
+				<source src="music/what_lies_beyond.ogg" type="audio/ogg">
+					Your browser does not support the audio element.
+			</audio>
+			<h3>What Lies Beyond</h3>
+			<p class="specs">May 2013</p>
+			<p>A wistful tune for some existentializing, this is the theme from my "game" of the same name (available on the <a href="games.php">games</a> page). Performed on a Casio electronic keyboard; recorded with an iPhone; insufficiently edited with GarageBand.</p>
+		</article>
+
+		<!-- Space Pollution 2/2 -->
 		<article class="thing music">
 			<audio controls>
 				<source src="music/spacejunk2.mp3" type="audio/mpeg">
@@ -23,9 +36,10 @@
 			</audio>
 			<h3>Space Pollution...2/2</h3>
 			<p class="specs">February 2013</p>
-			<p>This is the music for stage 2 of group project <a href="games.php"><span class="italics">Space Pollution Needs Solution</span></a>. I composed, performed and recorded the music using a Casio electronic keyboard, an iPhone, and GarageBand. Forgive the background noise - recording conditions were not ideal.</p>
+			<p>Made it into orbit, but it's lonely up here. This is the theme from Stage 2 of <span class="italics">Space Pollution Needs Solution</span> (available on the <a href="games.php">games</a> page). Performed on a Casio electronic keyboard; recorded with an iPhone; lightly edited with GarageBand.</p>
 		</article>
 
+		<!-- Space Pollution 1/2 -->
 		<article class="thing music">
 			<audio controls>
 				<source src="music/spacejunk1.mp3" type="audio/mpeg">
@@ -34,9 +48,10 @@
 			</audio>
 			<h3>Space Pollution...1/2</h3>
 			<p class="specs">February 2013</p>
-			<p>This is the music for <a target="_blank" href="http://www.openprocessing.org/sketch/90457">stage 1</a> of group project <a href="games.php"><span class="italics">Space Pollution Needs Solution</span></a>. I composed, performed and recorded the music using a Casio electronic keyboard, an iPhone, and GarageBand. Forgive the background noise - recording conditions were not ideal.</p>
+			<p>It's a dangerous business, going into orbit, but at least it's sunny. This is the theme from <a target="_blank" href="http://www.openprocessing.org/sketch/90457">Stage 1</a> of <span class="italics">Space Pollution Needs Solution</span> (available on the <a href="games.php">games</a> page). Performed on a Casio electronic keyboard; recorded with an iPhone; mildly edited with GarageBand.</p>
 		</article>
 
+		<!-- Platformal Ware -->
 		<article class="thing music">
 			<audio controls>
 				<source src="music/platformal_ware.mp3" type="audio/mpeg">
@@ -45,7 +60,7 @@
 			</audio>
 			<h3>Platformal Ware</h3>
 			<p class="specs">December 2011</p>
-			<p>This is the soundtrack to a game demo of the same name (<a href="games.php">available here</a>) I created as part of my application to graduate school. I composed, performed and recorded the music using a Casio electronic keyboard, a drum, an external mic, and a laptop.</p>
+			<p>Be careful wandering into the woods...it might get epic. This is the theme from my game of the same name (available on the <a href="games.php">games</a> page). Performed on a Casio electronic keyboard, a drum and a pair of hands; recorded with an external mic and a laptop.</p>
 		</article>
 
 	</section><!--end music-->

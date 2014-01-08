@@ -3,6 +3,7 @@
 *.MOV
 *.mp3
 *.ogg
+unity__building_worlds_misc
 
 # Some general ignore patterns
 build/
