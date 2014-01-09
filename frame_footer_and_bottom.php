@@ -7,7 +7,7 @@ echo '
 
 		<section id="legalAndLogo">
 
-			<p id="copyright">Copyright &copy; 2012-2013 John Matthew Griffis 
+			<p id="copyright">Copyright &copy; 2012-2014 John Matthew Griffis 
 				
 			<!--Email-->
 			<a href="mailto:jmatthewgriffis@gmail.com">

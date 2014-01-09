@@ -13,6 +13,30 @@
 
 		<!--the work-->
 
+		<!-- Space Odyssey 2 -->
+		<article class="thing game">
+			<a href="images/games/screen__space_odyssey_2__full.png"><img src="images/games/screen__space_odyssey_2__crop.png" alt="Space Odyssey 2" title="Pew pew" /></a>
+			<a href="games/Space_Odyssey_2.app.zip"><h3>Space Odyssey 2</h3></a>
+			<p class="specs"><a target="_blank" href="https://github.com/jmatthewgriffis/Space_Odyssey_2_complete/blob/master/README.md">Documentation</a> | December 2013<br><a target="_blank" href="https://github.com/jmatthewgriffis/Space_Odyssey_2_complete">Code</a> | Made with openFrameworks</p>
+			<p>Once again, 4 players work together to shoot down the enemy before it consumes them all! Mauricio Sanchez-Duque and I made this follow-up to our previous game, subtitled "Michael Kahane's Defection." Read the <a target="_blank" href="https://github.com/jmatthewgriffis/Space_Odyssey_2_complete/blob/master/README.md">documentation</a> and <a href="games/Space_Odyssey_2_controller.app.zip">download</a> the secondary controller (<a href="images/games/screen__space_odyssey_2__controller.png">pic</a>).</p>
+		</article>
+
+		<!-- Early Thesis Prototype -->
+		<article class="thing game">
+			<a href="images/games/screen__thesis_early_prototype__full.png"><img src="images/games/screen__thesis_early_prototype__crop.png" alt="Thesis--Early Prototype" title="Graphics not included." /></a>
+			<a href="games/Griffis_Thesis_prototype_Mac.zip"><h3>Thesis--Early Prototype</h3></a>
+			<p class="specs"><a href="writing/thesis_1_doc_list.html">Documentation</a> | December 2013<br>Made with openFrameworks</p>
+			<p>The first half of the Thesis year at Parsons MFADT is dedicated to developing a thesis concept, and at the end of the semester I presented this prototype of a new type of music game. I also documented the process thoroughly, as may be seen above.</p>
+		</article>
+
+		<!-- Collab: NWS ("Breath and Brass") -->
+		<article class="thing game">
+			<a href="images/games/screen__breath_and_brass__full.jpg"><img src="images/games/screen__breath_and_brass__crop.jpg" alt="Breath and Brass" title="Breath and Brass" /></a>
+			<h3>Breath and Brass</h3>
+			<p class="specs"><a target="_blank" href="http://parsonsnws.wordpress.com/2013/12/09/breath-and-brass/">Documentation 1</a> | <a href="writing/breath_and_brass__documentation.pdf">Doc. 2</a> | November 2013<br><a target="_blank" href="https://github.com/LordOfCorners/SymphonyCollab">Code</a> | Made with openFrameworks and Arduino</p>
+			<p>Not a game, but in the interactive category, this Parsons group project was a collaboration with Miami's New World Symphony. Michael Kahane, Quincy Bock, Mauricio Sanchez-Duque, Francesca Castelli, and I developed responsive, generative software for use in concert.</p>
+		</article>
+
 		<!-- What Lies Beyond -->
 		<article class="thing game">
 			<a href="images/games/screenshot__what_lies_beyond__full.png"><img src="images/games/screenshot__what_lies_beyond__cropped.png" alt="What Lies Beyond" title="Begin" /></a>
@@ -61,7 +85,7 @@
 			<a href="images/games/space_odyssey.png"><img src="images/games/space_odyssey.png" alt="Space Odyssey" title="Pew pew" /></a>
 			<a target="_blank" href="http://www.openprocessing.org/sketch/93227"><h3>Space Odyssey</h3></a>
 			<p class="specs">March 2013<br><a target="_blank" href="http://www.openprocessing.org/sketch/93227">Code</a> | Made with Processing</p>
-			<p>4 players work together on the same keyboard to shoot down the enemy before he consumes them all! Mauricio Sanchez-Duque, Michael Kahane and I created this prototype for our studies at Parsons the New School for Design. The game went over smashingly in class.</p>
+			<p>4 players work together on the same keyboard to shoot down the enemy before it consumes them all! Mauricio Sanchez-Duque, Michael Kahane and I created this prototype for our studies at Parsons the New School for Design. The game went over smashingly in class.</p>
 		</article>
 
 		<!-- Space Pollution -->
