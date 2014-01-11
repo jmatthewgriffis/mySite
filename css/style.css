@@ -27,7 +27,7 @@ body{
 
 body{
 	background: url("../images/background/background.png");
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
@@ -106,13 +106,15 @@ article#whatPage h2 {
 }
 
 article.thing {
-	clear:both;
+	/*clear:both;*/
 	display: inline-block;
-	width: 41em;
+	position: relative;
+	width: 19em;
 	padding: 0em;
-	margin: 1em;
+	margin: 0.5em;
 	text-align: left;
-	border: solid 1px black;
+	vertical-align: top;
+	border-radius: 5px;
 }
 
 article.game {
@@ -139,13 +141,20 @@ article.thing img, h3 {
 }
 
 article.thing img {
-	width:11em;
-	margin-right: 0.5em;
-	float:left;
+	width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 article.thing h3 {
-	border-bottom: solid 1px black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.25em 0 0 0.5em;
+	padding: 0;
+	font-size: 2em;
+	color: white;
+	text-shadow: 3px 3px 3px black;
 }
 
 article.writing h3 {
@@ -153,11 +162,9 @@ article.writing h3 {
 }
 
 article.thing p {
-	margin: 0.5em;
-}
-
-article.game p {
-	margin: 1em 0 0.5em 0;
+	clear: both;
+	margin: 0 0.5em;
+	text-align: justify;
 }
 
 article.thing p.specs {
@@ -165,7 +172,8 @@ article.thing p.specs {
 	text-align: right;
 	color: silver;
 	font-size: 0.9em;
-	margin:0 0.5em 0 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 article.thing audio {
