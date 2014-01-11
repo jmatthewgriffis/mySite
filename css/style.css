@@ -87,6 +87,7 @@ a:active{}
 
 article#whatPage {
 	margin-bottom: 1em;
+	display: none;
 }
 
 article#whatPage img {
@@ -125,6 +126,7 @@ article.game {
 article.writing {
 	background:rgb(50,110,83);
 	background:rgba(50,110,83,0.6);
+	padding-bottom: 0.5em;
 }
 
 article.music {
@@ -147,18 +149,17 @@ article.thing img {
 }
 
 article.thing h3 {
-	position: absolute;
-	top: 0;
-	left: 0;
 	margin: 0.25em 0 0 0.5em;
 	padding: 0;
-	font-size: 2em;
 	color: white;
 	text-shadow: 3px 3px 3px black;
 }
 
-article.writing h3 {
-	margin-left: 0.5em;
+article.game h3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 2em;
 }
 
 article.thing p {
@@ -168,7 +169,6 @@ article.thing p {
 }
 
 article.thing p.specs {
-	float:right;
 	text-align: right;
 	color: silver;
 	font-size: 0.9em;
@@ -177,7 +177,8 @@ article.thing p.specs {
 }
 
 article.thing audio {
-	float:left;
+	/*float:left;*/
+	width: 18em;
 	margin: 0 0.5em;
 }
 
@@ -247,7 +248,7 @@ footer{
 	width: 100%;
 	height: 3.5em;
 	text-align: center;
-	font-size: 0.75em;
+	font-size: 0.8em;
 	/*border: 1px solid red;*/
 }
 
@@ -275,7 +276,7 @@ footer section#legalAndLogo a:first-child{
 
 footer section#footerTxt{
 	clear: both;
-	font-size: 0.6em; /*Fits the sentence on one line in a 1024px window.*/
+	font-size: 0.9em; /*Fits the sentence on one line in a 1024px window.*/
 	/*border: 1px solid black*/
 }
 
@@ -301,6 +302,7 @@ footer section#footerTxt{
 	background:rgb(159, 139, 78); /* Brownish, #9F8B4E */
 	background:rgba(159, 139, 78, 0.7); /* add the alpha */
 	border: solid 1px black;
+	display: none;
 }
 
 #welcome img {
