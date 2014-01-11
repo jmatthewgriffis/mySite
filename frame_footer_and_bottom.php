@@ -24,6 +24,11 @@ echo '
 				<img src="images/logos/logo_facebook.png" alt="facebook logo" title="Facebook" />
 			</a>
 
+			<!--YouTube-->
+			<a target="_blank" href="http://www.youtube.com/channel/UCZ-Y7AmRYAkd4CaEKVOjnIQ">
+				<img src="images/logos/logo_youtube.png" alt="youtube logo" title="YouTube" />
+			</a>
+
 			<!--GitHub-->
 			<a target="_blank" href="https://github.com/jmatthewgriffis">
 				<img src="images/logos/logo_github.png" alt="github logo" title="GitHub" />
