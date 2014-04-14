@@ -75,6 +75,26 @@
 			<p>I wrote this humor piece for submission to the <span class="italics">Shouts and Murmers</span> section of the <span class="italics">New Yorker</span>. Unfortunately E.B. White submitted something the same month* (*this may not be true).</p>
 		</article>
 
+		<!-- Otherwise Employed -->
+		<article class="thing writing">
+			<h3>Otherwise Employed</h3>
+			<p class="specs">
+				2008-2009<br>
+				<a target="_blank" href="http://otherwiseemployed.blogspot.com/">read</a>
+			</p>
+			<p>While looking for work post-college, I tried my hand at writing and drawing a webcomic (concurrently with the Sage Mathias blog). I recommend starting at <a target="_blank" href="http://otherwiseemployed.blogspot.com/2008/08/waking-from-dream.html">the beginning</a> for the strongest material.</p>
+		</article>
+
+		<!-- Sage Mathias -->
+		<article class="thing writing">
+			<h3>Sage Mathias</h3>
+			<p class="specs">
+				2008-2009<br>
+				<a target="_blank" href="http://sagemathias.blogspot.com/">read</a>
+			</p>
+			<p>My first blog! I wrote Sage Mathias concurrently with the Otherwise Employed comic while looking for work post-college (these days I blog at a <a href="http://blog.jmatthewgriffis.com/">different address</a>).</p>
+		</article>
+
 	</section><!--end writing-->
 
 <?php include("frame_footer_and_bottom.php"); ?>

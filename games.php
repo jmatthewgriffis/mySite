@@ -13,6 +13,34 @@
 
 		<!--the work-->
 
+		<!-- The Doorway Experience -->
+		<article class="thing game">
+			<a href="images/games/screen__doorway_experience__full.png"><img src="images/games/screen__doorway_experience__crop.png" alt="Experience Doorways" title="You've never seen doorways like this. Probably." /></a>
+			<h3>The Doorway Experience: Experience Doorways</h3>
+			<p class="specs">
+				April 2014<br>
+				<a href="games/The_Doorway_Experience--Experience_Doorways__Mac_build.zip">download (Mac)</a> | 
+				<a href="games/The_Doorway_Experience--Experience_Doorways__Windows_build.zip">download (Windows)</a>
+			</p>
+			<p>Experience the humble doorway as you never have before in this 15-second saga, only for the Oculus Rift.
+				<br><br>Created as a "self-portrait" for the Recursive Reality class at Parsons.<br></p>
+			<p class="specs">Made with Unity for the Oculus Rift</p>
+		</article>
+
+		<!-- Project Cheese -->
+		<article class="thing game">
+			<a href="images/games/screen__project_cheese__full.jpg"><img src="images/games/screen__project_cheese__crop.jpg" alt="Project Cheese" title="Dangerously Cheesy" /></a>
+			<h3>Dust in the Wind: Project Cheese</h3>
+			<p class="specs">
+				March 2014<br>
+				<a target="_blank" href="http://vimeo.com/90924630">watch video</a> | 
+				<a target="_blank" href="http://www.gink-arts.com/recursive-reality-project/">about</a> | 
+				<a target="_blank" href="https://github.com/jmatthewgriffis/Recursive-Reality-midterm--shared-">code</a>
+			</p>
+			<p>Your apartment is cramped and lonely--so sad. But with the power of imagination and a cardboard box, you can escape into a beautiful surreality of siege weapons and flying cheese balls! Eat your fill or the dream will fade. A Team Cheeto production: Alec McClure (graphics and coding), Julie Huynh (coding), Jimmy Tang (graphics), and J. Matthew Griffis (coding).</p>
+			<p class="specs">Made with Unity for the Oculus Rift</p>
+		</article>
+
 		<!-- Space Odyssey 2 -->
 		<article class="thing game">
 			<a href="images/games/screen__space_odyssey_2__full.png"><img src="images/games/screen__space_odyssey_2__crop.png" alt="Space Odyssey 2" title="Pew pew" /></a>
@@ -46,6 +74,7 @@
 			<h3>Breath and Brass</h3>
 			<p class="specs">
 				November 2013<br>
+				<a target="_blank" href="http://vimeo.com/87206691">watch video</a> | 
 				about 
 				<a target="_blank" href="http://parsonsnws.wordpress.com/2013/12/09/breath-and-brass/">[1]</a> 
 				<a href="writing/breath_and_brass__documentation.pdf">[2]</a> | 
@@ -53,6 +82,18 @@
 			</p>
 			<p>Not a game, but in the interactive category, this Parsons group project was a collaboration with Miami's New World Symphony. Michael Kahane, Quincy Bock, Mauricio Sanchez-Duque, Francesca Castelli, and I developed responsive, generative software for use in concert.</p>
 			<p class="specs">Made with openFrameworks and Arduino</p>
+		</article>
+
+		<!-- Super Sack Race -->
+		<article class="thing game">
+			<a href="images/games/screen__super_sack_race__full.png"><img src="images/games/screen__super_sack_race__crop.png" alt="Super Sack Race" title="Rucksacks are in this year." /></a>
+			<h3>Super Sack Race</h3>
+			<p class="specs">
+				July 2013<br>
+				<a target="_blank" href="http://www.usanetwork.com/summercamp/supersackrace">play</a>
+			</p>
+			<p>Worst sack race course ever! Jump and use powerups to avoid the many obstacles while getting as far and scoring as many points as you can. I helped develop this commission from NBCUniversal while working at TreSensa.</p>
+			<p class="specs">Made with TGE (TreSensa Game Engine)</p>
 		</article>
 
 		<!-- What Lies Beyond -->
