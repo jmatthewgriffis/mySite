@@ -55,7 +55,8 @@ echo '
 	</footer>
 
   </div><!--end wrapper-->
- 
+ <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script src="scripts/details.js"></script>
  </body>
 
 </html>

@@ -58,6 +58,10 @@ div.background{
 	opacity: 0.1;
 }
 
+div.details{
+	display: none;
+}
+
 a{
 	text-decoration: none;
 }
@@ -129,6 +133,24 @@ article.writing {
 	padding-bottom: 0.5em;
 }
 
+article.archive {
+	width: 40%;
+}
+
+article.archive ul {
+	list-style-type: none;
+	padding-left: 0.75em;
+	margin-bottom: 0;
+}
+
+article.archive li {
+	margin: 0.5em 0;
+}
+
+article.archive li:last-child {
+	margin-bottom: 0;
+}
+
 article.music {
 	background:rgb(159,96,73);
 	background:rgba(159,96,73,0.6);
@@ -138,14 +160,14 @@ article.music, article.writing {
 	padding-top: 0.5em;
 }
 
-article.thing img, h3 {
+article.thing h3 {
 	display:inline;
 }
 
 article.thing img {
+	display: block;
 	width: 100%;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-radius: 10px;
 }
 
 article.thing h3 {
@@ -159,7 +181,16 @@ article.game h3 {
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-size: 2em;
+	/*font-size: 2em;*/
+	opacity: 0;
+}
+
+article.game:hover h3 {
+	opacity: 1;
+}
+
+article.game h3:hover, article.game img:hover {
+	cursor: pointer;
 }
 
 article.thing p {
