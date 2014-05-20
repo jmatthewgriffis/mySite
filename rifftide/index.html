@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<title>Toss your cares and ride the tide.</title>
+	<title>Music flows. Ride the tide.</title>
 	<link href="style.css" rel="stylesheet" />
 
 </head>
@@ -11,28 +11,72 @@
 	<div id="wrapper">
 
 		<div id="text">
-			<p>
-				People see radically different things when they look at sheet music. Some see the clear expression of an idea, reading it effortlessly. Others see a familiar symbology but struggle to interpret it. Still others see meaningless marks on a page. They are all right. Music is a language, to be spoken and heard, written and read, and as with any language, the spectrum of literacy is wide.
-			</p>
-			<p>
-				Music notation straddles the line between writing and drawing, description and graphic representation. It is spatial and temporal. Let us visualize our old friend that you thought you'd left behind forever, the Cartesian coordinate system, and drop it atop the sheet music. The vertical axis (y) is space, while the horizontal axis (x) is time. The higher-pitched note appears above the lower. The note played sooner appears before the later. Whether you can "read" the notation or not, you can put your finger on the marks and trace their path--the flow of the music.
-			</p>
-			<p>
-				What if you could jump into that piece of paper like something out of "The Pagemaster" and follow the path yourself, jumping and climbing and sliding from note to note as if they were tangible objects in the world? And if you "played" notes by touching and interacting with them, what would happen? Why, you'd make your own music by moving through the space.
-			</p>
-			<p>
-				Rifftide is a video game about that.
-			</p>
+			<ul>
+				<li class="chosen" data-content="pitch">Pitch</li>
+				<li data-content="gameplay">Gameplay</li>
+				<li data-content="context">Context</li>
+				<li data-content="abstract">Abstract</li>
+			</ul>
+			<div id="blahblah">
+				<p id="abstract">
+					People see radically different things when they look at sheet music. Some see the clear expression of an idea, reading it effortlessly. Others see a familiar symbology but struggle to interpret it. Still others see meaningless marks on a page. They are all right. Music is a language, to be spoken and heard, written and read, and as with any language, the spectrum of literacy is wide.
+				<br>
+				<br>
+					Music notation straddles the line between writing and drawing, description and graphic representation. It is spatial and temporal. Let us visualize our old friend that you thought you'd left behind forever, the Cartesian coordinate system, and drop it atop the sheet music. The vertical axis (y) is space, while the horizontal axis (x) is time. The higher-pitched note appears above the lower. The note played sooner appears before the later. Whether you can "read" the notation or not, you can put your finger on the marks and trace their path--the flow of the music.
+				<br>
+				<br>
+					What if you could jump into that piece of paper like something out of "The Pagemaster" and follow the path yourself, jumping and climbing and sliding from note to note as if they were tangible objects in the world? And if you "played" notes by touching and interacting with them, what would happen? Why, you'd make your own music by moving through the space.
+				<br>
+				<br>
+					Rifftide is a video game about that.
+				</p>
+
+				<p id="gameplay">
+					Rifftide is a computer game in which the player jumps into a world made of sheet music and surfs on streams of musical notation, creating the soundtrack live through play. The game mixes platforming and endless runner mechanics with a skating/surfing-inspired style, and lets the player experiment with composition simply by jumping, spinning, and moving through the world.
+					<br><br>
+					Rifftide features a simple control scheme in which you move forward automatically and your goal is to ride on and move between streams of notes to get to the end of the track without falling off the screen. You can jump short distances and spin your board while on the stream to catch bigger air. The game supports both keyboard controls and the Xbox 360 controller.
+				</p>
+
+				<p class="active" id="pitch">
+					Rifftide is a new kind of music game for anyone who thinks we can do something other than rhythm. Jump into a world made of sheet music and surf the note-stream to make your own soundtrack!
+					<br><br>
+					Created completely solo, on no budget, as a thesis project by a first-time game designer / programmer / composer / graduate student, Rifftide affectionately and respectfully sticks a thumb in the eye of conventional music gameplay.
+					<br><br>
+					Music flows. Ride the tide.
+				</p>
+
+				<p id="context">
+					I created Rifftide as my thesis project for the MFA Design and Technology program at Parsons The New School for Design. I chose sheet music as the setting because it is a spatial notation, allowing players to approach the musical content through familiar gameplay tropes of navigating 2D space. 
+					<br><br>
+					Making the notes tangible objects that the player can climb on and interact with provides a new way for the player to understand and experience music. The player sees the music in stasis, sees and hears how his or her actions bring it to life, and hears how different actions result in different music, and how the notes relate to one another.
+					<br><br>
+					The game transforms the player's view of sheet music from abstract notation into a dynamic world, and gives an experience of composition without requiring prior music knowledge.
+				</p>
+			</div>
 		</div>
 
-		<img src="images/rifftide_big.gif">
+		<div id="imagery">
+			<ul>
+				<li class="chosen" data-content="video1">Video 1</li>
+				<li data-content="video2">Video 2</li>
+				<li data-content="gif">Futility</li>
+			</ul>
+			<div id="media">
+				<img id="gif" src="images/rifftide_big.gif">
+				<iframe class="active" id="video1" width="420" height="315" src="//www.youtube.com/embed/4pAnght7KNQ?rel=0" frameborder="0" allowfullscreen></iframe>
+				<iframe id="video2" width="420" height="315" src="//www.youtube.com/embed/7IOIYSPTqI8?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
 
 		<footer>
+			<img src="images/rifftide_logo.png">
 			<p id="copyright">Copyright &copy; 2014 John Matthew Griffis
 				<br>
 				<a target="_blank" href="http://jmatthewgriffis.com/">jmatthewgriffis.com</a></p>
 		</footer>
 
 	</div> <!-- End wrapper -->
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

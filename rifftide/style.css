@@ -14,36 +14,80 @@ body {
 	background-position: 35% bottom;
 }
 
-img {
-	position: fixed;
-	top: 1em;
-	right: 1em;
-	border: solid 3px black;
-	height: 40%;
-}
-
 #text {
 	position: fixed;
 	top: 1em;
 	left: 1em;
 	bottom: 1em;
 	overflow: auto;
-	padding: 1em;
+	padding: 0 1em 0 1em;
 	background-color: white;
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 	width: 20%;
-	border: solid 3px black;
+	border: solid 2px black;
 }
 
 #text p:first-child {
-	margin-top: 0;
+	/*margin-top: 0;*/
 }
 #text p:last-child {
+	/*margin-bottom: 0;*/
+}
+
+#imagery {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	border: solid 2px black;
+	width: 40%;
+	background-color: white;
+}
+
+img, iframe, p {
+	width: 100%;
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+	text-align: center;
+}
+
+li {
+	margin: 0.5em 0;
+	padding: 0.5em 0;
+	display: inline-block;
+	width: 30%;
+	background-color: black;
+	color: white;
+	border: solid 1px black;
+}
+
+#text li {
+	width: 48%;
 	margin-bottom: 0;
+}
+
+li.chosen {
+	background-color: white;
+	color: black;
+}
+
+li:hover {
+	cursor: pointer;
+	opacity: 0.3;
 }
 
 footer {
 	position: fixed;
+	width: 20%;
 	bottom: 1em;
 	right: 1em;
 	border: solid 2px black;
@@ -53,4 +97,9 @@ footer {
 }
 footer p {
 	margin: 0;
+	display: block;
+}
+footer img {
+	display: inline;
+	width: 75%;
 }
