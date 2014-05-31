@@ -13,6 +13,24 @@
 
 		<!--the work-->
 
+		<!-- Rifftide -->
+		<article class="thing game">
+			<img src="images/games/rifftide_logo.png" alt="Rifftide" title="Music flows. Ride the tide." />
+			<h3>Rifftide</h3>
+			<div class="details">
+			<p class="specs">
+				Spring 2014<br>
+				<a href="writing/rifftide__production_doc.pdf">about</a>
+			</p>
+			<p>
+				<a target="_blank" href="rifftide/">VISIT THE PROJECT SITE</a>
+				<br><br>
+				Created as my thesis for the MFA in Design and Technology at Parsons The New School for Design.
+			</p>
+			<p class="specs">Made with openFrameworks</p>
+		</div>
+		</article>
+
 		<!-- The Doorway Experience -->
 		<article class="thing game">
 			<!-- <a href="images/games/screen__doorway_experience__full.png"> -->
