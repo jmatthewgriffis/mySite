@@ -119,7 +119,7 @@ article.thing {
 	margin: 0.5em;
 	text-align: left;
 	vertical-align: top;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 article.game {
@@ -167,7 +167,7 @@ article.thing h3 {
 article.thing img {
 	display: block;
 	width: 100%;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 article.thing h3 {
@@ -182,11 +182,11 @@ article.game h3 {
 	top: 0;
 	left: 0;
 	/*font-size: 2em;*/
-	opacity: 0;
+	/*opacity: 0;*/
 }
 
 article.game:hover h3 {
-	opacity: 1;
+	/*opacity: 1;*/
 }
 
 article.game h3:hover, article.game img:hover {
