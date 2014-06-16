@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>J. Matthew Griffis | one man. three names. unlimited humor.</title>
+		<title>J. Matthew Griffis | one man. three names. infinite humor.</title>
 		<link href="style.css" rel="stylesheet" />
 
 		<!--Add Google Web Font-->
@@ -19,44 +19,25 @@
 		<div id="wrapper">
 
 		  	<!--<a name="top">-->
-
-			<header>
-				<h1>
-					<section><a href="index.php">J. Matthew Griffis</a> |</section> <section>one man.</section> <section>three names.</section> <section>unlimited humor.</section>
-				</h1>
-
-				<nav>
-					<ul>
-						<li>
-							<a href="games.php">
-								<h2>games</h2>
-							</a>
-						</li>
-						<li>
-							<a href="music.php">
-								<h2>music</h2>
-							</a>
-						</li>
-						<li>
-							<a href="writing.php">
-								<h2>writing</h2>
-							</a>
-						</li>
-						<li>
-							<a href="about.php">
-								<h2>about</h2>
-							</a>
-						</li>
-						<li>
-							<a href="http://blog.jmatthewgriffis.com">
-								<h2>-blog-</h2>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
+			<nav style="display:none;">
+				<ul>
+					<li>
+						<a href="http://blog.jmatthewgriffis.com">
+							<h2>blog</h2>
+						</a>
+					</li>
+				</ul>
+			</nav>
 
 			<!--<a id="jumpToTop" href="#top">top</a>-->
+			<div id="intro">
+				<!-- <p class="jumbojumbo">Abandon all boredom, ye who enter here.<p> -->
+				<p class="jumbo">I'm <span class="highlight">J. Matthew Griffis</span>, usually called '<span class="highlight">Matt</span>,' and I do <span class="highlight">creative coding and interaction design</span>.<p>
+				<p class="jumbo">I specialize in creating <span class="highlight">'lasagna' experiences</span>, i.e. rich, multi-layered, and full of sauce, with a generous yet curated helping of cheese.<p>
+				<p class="jumbo">Whatever the format, from websites to critical software to games, my work encourages <span class="highlight">exploration and play</span>.</p>
+			</div><!-- End intro -->
+
+			<p class="jumbojumbo">Some of my favorites:</p>
 
 			<section id="games" class="content">
 				
@@ -261,7 +242,7 @@
 				</ul><!-- End grid -->
 			</section><!--end games-->
 
-			<section id="writing" class="content">
+			<section style="display:none;" id="writing" class="content">
 
 				<div class="background" id="writingPic">
 				</div><!--end background-->
@@ -357,7 +338,7 @@
 
 			</section><!--end writing-->
 
-			<section id="music" class="content">
+			<section style="display:none;" id="music" class="content">
 
 				<div class="background" id="musicPic">
 				</div><!--end background-->
@@ -448,8 +429,9 @@
 			<footer>
 				<section id="legalAndLogo">
 
-					<p id="copyright">Copyright &copy; 2012-2014 John Matthew Griffis 
-						
+					<p class="jumbo">I'd love to hear from you, so <span class="highlight">get in touch</span>:</p>
+
+					<div>
 						<!--Email-->
 						<a href="mailto:jmatthewgriffis@gmail.com">
 							<img src="images/logos/logo_mail2.png" alt="email" title="Email" />
@@ -460,15 +442,10 @@
 							<img src="images/logos/logo_linkedin.png" alt="linkedin logo" title="LinkedIn" />
 						</a>
 
-						<!--Facebook-->
-						<a target="_blank" href="https://www.facebook.com/j.matthew.griffis">
-							<img src="images/logos/logo_facebook.png" alt="facebook logo" title="Facebook" />
-						</a>
-
 						<!--YouTube-->
-						<a target="_blank" href="http://www.youtube.com/channel/UCZ-Y7AmRYAkd4CaEKVOjnIQ">
+						<!-- <a target="_blank" href="http://www.youtube.com/channel/UCZ-Y7AmRYAkd4CaEKVOjnIQ">
 							<img src="images/logos/logo_youtube.png" alt="youtube logo" title="YouTube" />
-						</a>
+						</a> -->
 
 						<!--GitHub-->
 						<a target="_blank" href="https://github.com/jmatthewgriffis">
@@ -476,21 +453,14 @@
 						</a>
 
 						<!--OpenProcessing-->
-						<a target="_blank" href="http://www.openprocessing.org/user/20132">
+						<!-- <a target="_blank" href="http://www.openprocessing.org/user/20132">
 							<img src="images/logos/logo_processing.png" alt="processing logo" title="OpenProcessing" />
-						</a>
+						</a> -->
+					</div>
 
-					</p>
+					<p id="copyright">Copyright &copy; 2012-2014 John Matthew Griffis</p>
 
 				</section><!--end legalAndLogo-->
-				<section id="footerTxt">
-
-					<p>Lovingly handcrafted from pulverized SNES games,  
-					leftover riffs from the Kind of Blue sessions, 
-					a towel stolen from Douglas Adams, 
-					and the tri-fisted jiu-jitsu of HTML, CSS and PHP.</p>
-
-				</section><!--end footerTxt-->
 			</footer>
 		</div><!--end wrapper-->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
