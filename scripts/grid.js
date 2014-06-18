@@ -347,14 +347,14 @@ var Grid = (function() {
 
 			// My buttons:
 			this.$website = $( '<a href="#">Website</a>' );
-			this.$play = $( '<a href="#">Play</a>' );
-			this.$downloadMac = $( '<a href="#">Download (Mac)</a>' );
-			this.$downloadWin = $( '<a href="#">Download (Win)</a>' );
+			this.$play = $( '<a href="#">Play Now</a>' );
+			this.$downloadMac = $( '<a href="#">Get It (Mac)</a>' );
+			this.$downloadWin = $( '<a href="#">Get It (Win)</a>' );
 			this.$video = $( '<a href="#">Video</a>' );
-			this.$about = $( '<a href="#">Read More</a>' );
+			this.$about = $( '<a href="#">More</a>' );
 			this.$code = $( '<a href="#">Code</a>' );
 			
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$website, this.$play, this.$downloadWin, this.$downloadMac, this.$video, this.$about, this.$code );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$website, this.$play, this.$downloadWin, this.$downloadMac, this.$video, this.$code, this.$about );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
