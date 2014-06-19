@@ -577,6 +577,10 @@ span.highlight {
 	position: relative;
 }
 
+.og-grid li > a img, .og-expander {
+	box-shadow: 10px 10px 5px #888888;
+}
+
 .og-grid li > a {
 	cursor: pointer;
 }

@@ -349,7 +349,7 @@ var Grid = (function() {
 			this.$website = $( '<a target="_blank" href="#">Website</a>' );
 			this.$play = $( '<a target="_blank" href="#">Play Now</a>' );
 			this.$downloadMac = $( '<a href="#">Get It (Mac)</a>' );
-			this.$downloadWin = $( '<a href="#">Get It (Win)</a>' );
+			this.$downloadWin = $( '<a href="#">Get It (PC)</a>' );
 			this.$video = $( '<a target="_blank" href="#">Video</a>' );
 			this.$about = $( '<a target="_blank" href="#">More</a>' );
 			this.$code = $( '<a target="_blank" href="#">Code</a>' );
