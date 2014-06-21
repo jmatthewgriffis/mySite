@@ -655,6 +655,7 @@ span.highlight {
 	float: left;
 	height: 100%;
 	overflow: hidden;
+	overflow-y: auto; /* Find me */
 	position: relative;
 }
 
