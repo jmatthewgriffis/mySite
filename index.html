@@ -31,7 +31,7 @@
 
 			<!--<a id="jumpToTop" href="#top">top</a>-->
 
-			<section id="games" class="content" data-type="background" data-speed="10">
+			<section id="games" class="content">
 				
 				<div class="background" id="gamesPic">
 				</div><!--end background-->
@@ -425,7 +425,7 @@
 
 			</section><!--end music-->
 			
-			<section id="about" data-type="background" data-speed="10">
+			<section id="about">
 				<div id="intro">
 					<!-- <p class="jumbojumbo">Abandon all boredom, ye who enter here.<p> -->
 					<p class="jumbo">I'm <span class="highlight">J. Matthew Griffis</span>, usually called '<span class="highlight">Matt</span>,' and I do <span class="highlight">creative coding and interaction design</span>.<p>
@@ -479,22 +479,6 @@
 				Grid.init();
 			});
 		</script>
-		<script>
-			// $(document).ready(function(){
-			// 	$('section[data-type="background"]').each(function(){
-			//         var $bgobj = $(this); // assigning the object
-			        
-			//         $(window).scroll(function() {
-			//           var yPos = -($(window).scrollTop() / $bgobj.data('speed')); 
-			          
-			//             // Put together our final background position
-			//             var coords = '50% '+ yPos + 'px';
-			            
-			//             // Move the background
-			//             $bgobj.css({ backgroundPosition: coords });
-			//         }); 
-			//     });    
-			// });
- 		</script>
+		<!-- Thanks to http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641 for some guidance on parallax, from which I took the neat sliding panel effect. -->
 	</body>
 </html>

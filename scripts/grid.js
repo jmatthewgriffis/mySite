@@ -164,12 +164,10 @@ $.fn.imagesLoaded = function( callback ) {
 // Find me. [Some custom stuff I added--search for others.]
 $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
-});
+}); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 var winHeight = $(window).height();
-// console.log(winHeight);
 $('#games').css('max-height', winHeight);
 // var trueHeight = $('#games').height();
-// console.log(trueHeight);
 $('#about').css('top', winHeight);
 
 var Grid = (function() {
@@ -529,11 +527,6 @@ var Grid = (function() {
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = winsize.height;
 
-			// Find me.
-			// var divHeight = $('#games').height();
-			// var heightPreview = divHeight - this.$item.data( 'height' ) - marginExpanded,
-				// itemHeight = divHeight;
-
 			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
 				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
@@ -572,13 +565,6 @@ var Grid = (function() {
 				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
 				previewOffsetT = this.$previewEl.offset().top + $('#games').scrollTop() - scrollExtra, // Find me.
 				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-			
-			// Find me.
-			// var divHeight = $('#games').height();
-			// var position = this.$item.data( 'offsetTop' ),
-				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-				// scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= divHeight ? position : this.height <divHeight ? previewOffsetT - ( divHeight - this.height ) : previewOffsetT;
-
 
 			// $body.animate( { scrollTop : scrollVal }, settings.speed );
 			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
