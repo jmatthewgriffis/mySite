@@ -535,17 +535,6 @@ p.jumbo {
 	font-size: 1.5em;
 }
 
-p.jumbojumbo {
-	font-size: 4em;
-	color: white;
-	text-transform: uppercase;
-	/*width: 75%;*/
-	margin: auto;
-	background-color: black;
-	padding: 10px;
-	text-align: center;
-}
-
 span.highlight {
 	color: blue;
 	font-size: 2em;
@@ -655,12 +644,12 @@ span.highlight {
 	float: left;
 	height: 100%;
 	overflow: hidden;
-	overflow-y: auto; /* Find me */
 	position: relative;
 }
 
 .og-details {
 	padding: 0 40px 0 20px;
+	overflow-y: auto; /* Find me */
 }
 
 .og-fullimg {
@@ -759,3 +748,54 @@ span.highlight {
 	.og-details { float: none; width: 100%; }
 	
 }
+
+
+
+
+
+/*Parallax stuff*/
+/*#home { 
+		background: url(rifftide_small.gif) 50% 0 repeat fixed; min-height: 1000px;
+		height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative;
+		}*/
+
+		/*#home article { 
+  height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 150px; 
+  width: 100%; 
+}*/
+
+#games {
+	position: fixed;
+	overflow: auto;
+	/*height: 1000px;*/
+}
+ 
+		#about { 
+		/*background: url(sissel.png) 50% 0 no-repeat; min-height: 1000px;*/
+		/*height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative;*/
+
+  position: relative;
+top: 1000px;
+background-color: white;
+
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);  
+		}
+		/*#about article { 
+  height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 150px; 
+  width: 100%; 
+}*/

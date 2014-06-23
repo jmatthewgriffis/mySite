@@ -161,6 +161,17 @@ $.fn.imagesLoaded = function( callback ) {
 	return deferred ? deferred.promise( $this ) : $this;
 };
 
+// Find me. [Some custom stuff I added--search for others.]
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
+var winHeight = $(window).height();
+// console.log(winHeight);
+$('#games').css('max-height', winHeight);
+// var trueHeight = $('#games').height();
+// console.log(trueHeight);
+$('#about').css('top', winHeight);
+
 var Grid = (function() {
 
 		// list of items
@@ -256,6 +267,8 @@ var Grid = (function() {
 		// reset some values..
 		$window.on( 'debouncedresize', function() {
 			
+			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+
 			scrollExtra = 0;
 			previewPos = -1;
 			// save item´s offset
@@ -369,6 +382,8 @@ var Grid = (function() {
 		},
 		update : function( $item ) {
 
+			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+
 			if( $item ) {
 				this.$item = $item;
 			}
@@ -413,7 +428,7 @@ var Grid = (function() {
 			this.$about.attr( 'href', eldata.about );
 			this.$code.attr( 'href', eldata.code );
 
-			// Hide and show buttons as needed:
+			// Hide and show buttons as needed: // Find me.
 			if( typeof eldata.website == 'undefined' ) {
 				this.$website.hide();
 			} else this.$website.show();
@@ -467,6 +482,8 @@ var Grid = (function() {
 		},
 		open : function() {
 
+			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+
 			setTimeout( $.proxy( function() {	
 				// set the height for the preview and the item
 				this.setHeights();
@@ -476,6 +493,8 @@ var Grid = (function() {
 
 		},
 		close : function() {
+
+			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
 
 			var self = this,
 				onEndFn = function() {
@@ -509,6 +528,11 @@ var Grid = (function() {
 
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = winsize.height;
+
+			// Find me.
+			// var divHeight = $('#games').height();
+			// var heightPreview = divHeight - this.$item.data( 'height' ) - marginExpanded,
+				// itemHeight = divHeight;
 
 			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
@@ -545,10 +569,19 @@ var Grid = (function() {
 			// case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
 			var position = this.$item.data( 'offsetTop' ),
-				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+				previewOffsetT = this.$previewEl.offset().top + $('#games').scrollTop() - scrollExtra, // Find me.
 				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 			
-			$body.animate( { scrollTop : scrollVal }, settings.speed );
+			// Find me.
+			// var divHeight = $('#games').height();
+			// var position = this.$item.data( 'offsetTop' ),
+				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+				// scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= divHeight ? position : this.height <divHeight ? previewOffsetT - ( divHeight - this.height ) : previewOffsetT;
+
+
+			// $body.animate( { scrollTop : scrollVal }, settings.speed );
+			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
 
 		},
 		setTransition  : function() {
