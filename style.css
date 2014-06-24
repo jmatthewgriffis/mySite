@@ -558,6 +558,10 @@ span.highlight {
 	height: 250px;
 }
 
+.og-grid li > a {
+	cursor: pointer;
+}
+
 .og-grid li > a,
 .og-grid li > a img {
 	border: none;
@@ -570,8 +574,29 @@ span.highlight {
 	box-shadow: 10px 10px 5px #888888;
 }
 
-.og-grid li > a {
-	cursor: pointer;
+.og-grid li > a h3 {
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+	font-size: 0.75em;
+	width: 100%;
+	opacity: 0;
+}
+
+.og-grid li > a:hover h3 {
+	opacity: 1;
+}
+
+.og-grid li.og-expanded > a:hover img {
+	opacity: 0.7;
+	/*-webkit-filter: grayscale(100%);*/
+}
+
+.og-grid li.og-expanded > a:hover h3 {
+	opacity: 0;
 }
 
 .og-grid li.og-expanded > a::after {
@@ -625,6 +650,10 @@ span.highlight {
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+
+#about .og-close::before, #about .og-close::after {
+	left: 0;
 }
 
 .og-close::after {

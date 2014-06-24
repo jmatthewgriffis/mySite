@@ -295,6 +295,11 @@ var Grid = (function() {
 		} );
 	}
 
+	// Find me.
+	$('#about span.og-close').on('click', function() {
+		$body.animate( { scrollTop : 0 }, settings.speed );
+	} );
+
 	function getWinSize() {
 		winsize = { width : $window.width(), height : $window.height() };
 	}
