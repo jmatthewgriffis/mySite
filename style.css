@@ -584,19 +584,59 @@ span.highlight {
 	font-size: 0.75em;
 	width: 100%;
 	opacity: 0;
+	text-align: left;
 }
+
+/* hover h3 stuff */
+
+.name,
+.year,
+.desc,
+.tool {
+	display: block;
+}
+.name {
+	font-size: 2em;
+	margin-bottom: 5px;
+}
+.year {
+	/**/
+}
+.desc {
+	/**/
+}
+.tool {
+	margin-top: 5px;
+}
+
+/* end hover h3 stuff*/
 
 .og-grid li > a:hover h3 {
 	opacity: 1;
 }
 
-.og-grid li.og-expanded > a:hover img {
-	opacity: 0.7;
+.og-grid li > a:hover img {
+	/*opacity: 0.7;*/
 	/*-webkit-filter: grayscale(100%);*/
+	top: -5px;
 }
 
-.og-grid li.og-expanded > a:hover h3 {
+.og-grid li.og-expanded > a:hover img {
+	/*opacity: 0.7;*/
+	-webkit-filter: grayscale(100%);
+}
+
+.og-grid li > a:hover h3 {
+	bottom: 5px;
+}
+
+.og-grid li.og-expanded > a img {
+	top: 0;
+}
+
+.og-grid li.og-expanded > a h3 {
 	opacity: 0;
+	/*bottom: 0;*/
 }
 
 .og-grid li.og-expanded > a::after {
