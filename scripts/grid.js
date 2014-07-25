@@ -161,14 +161,18 @@ $.fn.imagesLoaded = function( callback ) {
 	return deferred ? deferred.promise( $this ) : $this;
 };
 
+var totalHeight = $(window).height() + $('#about').height();
+$('#wrapper').css('height', totalHeight);
+
 // Find me. [Some custom stuff I added--search for others.]
 $(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
+    $(window).scrollTop($('#about').height()); // yo yo
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 var winHeight = $(window).height();
 $('#games').css('max-height', winHeight);
 // var trueHeight = $('#games').height();
-$('#about').css('top', winHeight);
+// $('#about').css('top', winHeight);
 
 var Grid = (function() {
 
