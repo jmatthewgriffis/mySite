@@ -547,21 +547,64 @@ section#about article#domain p {
 	color:white;
 }
 
-#intro {
+#about #intro {
 	text-align: center;
 	padding: 10px;
+	border: 1px black solid;
 }
 
-#intro ul {
-	text-align: left;
+#about #intro div {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
+	position: relative;
+}
+
+#about ul {
+	text-align: left;
+	position: absolute;
+	top: 0;
+	display: none;
+	background-color: white;
+	border: 1px black solid;
+	padding: 10px 40px;
+	margin: 0;
+	list-style-type: square;
+}
+
+#about ul li {
+	margin: 5px 0;
+}
+
+#about ul li:first-child {
+	margin-top: 0;
+}
+
+#about ul li:last-child {
+	margin-bottom: 0;
+}
+
+#about h2 {
+	display: inline-block;
+}
+
+#about h2:hover {
+	color: red;
+	cursor: help;
+}
+
+#about h2:hover + ul {
+	display: block;
 }
 
 #about #imageholder {
 	position: relative;
 	border: 1px solid blue;
-	display: inline-block;
+	max-width: 20%;
+}
+
+#about #mydetails {
+	border: solid 1px black;
+	max-width: 60%;
 }
 
 #about #imageholder p {
@@ -574,6 +617,7 @@ section#about article#domain p {
 
 #about #imageholder p#setuphat {
 	color: red;
+	cursor: help;
 }
 
 #about #imageholder img {
