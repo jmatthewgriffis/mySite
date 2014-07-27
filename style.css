@@ -552,6 +552,52 @@ section#about article#domain p {
 	padding: 10px;
 }
 
+#intro ul {
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#about #imageholder {
+	position: relative;
+	border: 1px solid blue;
+	display: inline-block;
+}
+
+#about #imageholder p {
+	display: inline-block;
+}
+
+#about #imageholder p:first-child {
+	display: block;
+}
+
+#about #imageholder p#setuphat {
+	color: red;
+}
+
+#about #imageholder img {
+	display: block;
+	width: 100%;
+	/*yo yo*/
+}
+
+#about #imageholder img#headshot {
+	-webkit-filter: grayscale(100%);
+}
+
+#about #imageholder img#funnyhat {
+	display: none;
+}
+
+#about #imageholder p#setuphat:hover ~ img#headshot {
+	display: none;
+}
+
+#about #imageholder p#setuphat:hover ~ img#funnyhat {
+	display: block;
+}
+
 p.jumbo {
 	font-size: 1.5em;
 }
