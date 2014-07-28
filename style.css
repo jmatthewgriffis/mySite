@@ -556,14 +556,16 @@ section#about article#domain p {
 #about #intro div {
 	display: inline-block;
 	vertical-align: middle;
-	position: relative;
+	/*position: relative;*/
+	/*border: solid 1px black;*/
 }
 
 #about ul {
 	text-align: left;
 	position: absolute;
 	top: 0;
-	display: none;
+	right: 24%; /* Same as width of buttons div! */
+	visibility: hidden;
 	background-color: white;
 	border: 1px black solid;
 	padding: 10px 40px;
@@ -575,25 +577,15 @@ section#about article#domain p {
 	margin: 5px 0;
 }
 
-#about ul li:first-child {
-	margin-top: 0;
-}
-
-#about ul li:last-child {
-	margin-bottom: 0;
-}
-
-#about h2 {
-	display: inline-block;
-}
-
 #about h2:hover {
 	color: red;
 	cursor: help;
 }
 
-#about h2:hover + ul {
-	display: block;
+#about h2:hover + ul,
+#about ul:hover
+{
+	visibility: visible;
 }
 
 #about #imageholder {
@@ -603,8 +595,17 @@ section#about article#domain p {
 }
 
 #about #mydetails {
-	border: solid 1px black;
+	position: relative;
 	max-width: 60%;
+}
+
+#about #mydetails #summary {
+	width: 75%;
+}
+
+#about #mydetails #buttons {
+	width: 24%;
+	border: solid;
 }
 
 #about #imageholder p {
@@ -623,18 +624,15 @@ section#about article#domain p {
 #about #imageholder img {
 	display: block;
 	width: 100%;
-	/*yo yo*/
 }
 
 #about #imageholder img#headshot {
 	-webkit-filter: grayscale(100%);
 }
 
-#about #imageholder img#funnyhat {
-	display: none;
-}
-
-#about #imageholder p#setuphat:hover ~ img#headshot {
+#about #imageholder img#funnyhat,
+#about #imageholder p#setuphat:hover ~ img#headshot
+{
 	display: none;
 }
 
