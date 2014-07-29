@@ -450,6 +450,8 @@ section#writing div#writingPic{
 
 section#about {
 	margin: 0 10px;
+	/*width: 90%;*/
+	/*margin: auto;*/
 }
 
 section#about article#whatPage {
@@ -547,24 +549,24 @@ section#about article#domain p {
 	color:white;
 }
 
-#about #intro {
+#about #mydetails {
 	text-align: center;
-	padding: 10px;
+	/*padding: 10px;*/
 	border: 1px black solid;
 }
 
-#about #intro div {
+#about #mydetails div {
 	display: inline-block;
 	vertical-align: middle;
-	/*position: relative;*/
-	/*border: solid 1px black;*/
 }
 
 #about ul {
 	text-align: left;
 	position: absolute;
-	top: 0;
-	right: 24%; /* Same as width of buttons div! */
+	top: -10%;
+	right: 105%; /* Same as width of buttons div? */
+	width: 300%;
+	min-height: 120%;
 	visibility: hidden;
 	background-color: white;
 	border: 1px black solid;
@@ -577,35 +579,71 @@ section#about article#domain p {
 	margin: 5px 0;
 }
 
-#about h2:hover {
-	color: red;
+#about h2 {
+	z-index: 1;
+}
+
+#about #imageholder h2 {
 	cursor: help;
 }
 
+#about #mydetails h2 {
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+}
+
 #about h2:hover + ul,
+#about a:hover + ul,
 #about ul:hover
 {
 	visibility: visible;
 }
 
-#about #imageholder {
-	position: relative;
-	border: 1px solid blue;
-	max-width: 20%;
-}
-
 #about #mydetails {
 	position: relative;
-	max-width: 60%;
+	/*width: 79%;*/
 }
 
-#about #mydetails #summary {
-	width: 75%;
+#about #imageholder {
+	width: 16%;
+	position: relative;
+	border: 1px solid blue;
+}
+
+#about #summary {
+	width: 70%;
+	padding: 0 20px;
+	text-align: justify;
+	font-size: 1.5em;
 }
 
 #about #mydetails #buttons {
-	width: 24%;
-	border: solid;
+	width: 13%;
+	position: relative;
+}
+
+#about #buttons h2 {
+	background-color: black;
+	color: white;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top: solid 1px white;
+	border-bottom: solid 1px white;
+}
+
+#about #buttons h2:hover {
+	text-align: left;
+	cursor: default;
+	width: 115%;
+	position: relative;
+	left: -15%;
+}
+
+#about #buttons a h2,
+#about #buttons a h2:hover
+{
+	cursor: pointer;
 }
 
 #about #imageholder p {
@@ -627,7 +665,7 @@ section#about article#domain p {
 }
 
 #about #imageholder img#headshot {
-	-webkit-filter: grayscale(100%);
+	/*-webkit-filter: grayscale(100%);*/
 }
 
 #about #imageholder img#funnyhat,
