@@ -563,10 +563,10 @@ section#about article#domain p {
 #about ul {
 	text-align: left;
 	position: absolute;
-	top: -10%;
+	top: 0;
 	right: 105%; /* Same as width of buttons div? */
 	width: 300%;
-	min-height: 120%;
+	min-height: 100%;
 	visibility: hidden;
 	background-color: white;
 	border: 1px black solid;
@@ -608,7 +608,27 @@ section#about article#domain p {
 #about #imageholder {
 	width: 16%;
 	position: relative;
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
+	padding-left: 20px;
+}
+
+#about #imageholder img {
+	display: block;
+	width: 100%;
+}
+
+#about #imageholder img#headshot {
+	/*-webkit-filter: grayscale(100%);*/
+}
+
+#about #imageholder img#funnyhat,
+#about #imageholder:hover img#headshot
+{
+	display: none;
+}
+
+#about #imageholder:hover img#funnyhat {
+	display: block;
 }
 
 #about #summary {
@@ -646,36 +666,8 @@ section#about article#domain p {
 	cursor: pointer;
 }
 
-#about #imageholder p {
-	display: inline-block;
-}
-
-#about #imageholder p:first-child {
-	display: block;
-}
-
-#about #imageholder p#setuphat {
-	color: red;
-	cursor: help;
-}
-
-#about #imageholder img {
-	display: block;
-	width: 100%;
-}
-
-#about #imageholder img#headshot {
-	/*-webkit-filter: grayscale(100%);*/
-}
-
-#about #imageholder img#funnyhat,
-#about #imageholder p#setuphat:hover ~ img#headshot
-{
-	display: none;
-}
-
-#about #imageholder p#setuphat:hover ~ img#funnyhat {
-	display: block;
+#about #buttons a + ul {
+	/*font-size: 2em;*/
 }
 
 p.jumbo {
