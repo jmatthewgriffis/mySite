@@ -278,38 +278,6 @@ nav ul li a h2{
 }
 
 /*__________________________________________________________*/
-/* Footer */
-
-/*a#jumpToTop{
-	position: fixed;
-	z-index: 10000;
-	bottom: 2%;
-	right: 2%;
-	padding: 0.25em;
-	border: 1px solid black;
-}*/
-
-
-#outro {
-	padding: 10px;
-	text-align: left;
-	text-transform: uppercase;
-}
-
-#outro h1 {
-	display: inline-block;
-	margin: 0;
-}
-
-h1#myname {
-	font-size: 3em;
-}
-
-h1#whatido {
-	float: right;
-}
-
-/*__________________________________________________________*/
 /* index.php */
 
 #welcome {
@@ -649,6 +617,26 @@ footer p {
 
 #buttons a + ul {
 	/*font-size: 2em;*/
+}
+
+#about h1#whoiam {
+	display: inline-block;
+	margin: 0;
+	width: 100%;
+	/*font-size: 1em;*/
+	padding: 10px;
+	text-align: right;
+	/*text-transform: uppercase;*/
+}
+
+#whoiam span#whatido {
+	display: inline-block;
+}
+
+#whoiam span#myname {
+	display: inline-block;
+	float: left;
+	text-align: left;
 }
 
 p.jumbo {
