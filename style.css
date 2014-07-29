@@ -280,46 +280,6 @@ nav ul li a h2{
 /*__________________________________________________________*/
 /* Footer */
 
-footer{
-	/*position: absolute;*/
-	/*z-index: 2;*/
-	/*bottom: 0;*/
-	width: 100%;
-	/*height: 3.5em;*/
-	text-align: center;
-	font-size: 0.8em;
-	/*border: 1px solid red;*/
-	padding: 10px;
-}
-
-footer p {
-	padding: 0;
-	margin: 0;
-}
-
-footer img{
-	width: 5em;
-}
-
-footer section#legalAndLogo {
-	/*border: 1px solid green;*/
-}
-
-footer section#legalAndLogo a img:hover{
-	position: relative;
-	bottom: 0.25em;
-}
-
-footer section#legalAndLogo a:first-child{
-	margin-left: 1.5%; /*Matches margin of leftHalf p above.*/
-}
-
-footer section#footerTxt{
-	clear: both;
-	font-size: 0.9em; /*Fits the sentence on one line in a 1024px window.*/
-	/*border: 1px solid black*/
-}
-
 /*a#jumpToTop{
 	position: fixed;
 	z-index: 10000;
@@ -549,44 +509,6 @@ section#about article#domain p {
 	color:white;
 }
 
-#about #mydetails {
-	text-align: center;
-	/*padding: 10px;*/
-	border: 1px black solid;
-}
-
-#about #mydetails div {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#about ul {
-	text-align: left;
-	position: absolute;
-	top: 0;
-	right: 105%; /* Same as width of buttons div? */
-	width: 300%;
-	min-height: 100%;
-	visibility: hidden;
-	background-color: white;
-	border: 1px black solid;
-	padding: 10px 40px;
-	margin: 0;
-	list-style-type: square;
-}
-
-#about ul li {
-	margin: 5px 0;
-}
-
-#about h2 {
-	z-index: 1;
-}
-
-#about #imageholder h2 {
-	cursor: help;
-}
-
 #about #mydetails h2 {
 	margin: 0;
 	padding: 20px;
@@ -602,45 +524,81 @@ section#about article#domain p {
 
 #about #mydetails {
 	position: relative;
-	/*width: 79%;*/
+	text-align: center;
+}
+
+#about #mydetails div {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #about #imageholder {
 	width: 16%;
 	position: relative;
 	/*border: 1px solid blue;*/
-	padding-left: 20px;
+	padding: 20px;
+	padding-right: 0;
 }
 
-#about #imageholder img {
+#imageholder div#picsofme {
+	width: 100%;
+}
+
+#picsofme img {
 	display: block;
 	width: 100%;
 }
 
-#about #imageholder img#headshot {
+#picsofme img#headshot {
 	/*-webkit-filter: grayscale(100%);*/
 }
 
-#about #imageholder img#funnyhat,
-#about #imageholder:hover img#headshot
+#picsofme img#funnyhat,
+#picsofme:hover img#headshot
 {
 	display: none;
 }
 
-#about #imageholder:hover img#funnyhat {
+#picsofme:hover img#funnyhat {
 	display: block;
+}
+
+#imageholder div#contact {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+#contact img{
+	display: inline;
+	width: 30%;
+}
+
+#contact a img:hover{
+	position: relative;
+	top: -5px;
+}
+
+#imageholder footer {
+	font-size: 0.8em;
+}
+
+footer p {
+	padding: 0;
+	margin: 0;
 }
 
 #about #summary {
 	width: 70%;
 	padding: 0 20px;
 	text-align: justify;
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
 #about #mydetails #buttons {
 	width: 13%;
 	position: relative;
+	padding: 20px 0;
 }
 
 #about #buttons h2 {
@@ -666,7 +624,30 @@ section#about article#domain p {
 	cursor: pointer;
 }
 
-#about #buttons a + ul {
+#buttons ul {
+	text-align: left;
+	position: absolute;
+	top: 10px;
+	right: 105%; /* Same as width of buttons div? */
+	width: 300%;
+	min-height: 100%;
+	visibility: hidden;
+	background-color: white;
+	border: 1px black solid;
+	padding: 10px 40px;
+	margin: 0;
+	list-style-type: square;
+}
+
+#buttons ul li {
+	margin: 5px 0;
+}
+
+#buttons h2 {
+	z-index: 1;
+}
+
+#buttons a + ul {
 	/*font-size: 2em;*/
 }
 
