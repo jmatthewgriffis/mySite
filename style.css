@@ -409,9 +409,9 @@ section#writing div#writingPic{
 /* about.php */
 
 section#about {
-	margin: 0 10px;
-	/*width: 90%;*/
-	/*margin: auto;*/
+	/*margin: 0 10px;*/
+	width: 97%;
+	margin: auto;
 }
 
 section#about article#whatPage {
