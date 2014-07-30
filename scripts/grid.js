@@ -249,7 +249,8 @@ var Grid = (function() {
 		$newitems.each( function() {
 			var $item = $( this );
 			$item.data( {
-				offsetTop : $item.offset().top,
+				// offsetTop : $item.offset().top,
+				offsetTop : $item.position().top, // Find me
 				height : $item.height()
 			} );
 		} );
@@ -262,7 +263,8 @@ var Grid = (function() {
 	function saveItemInfo( saveheight ) {
 		$items.each( function() {
 			var $item = $( this );
-			$item.data( 'offsetTop', $item.offset().top );
+			// $item.data( 'offsetTop', $item.offset().top );
+			$item.data( 'offsetTop', $item.position().top ); // Find me
 			if( saveheight ) {
 				$item.data( 'height', $item.height() );
 			}
@@ -324,7 +326,8 @@ var Grid = (function() {
 
 		var preview = $.data( this, 'preview' ),
 			// item´s offset top
-			position = $item.data( 'offsetTop' );
+			// position = $item.data( 'offsetTop' );
+			position = $item.data( 'offsetTop' ) - whoiam; // Find me
 
 		scrollExtra = 0;
 
@@ -501,7 +504,7 @@ var Grid = (function() {
 		},
 		open : function() {
 
-			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			setTimeout( $.proxy( function() {	
 				// set the height for the preview and the item
@@ -513,7 +516,7 @@ var Grid = (function() {
 		},
 		close : function() {
 
-			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			var self = this,
 				onEndFn = function() {
@@ -545,8 +548,10 @@ var Grid = (function() {
 		},
 		calcHeight : function() {
 
-			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
-				itemHeight = winsize.height;
+			// var heightPreview = (winsize.height - whoiam) - this.$item.data( 'height' ) - marginExpanded,
+			// 	itemHeight = (winsize.height - whoiam);
+			var heightPreview = (winHeight - whoiam) - this.$item.data( 'height' ) - marginExpanded,
+				itemHeight = (winHeight - whoiam); // Find me
 
 			if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
@@ -555,6 +560,7 @@ var Grid = (function() {
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
+			// console.log(settings.minHeight + ", " + heightPreview);
 
 		},
 		setHeights : function() {
@@ -582,13 +588,17 @@ var Grid = (function() {
 			// case 1 : preview height + item height fits in window´s height
 			// case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
-			var position = this.$item.data( 'offsetTop' ),
+			// var position = this.$item.data( 'offsetTop' ),
+			var position = this.$item.data( 'offsetTop' ) - whoiam, // Find me
 				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-				previewOffsetT = this.$previewEl.offset().top + $('#games').scrollTop() - scrollExtra, // Find me.
-				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-
+				previewOffsetT = this.$previewEl.position().top + $('#games').scrollTop() - scrollExtra, // Find me.
+				// scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
+				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= (winHeight - whoiam) ? position : this.height < (winHeight - whoiam) ? previewOffsetT - whoiam - (winHeight - whoiam - this.height) : previewOffsetT; // Find me
+				// scrollVal = previewOffsetT - whoiam - (winsize.height - whoiam - this.height);
+//yoyo
 			// $body.animate( { scrollTop : scrollVal }, settings.speed );
 			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
+			console.log(scrollVal);
 
 		},
 		setTransition  : function() {
