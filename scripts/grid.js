@@ -1,15 +1,22 @@
 // Find me. [Some custom stuff I added--search for others.]
-var panelHeight = $('#about').height();
-whoiam = $('#whoiam').outerHeight();
-scrollDefault = panelHeight - whoiam;
-winHeight = $(window).height();
-totalHeight = winHeight + (panelHeight - whoiam);
+function resetvalues() {
+	var panelHeight = $('#about').height();
+	whoiam = $('#whoiam').outerHeight();
+	scrollDefault = panelHeight - whoiam;
+	winHeight = $(window).height();
+	totalHeight = winHeight + (panelHeight - whoiam);
 
-$('#wrapper').css('height', totalHeight);
-$('#games').css('max-height', winHeight - whoiam);
-$('#games').css('top', whoiam);
+	$('#wrapper').css('height', totalHeight);
+	$('#games').css('max-height', winHeight - whoiam);
+	$('#games').css('top', whoiam);
+}
+
+// Run when page loads.
+resetvalues();
 
 $(window).on('beforeunload', function() {
+	// Run when page reloads.
+	resetvalues();
     $(window).scrollTop(scrollDefault);
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
@@ -272,7 +279,8 @@ var Grid = (function() {
 		// on window resize get the window´s size again
 		// reset some values..
 		$window.on( 'debouncedresize', function() {
-			
+			// Run when page resizes.
+			resetvalues();
 			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			scrollExtra = 0;
