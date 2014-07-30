@@ -2,12 +2,15 @@
 var winHeight = $(window).height();
 panelHeight = $('#about').height();
 totalHeight = winHeight + panelHeight;
+whoiam = $('#whoiam').outerHeight();
+scrollDefault = panelHeight - whoiam;
 
-$('#wrapper').css('height', totalHeight);
-$('#games').css('max-height', winHeight);
+$('#wrapper').css('height', totalHeight - whoiam);
+$('#games').css('max-height', winHeight - whoiam);
+$('#games').css('top', whoiam);
 
 $(window).on('beforeunload', function() {
-    $(window).scrollTop(panelHeight);
+    $(window).scrollTop(scrollDefault);
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
 // -----------------------------
@@ -270,7 +273,7 @@ var Grid = (function() {
 		// reset some values..
 		$window.on( 'debouncedresize', function() {
 			
-			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			scrollExtra = 0;
 			previewPos = -1;
@@ -302,7 +305,7 @@ var Grid = (function() {
 
 	// Find me.
 	$('#about span.og-close').on('click', function() {
-		$body.animate( { scrollTop : 0 }, settings.speed );
+		$body.animate( { scrollTop : scrollDefault }, settings.speed );
 	} );
 
 	function getWinSize() {
@@ -390,7 +393,7 @@ var Grid = (function() {
 		},
 		update : function( $item ) {
 
-			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			if( $item ) {
 				this.$item = $item;
@@ -490,7 +493,7 @@ var Grid = (function() {
 		},
 		open : function() {
 
-			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			setTimeout( $.proxy( function() {	
 				// set the height for the preview and the item
@@ -502,7 +505,7 @@ var Grid = (function() {
 		},
 		close : function() {
 
-			$body.animate( { scrollTop : 0 }, settings.speed ); // Find me.
+			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			var self = this,
 				onEndFn = function() {

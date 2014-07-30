@@ -537,6 +537,10 @@ section#about article#domain p {
 	margin-bottom: 15px;
 }
 
+#contact h3 {
+	margin: 0;
+}
+
 #contact img{
 	display: inline;
 	width: 30%;
@@ -551,9 +555,19 @@ section#about article#domain p {
 	font-size: 0.8em;
 }
 
-footer p {
-	padding: 0;
+p#copyright {
+	font-size: 0.8em;
 	margin: 0;
+	margin-top: 10px;
+	border: solid 1px gray;
+	padding: 5px;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+p#copyright:hover {
+	opacity: 1.0;
+	cursor: default;
 }
 
 #about #summary {
@@ -627,6 +641,7 @@ footer p {
 	padding: 10px;
 	text-align: right;
 	/*text-transform: uppercase;*/
+	position: relative;
 }
 
 #whoiam span#whatido {
@@ -653,7 +668,9 @@ span.highlight {
 
 .og-grid {
 	list-style: none;
-	padding: 20px 0;
+	/*padding: 20px 0;*/
+	padding: 0;
+	padding-bottom: 20px;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
@@ -663,7 +680,7 @@ span.highlight {
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
-	height: 250px;
+	height: 245px;
 }
 
 .og-grid li > a {
@@ -676,6 +693,7 @@ span.highlight {
 	outline: none;
 	display: block;
 	position: relative;
+	height: 100%;
 }
 
 .og-grid li > a img, .og-expander {
@@ -785,6 +803,16 @@ span.highlight {
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
+}
+
+#about .og-close {
+	width: 30px;
+	height: 30px;
+	top: -30px;
+	right: -10px;
+	z-index: 1;
+	background-color: rgba(255,255,255,0.8);
+	border: solid;
 }
 
 .og-close::before,
