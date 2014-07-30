@@ -7,8 +7,8 @@ function resetvalues() {
 	totalHeight = winHeight + (panelHeight - whoiam);
 
 	$('#wrapper').css('height', totalHeight);
-	$('#games').css('max-height', winHeight - whoiam);
-	$('#games').css('top', whoiam);
+	$('#games').css('max-height', winHeight);
+	$('#games').css('padding-top', whoiam);
 }
 
 // Run when page loads.
