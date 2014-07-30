@@ -680,7 +680,8 @@ span.highlight {
 	display: inline-block;
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
-	height: 245px;
+	/*height: 245px;*/
+	width: 326px;
 }
 
 .og-grid li > a {
@@ -693,7 +694,7 @@ span.highlight {
 	outline: none;
 	display: block;
 	position: relative;
-	height: 100%;
+	width: 100%;
 }
 
 .og-grid li > a img, .og-expander {

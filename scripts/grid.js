@@ -1,11 +1,11 @@
 // Find me. [Some custom stuff I added--search for others.]
-var winHeight = $(window).height();
-panelHeight = $('#about').height();
-totalHeight = winHeight + panelHeight;
+var panelHeight = $('#about').height();
 whoiam = $('#whoiam').outerHeight();
 scrollDefault = panelHeight - whoiam;
+winHeight = $(window).height();
+totalHeight = winHeight + (panelHeight - whoiam);
 
-$('#wrapper').css('height', totalHeight - whoiam);
+$('#wrapper').css('height', totalHeight);
 $('#games').css('max-height', winHeight - whoiam);
 $('#games').css('top', whoiam);
 
