@@ -1,6 +1,11 @@
 // Find me. [Some custom stuff I added--search for others.]
+var panelHeight,
+	whoiam,
+	scrollDefault,
+	winHeight,
+	totalHeight;
 function resetvalues() {
-	var panelHeight = $('#about').height();
+	panelHeight = $('#about').height();
 	whoiam = $('#whoiam').outerHeight();
 	scrollDefault = panelHeight - whoiam;
 	winHeight = $(window).height();
@@ -13,11 +18,19 @@ function resetvalues() {
 
 // Run when page loads.
 resetvalues();
+// $(document).ready( function() { // Doesn't work, at least in Chrome.
+$(window).load( function() {
+	resetvalues();
+	// $(window).scrollTop(scrollDefault);
+	$('body').animate( { scrollTop : scrollDefault }, 350 );
+	console.log(scrollDefault);
+});
 
 $(window).on('beforeunload', function() {
 	// Run when page reloads.
-	resetvalues();
-    $(window).scrollTop(scrollDefault);
+	// resetvalues();
+    // $(window).scrollTop(scrollDefault);
+    // $('body').animate( { scrollTop : scrollDefault }, 350 );
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
 // -----------------------------
@@ -284,6 +297,7 @@ var Grid = (function() {
 			// Run when page resizes.
 			resetvalues();
 			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			// $('#games').animate( { scrollTop : 0 }, settings.speed); // Find me.
 
 			scrollExtra = 0;
 			previewPos = -1;
@@ -560,7 +574,6 @@ var Grid = (function() {
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
-			// console.log(settings.minHeight + ", " + heightPreview);
 
 		},
 		setHeights : function() {
@@ -598,7 +611,6 @@ var Grid = (function() {
 //yoyo
 			// $body.animate( { scrollTop : scrollVal }, settings.speed );
 			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
-			console.log(scrollVal);
 
 		},
 		setTransition  : function() {
