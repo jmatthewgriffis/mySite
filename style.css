@@ -670,7 +670,6 @@ span.highlight {
 	list-style: none;
 	/*padding: 20px 0;*/
 	padding: 0;
-	padding-bottom: 20px;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
@@ -678,7 +677,7 @@ span.highlight {
 
 .og-grid li {
 	display: inline-block;
-	margin: 10px 5px 0;
+	margin: 0 5px 10px;
 	vertical-align: top;
 	/*height: 245px;*/
 	width: 326px;

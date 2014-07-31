@@ -3,17 +3,25 @@ var panelHeight,
 	whoiam,
 	scrollDefault,
 	winHeight,
-	totalHeight;
+	totalHeight,
+	extraMargin,
+	diff;
 function resetvalues() {
 	panelHeight = $('#about').height();
 	whoiam = $('#whoiam').outerHeight();
 	scrollDefault = panelHeight - whoiam;
 	winHeight = $(window).height();
 	totalHeight = winHeight + (panelHeight - whoiam);
+	extraMargin = parseInt($('.og-grid li').css('margin-bottom'));
+	diff = (winHeight - whoiam) - ( $('#og-grid').height());
 
 	$('#wrapper').css('height', totalHeight);
 	$('#games').css('max-height', winHeight);
-	$('#games').css('padding-top', whoiam);
+	if (diff > 0) {
+		$('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
+	} else {
+		$('#games').css('padding-top', whoiam + extraMargin);
+	}
 }
 
 // Run when page loads.
