@@ -18,19 +18,16 @@ function resetvalues() {
 
 // Run when page loads.
 resetvalues();
-// $(document).ready( function() { // Doesn't work, at least in Chrome.
+// $(document).ready( function() { // Doesn't work, at least in Chrome. Thanks to http://stackoverflow.com/questions/2248325/webkit-browsers-are-getting-elements-width-wrong for solving a problem that was driving me crazy.
 $(window).load( function() {
 	resetvalues();
 	// $(window).scrollTop(scrollDefault);
 	$('body').animate( { scrollTop : scrollDefault }, 350 );
-	console.log(scrollDefault);
 });
 
 $(window).on('beforeunload', function() {
 	// Run when page reloads.
-	// resetvalues();
     // $(window).scrollTop(scrollDefault);
-    // $('body').animate( { scrollTop : scrollDefault }, 350 );
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
 // -----------------------------

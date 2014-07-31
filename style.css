@@ -678,7 +678,7 @@ span.highlight {
 
 .og-grid li {
 	display: inline-block;
-	margin: 10px 5px 0 5px;
+	margin: 10px 5px 0;
 	vertical-align: top;
 	/*height: 245px;*/
 	width: 326px;
