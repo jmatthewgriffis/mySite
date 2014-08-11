@@ -519,7 +519,11 @@ var Grid = (function() {
 					}
 				} ).attr( 'src', eldata.largesrc );	
 			}
-
+			// Find me
+			var myPaddingT = $('.og-details h3').outerHeight();
+			// console.log(myPaddingT);
+			$('.og-details p').css('padding-top', myPaddingT);
+			// console.log($('.og-details p').css('padding-top'));
 		},
 		open : function() {
 
@@ -531,7 +535,6 @@ var Grid = (function() {
 				// scroll to position the preview in the right place
 				this.positionPreview();
 			}, this ), 25 );
-
 		},
 		close : function() {
 

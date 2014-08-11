@@ -18,6 +18,46 @@ and then, using the blue as a new base:
 /*__________________________________________________________*/
 /* All pages */
 
+@font-face {
+    font-family: gothamLight;
+    src: url(fonts/gotham_rounded/gotham_rnd-light.otf);
+}
+@font-face {
+	font-family: gothamLight;
+    src: url(fonts/gotham_rounded/gotham_rnd-light_ita.otf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: gothamMed;
+    src: url(fonts/gotham_rounded/gotham_rnd-medium.otf);
+}
+@font-face {
+	font-family: gothamMed;
+    src: url(fonts/gotham_rounded/gotham_rnd-med_ita.otf);
+    font-style: italic;
+}
+
+@font-face {
+	font-family: gothamBold;
+    src: url(fonts/gotham_rounded/gotham_rnd-bold.otf);
+}
+@font-face {
+	font-family: gothamBold;
+    src: url(fonts/gotham_rounded/gotham_rnd-bold_ita.otf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: gothamBook;
+    src: url(fonts/gotham_rounded/gotham_rnd-book.otf);
+}
+@font-face {
+	font-family: gothamBook;
+    src: url(fonts/gotham_rounded/gotham_rnd-book_ita.otf);
+    font-style: italic;
+}
+
 *,
 *:after,
 *:before {
@@ -35,7 +75,8 @@ body{
 
 body{
 	background: url("images/background/background.png");
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: gothamBold, Arial, Helvetica, sans-serif;
+	font-style: normal;
 }
 
 p {
@@ -590,6 +631,11 @@ p#copyright:hover {
 	border-bottom-left-radius: 10px;
 	border-top: solid 1px white;
 	border-bottom: solid 1px white;
+	text-transform: uppercase;
+	font-family: gothamLight;
+	font-style: normal;
+	font-size: 0.85em;
+	padding: 40px 20px;
 }
 
 #about #buttons h2:hover {
@@ -792,7 +838,8 @@ span.highlight {
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
+	/*padding: 50px 30px;*/
+	padding: 10px;
 	height: 100%;
 }
 
@@ -800,9 +847,10 @@ span.highlight {
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	top: 20px;
+	top: 10px;
 	right: 20px;
 	cursor: pointer;
+	z-index: 1;
 }
 
 #about .og-close {
@@ -854,7 +902,7 @@ span.highlight {
 
 .og-details {
 	padding: 0 40px 0 20px;
-	overflow-y: auto; /* Find me */
+	/*overflow-y: auto; /* Find me */*/
 }
 
 .og-fullimg {
@@ -868,18 +916,31 @@ span.highlight {
 }
 
 .og-details h3 {
-	font-weight: 300;
-	font-size: 52px;
-	padding: 0 0 10px;
-	margin-top: 0;
-	margin-bottom: 10px;
+	/*font-weight: 300;*/
+	/*font-size: 52px;*/
+	font-size: 1em;
+	padding: 0.75em 20px;
+	/*margin-top: 0;*/
+	/*margin-bottom: 10px;*/
+	margin: 0;
+	font-family: gothamBold;
+	text-transform: uppercase;
+	position: absolute;
+	width: 100%;
+	background: rgba(221,221,221, 0.85);
 }
 
 .og-details p {
-	font-weight: 400;
-	font-size: 16px;
+	/*font-weight: 400;*/
+	/*font-size: 16px;*/
+	font-size: 1.5em;
 	line-height: 22px;
 	color: #999;
+	margin: 0;
+
+	padding: 0 40px 0 20px;
+	height: 100%;
+	overflow-y: auto; /* Find me */
 }
 
 .og-details > a {
@@ -893,6 +954,7 @@ span.highlight {
 	display: inline-block;
 	margin: 30px 5px 0 0; /* button spacing */
 	outline: none;
+	font-family: gothamBook;
 }
 
 .og-details > a::before {
