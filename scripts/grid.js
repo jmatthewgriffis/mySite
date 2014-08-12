@@ -474,27 +474,6 @@ var Grid = (function() {
 			this.$code.attr( 'href', eldata.code );
 
 			// Hide and show buttons as needed: // Find me.
-			// var myDiv = $('#myButtonsDiv');
-			// console.log(myDiv.length);
-			// if (myDiv.length != 0) {
-			// 	myDiv.contents().unwrap();
-			// 	console.log('unwrapped!');
-			// 	console.log(myDiv.length);
-			// }
-			// $('a.myButtons').each( function() {
-			// 	$(this).removeClass('myButtons');
-			// 	$(this).css('display', 'none');
-			// });
-			// console.log($('a.myButtons').length);
-
-			// if ($('#myButtonsDiv').length == 0) {
-				// $('a.myButtons').wrapAll( '<div id="myButtonsDiv"></div>');
-				// console.log('divved');
-				// console.log($('a.myButtons').length);
-				// if ($('#myButtonsDiv').parent().is('#myButtonsDiv')) {
-					// console.log('nope');
-				// }
-			// }
 
 			if( typeof eldata.website == 'undefined' ) {
 				// this.$website.hide();
@@ -558,9 +537,6 @@ var Grid = (function() {
 				this.$code.css('display', 'inline-block');
 				// this.$code.addClass('myButtons');
 			}
-			// console.log($('a.myButtons').length);
-			// $('a.myButtons').wrapAll( '<div id="myButtonsDiv"></div>');
-			// $('a.myButtons', this).wrapAll( '<div id="myButtonsDiv"></div>');
 			
 			var self = this;
 			
@@ -586,25 +562,15 @@ var Grid = (function() {
 
 			// Find me
 			var myPaddingT = $('.og-details h3').outerHeight();
-			// console.log(myPaddingT);
 			$('.og-details p').css('padding-top', myPaddingT);
-			// console.log($('.og-details p').css('padding-top'));
 
-			//yoyoyo
-			// if ($('#myButtonsDiv').length == 0) {
-				$('a.myButtons').wrapAll( '<div class="myButtonsDiv"></div>');
-				console.log('divved');
-				$('.myButtonsDiv').each( function() {
-					console.log('yo!');
-					if ($(this).parent().is('.myButtonsDiv')) {
-						$(this).unwrap();
-						console.log('unwrapped!');
-					}
-				});
-			// }
-
-			// console.log('divved');
-			console.log($('a.myButtons').length);
+			// Wrap the buttons in a div. Find me.
+			$('a.myButtons').wrapAll( '<div class="myButtonsDiv"></div>');
+			$('.myButtonsDiv').each( function() {
+				if ($(this).parent().is('.myButtonsDiv')) {
+					$(this).unwrap();
+				}
+			});
 		},
 		open : function() {
 
