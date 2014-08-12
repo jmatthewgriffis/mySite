@@ -943,7 +943,15 @@ span.highlight {
 	overflow-y: auto; /* Find me */
 }
 
-.og-details > a {
+.og-details div.myButtonsDiv {
+	position: absolute;
+	bottom: 0;
+	padding-left: 20px;
+	width: 100%;
+	background: rgba(221,221,221, 0.85);
+}
+
+.og-details div.myButtonsDiv > a {
 	font-weight: 700;
 	font-size: 16px;
 	color: #333;
@@ -957,13 +965,13 @@ span.highlight {
 	font-family: gothamBook;
 }
 
-.og-details > a::before {
+.og-details div.myButtonsDiv > a::before {
 	content: '\2192';
 	display: inline-block;
 	margin-right: 10px;
 }
 
-.og-details > a:hover {
+.og-details div.myButtonsDiv > a:hover {
 	border-color: #999;
 	color: #999;
 }

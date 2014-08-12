@@ -375,10 +375,15 @@ var Grid = (function() {
 		preview = $.data( this, 'preview', new Preview( $item ) );
 		// expand preview overlay
 		preview.open();
-
 	}
 
 	function hidePreview() {
+
+		// Find me
+		$('a.myButtons').each( function() {
+			$(this).removeClass('myButtons');
+		});
+
 		current = -1;
 		var preview = $.data( this, 'preview' );
 		preview.close();
@@ -400,13 +405,13 @@ var Grid = (function() {
 			this.$description = $( '<p></p>' );
 
 			// My buttons:
-			this.$website = $( '<a target="_blank" href="#">Website</a>' );
-			this.$play = $( '<a target="_blank" href="#">Play Now</a>' );
-			this.$downloadMac = $( '<a href="#">Get It (Mac)</a>' );
-			this.$downloadWin = $( '<a href="#">Get It (PC)</a>' );
-			this.$video = $( '<a target="_blank" href="#">Video</a>' );
-			this.$about = $( '<a target="_blank" href="#">More</a>' );
-			this.$code = $( '<a target="_blank" href="#">Code</a>' );
+			this.$website = $( '<a class="myButtons" target="_blank" href="#">Website</a>' );
+			this.$play = $( '<a class="myButtons" target="_blank" href="#">Play Now</a>' );
+			this.$downloadMac = $( '<a class="myButtons" href="#">Get It (Mac)</a>' );
+			this.$downloadWin = $( '<a class="myButtons" href="#">Get It (PC)</a>' );
+			this.$video = $( '<a class="myButtons" target="_blank" href="#">Video</a>' );
+			this.$about = $( '<a class="myButtons" target="_blank" href="#">More</a>' );
+			this.$code = $( '<a class="myButtons" target="_blank" href="#">Code</a>' );
 			
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$website, this.$play, this.$downloadWin, this.$downloadMac, this.$video, this.$code, this.$about );
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -422,7 +427,6 @@ var Grid = (function() {
 			}
 		},
 		update : function( $item ) {
-
 			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			if( $item ) {
@@ -470,33 +474,93 @@ var Grid = (function() {
 			this.$code.attr( 'href', eldata.code );
 
 			// Hide and show buttons as needed: // Find me.
+			// var myDiv = $('#myButtonsDiv');
+			// console.log(myDiv.length);
+			// if (myDiv.length != 0) {
+			// 	myDiv.contents().unwrap();
+			// 	console.log('unwrapped!');
+			// 	console.log(myDiv.length);
+			// }
+			// $('a.myButtons').each( function() {
+			// 	$(this).removeClass('myButtons');
+			// 	$(this).css('display', 'none');
+			// });
+			// console.log($('a.myButtons').length);
+
+			// if ($('#myButtonsDiv').length == 0) {
+				// $('a.myButtons').wrapAll( '<div id="myButtonsDiv"></div>');
+				// console.log('divved');
+				// console.log($('a.myButtons').length);
+				// if ($('#myButtonsDiv').parent().is('#myButtonsDiv')) {
+					// console.log('nope');
+				// }
+			// }
+
 			if( typeof eldata.website == 'undefined' ) {
-				this.$website.hide();
-			} else this.$website.show();
+				// this.$website.hide();
+				this.$website.css('display', 'none');
+			} else {
+				// this.$website.show();
+				this.$website.css('display', 'inline-block');
+				// this.$website.addClass('myButtons');
+			}
 
 			if( typeof eldata.play == 'undefined' ) {
-				this.$play.hide();
-			} else this.$play.show();
+				// this.$play.hide();
+				this.$play.css('display', 'none');
+			} else {
+				// this.$play.show();
+				this.$play.css('display', 'inline-block');
+				// this.$play.addClass('myButtons');
+			}
 			
 			if( typeof eldata.downloadMac == 'undefined' ) {
-				this.$downloadMac.hide();
-			} else this.$downloadMac.show();
+				// this.$downloadMac.hide();
+				this.$downloadMac.css('display', 'none');
+			} else {
+				// this.$downloadMac.show();
+				this.$downloadMac.css('display', 'inline-block');
+				// this.$downloadMac.addClass('myButtons');
+			}
 			
 			if( typeof eldata.downloadWin == 'undefined' ) {
-				this.$downloadWin.hide();
-			} else this.$downloadWin.show();
+				// this.$downloadWin.hide();
+				this.$downloadWin.css('display', 'none');
+			} else {
+				// this.$downloadWin.show();
+				this.$downloadWin.css('display', 'inline-block');
+				// this.$downloadWin.addClass('myButtons');
+			}
 			
 			if( typeof eldata.video == 'undefined' ) {
-				this.$video.hide();
-			} else this.$video.show();
+				// this.$video.hide();
+				this.$video.css('display', 'none');
+			} else {
+				// this.$video.show();
+				this.$video.css('display', 'inline-block');
+				// this.$video.addClass('myButtons');
+			}
 			
 			if( typeof eldata.about == 'undefined' ) {
-				this.$about.hide();
-			} else this.$about.show();
+				// this.$about.hide();
+				this.$about.css('display', 'none');
+			} else {
+				// this.$about.show();
+				this.$about.css('display', 'inline-block');
+				// this.$about.addClass('myButtons');
+			}
 			
 			if( typeof eldata.code == 'undefined' ) {
-				this.$code.hide();
-			} else this.$code.show();
+				// this.$code.hide();
+				this.$code.css('display', 'none');
+			} else {
+				// this.$code.show();
+				this.$code.css('display', 'inline-block');
+				// this.$code.addClass('myButtons');
+			}
+			// console.log($('a.myButtons').length);
+			// $('a.myButtons').wrapAll( '<div id="myButtonsDiv"></div>');
+			// $('a.myButtons', this).wrapAll( '<div id="myButtonsDiv"></div>');
 			
 			var self = this;
 			
@@ -519,11 +583,28 @@ var Grid = (function() {
 					}
 				} ).attr( 'src', eldata.largesrc );	
 			}
+
 			// Find me
 			var myPaddingT = $('.og-details h3').outerHeight();
 			// console.log(myPaddingT);
 			$('.og-details p').css('padding-top', myPaddingT);
 			// console.log($('.og-details p').css('padding-top'));
+
+			//yoyoyo
+			// if ($('#myButtonsDiv').length == 0) {
+				$('a.myButtons').wrapAll( '<div class="myButtonsDiv"></div>');
+				console.log('divved');
+				$('.myButtonsDiv').each( function() {
+					console.log('yo!');
+					if ($(this).parent().is('.myButtonsDiv')) {
+						$(this).unwrap();
+						console.log('unwrapped!');
+					}
+				});
+			// }
+
+			// console.log('divved');
+			console.log($('a.myButtons').length);
 		},
 		open : function() {
 
@@ -619,7 +700,6 @@ var Grid = (function() {
 //yoyo
 			// $body.animate( { scrollTop : scrollVal }, settings.speed );
 			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
-
 		},
 		setTransition  : function() {
 			this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
