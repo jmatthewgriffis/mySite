@@ -755,8 +755,11 @@ span.highlight {
 	color: white;
 	font-size: 0.75em;
 	width: 100%;
+	min-height: 100%;
 	opacity: 0;
 	text-align: left;
+	font-family: gothamLight;
+	font-style: normal;
 }
 
 /* hover h3 stuff */
@@ -768,17 +771,19 @@ span.highlight {
 	display: block;
 }
 .name {
-	font-size: 2em;
-	margin-bottom: 5px;
+	font-size: 1.75em;
+	margin-bottom: 30px;
+	font-style: italic;
 }
 .year {
-	/**/
+	margin-bottom: 10px;
 }
 .desc {
-	/**/
+	margin-bottom: 10px;
+	font-size: 2em;
 }
 .tool {
-	margin-top: 5px;
+	/*margin-top: 10px;*/
 }
 
 /* end hover h3 stuff*/
