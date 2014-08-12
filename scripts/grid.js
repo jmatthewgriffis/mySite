@@ -560,10 +560,6 @@ var Grid = (function() {
 				} ).attr( 'src', eldata.largesrc );	
 			}
 
-			// Find me
-			var myPaddingT = $('.og-details h3').outerHeight();
-			$('.og-details p').css('padding-top', myPaddingT);
-
 			// Wrap the buttons in a div. Find me.
 			$('a.myButtons').wrapAll( '<div class="myButtonsDiv"></div>');
 			$('.myButtonsDiv').each( function() {
@@ -571,6 +567,12 @@ var Grid = (function() {
 					$(this).unwrap();
 				}
 			});
+
+			// Find me
+			var myPaddingT = $('.og-details h3').outerHeight();
+			$('.og-details p').css('padding-top', myPaddingT);
+			var myPaddingB = $('.og-details div.myButtonsDiv').outerHeight();
+			$('.og-details p').css('padding-bottom', myPaddingB);
 		},
 		open : function() {
 
