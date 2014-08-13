@@ -692,12 +692,18 @@ p#copyright:hover {
 
 #whoiam span#whatido {
 	display: inline-block;
+	font-family: gothamLight;
+	padding: 10px;
 }
 
 #whoiam span#myname {
 	display: inline-block;
 	float: left;
 	text-align: left;
+	font-family: gothamLight;
+	font-size: 1.75em;
+	letter-spacing: 11px;
+	padding-left: 10px;
 }
 
 p.jumbo {
@@ -771,7 +777,8 @@ span.highlight {
 	display: block;
 }
 .name {
-	font-size: 1.75em;
+	font-size: 1.5em;
+	margin-top: 10px;
 	margin-bottom: 30px;
 	font-style: italic;
 }
