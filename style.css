@@ -778,7 +778,7 @@ span.highlight {
 	width: 100%;
 }
 
-.og-grid li > a img, .og-expander {
+.og-grid li > a img, .og-expander, #buttons ul {
 	box-shadow: 10px 10px 5px #888888;
 }
 
