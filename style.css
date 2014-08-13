@@ -421,6 +421,8 @@ section#about {
 	/*margin: 0 10px;*/
 	width: 97%;
 	margin: auto;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 section#about article#whatPage {
@@ -580,6 +582,9 @@ section#about article#domain p {
 
 #contact h3 {
 	margin: 0;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-family: gothamLight;
 }
 
 #contact img{
@@ -604,6 +609,7 @@ p#copyright {
 	padding: 5px;
 	display: inline-block;
 	opacity: 0.5;
+	font-family: gothamLight;
 }
 
 p#copyright:hover {
@@ -616,6 +622,23 @@ p#copyright:hover {
 	padding: 0 20px;
 	text-align: justify;
 	font-size: 1.25em;
+	font-family: gothamBook;
+}
+
+#summary ul {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#summary ul li {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+.embiggen {
+	font-size: 2em;
 }
 
 #about #mydetails #buttons {
@@ -688,6 +711,13 @@ p#copyright:hover {
 	text-align: right;
 	/*text-transform: uppercase;*/
 	position: relative;
+}
+
+h1#whoiam img {
+	position: absolute;
+	top: 0;
+	left: 600px;
+	width: 30px;
 }
 
 #whoiam span#whatido {
