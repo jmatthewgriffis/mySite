@@ -133,7 +133,7 @@ nav a:hover,
 article.thing a:hover,
 section#about a:hover,
 a:hover{
-	color: red;
+	/*color: red;*/
 }
 
 a:active{}
@@ -583,6 +583,7 @@ section#about article#domain p {
 #contact h3 {
 	margin: 0;
 	margin-bottom: 5px;
+	font-size: 1em;
 	text-transform: uppercase;
 	font-family: gothamLight;
 }
@@ -618,27 +619,41 @@ p#copyright:hover {
 }
 
 #about #summary {
-	width: 70%;
-	padding: 0 20px;
+	width: 69%;
+	padding: 0 10%;
 	text-align: justify;
-	font-size: 1.25em;
+	font-size: 1em;
 	font-family: gothamBook;
+}
+
+#summary a {
+	text-decoration: underline;
 }
 
 #summary ul {
 	padding: 0;
 	margin: 0;
-	margin-bottom: 30px;
 	text-align: center;
 }
 
 #summary ul li {
 	display: inline-block;
-	padding-right: 20px;
+	margin-bottom: 5px;
+	padding: 5px;
+	background-color: black;
+	color: white;
+	font-size: 0.9em;
+}
+
+p#workisabout {
+	text-align: center;
 }
 
 .embiggen {
-	font-size: 2em;
+	font-size: 1em;
+	color: red;
+	text-transform: uppercase;
+	font-weight: bolder;
 }
 
 #about #mydetails #buttons {
@@ -899,7 +914,7 @@ span.highlight {
 	width: 30px;
 	height: 30px;
 	top: -30px;
-	right: -10px;
+	right: 3px;
 	z-index: 1;
 	background-color: rgba(255,255,255,0.8);
 	border: solid;
