@@ -973,7 +973,7 @@ span.highlight {
 .og-fullimg img {
 	display: inline-block;
 	max-height: 100%;
-	/*max-width: 100%;*/
+	max-width: 100%;
 }
 
 .og-details h3 {
