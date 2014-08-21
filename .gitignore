@@ -3,7 +3,9 @@
 *.MOV
 *.mp3
 *.ogg
+*.otf
 unity__building_worlds_misc
+trystanandmattswedding
 
 # Some general ignore patterns
 build/
