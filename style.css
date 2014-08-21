@@ -1143,6 +1143,18 @@ span.highlight {
 /* Less than an iPad in portrait view */
 @media only screen and (max-device-width: 767px), only screen and (min-device-width: 769px) and (max-width: 640px) {
 	.og-grid li {
-		width: 75%;
+		width: 97%;
+		font-size: 3em;
 	}
+
+	.og-details {
+		font-size: 0.4em;
+		text-align: left;
+	}
+
+	.og-details p {
+		line-height: 1em;
+	}
+
+	.og-fullimg { display: none; }
 }
