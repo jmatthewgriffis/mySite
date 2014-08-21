@@ -965,6 +965,7 @@ span.highlight {
 
 .og-details {
 	padding: 0 40px 0 20px;
+	float: right;
 	/*overflow-y: auto; /* Find me */*/
 }
 
@@ -1084,7 +1085,8 @@ span.highlight {
 /*@media screen and (max-width: 650px) {*/
 @media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 1023px) {	
 
-	.og-fullimg { display: none; }
+	.og-expander { overflow-y: auto; text-align: center; }
+	.og-fullimg { /*display: none;*/ float: none; width: 100%; margin-bottom: 10px; }
 	.og-details { float: none; width: 100%; }
 	
 }
@@ -1109,9 +1111,16 @@ span.highlight {
 }
 
 /* Check for less than an iPad in landscape, or a computer browser smaller than an iPad in landscape. */
-@media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 1023px) {
+/* Actally, include a landscape iPad too here.*/
+@media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (max-device-width: 1024px), only screen and (min-device-width: 769px) and (max-width: 1023px) {
+	/*, only screen and (min-device-width: 768px) and (orientation: portrait)*/
 	/*, only screen and (min-device-width: 769px) and (max-height: 650px)*/
 	
+	.og-grid li {
+		width: 30%;
+		margin-bottom: 20px;
+	}
+
 	.og-grid li > a h3 {
 		position: static;
 		font-size: 0.5em;
@@ -1121,5 +1130,19 @@ span.highlight {
 
 	.og-grid li.og-expanded > a h3 {
 		opacity: 1;
+	}
+}
+
+/* iPad in portrait view, small browser. */
+@media only screen and (min-device-width: 768px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 800px) {
+	.og-grid li {
+		width: 45%;
+	}
+}
+
+/* Less than an iPad in portrait view */
+@media only screen and (max-device-width: 767px), only screen and (min-device-width: 769px) and (max-width: 640px) {
+	.og-grid li {
+		width: 75%;
 	}
 }
