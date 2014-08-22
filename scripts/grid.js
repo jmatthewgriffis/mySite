@@ -405,15 +405,15 @@ var Grid = (function() {
 			this.$description = $( '<p></p>' );
 
 			// My buttons:
-			this.$website = $( '<a class="myButtons" target="_blank" href="#">Website</a>' );
-			this.$play = $( '<a class="myButtons" target="_blank" href="#">Play Now</a>' );
+			this.$website = $( '<a class="myButtons" target="_blank" href="#">Site</a>' );
+			this.$play = $( '<a class="myButtons" target="_blank" href="#">Play</a>' );
 			this.$downloadMac = $( '<a class="myButtons" href="#">Get It (Mac)</a>' );
 			this.$downloadWin = $( '<a class="myButtons" href="#">Get It (PC)</a>' );
 			this.$video = $( '<a class="myButtons" target="_blank" href="#">Video</a>' );
 			this.$about = $( '<a class="myButtons" target="_blank" href="#">More</a>' );
 			this.$code = $( '<a class="myButtons" target="_blank" href="#">Code</a>' );
 			
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$website, this.$play, this.$downloadWin, this.$downloadMac, this.$video, this.$code, this.$about );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$play, this.$website, this.$downloadWin, this.$downloadMac, this.$video, this.$code, this.$about );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
