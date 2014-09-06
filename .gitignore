@@ -6,6 +6,7 @@
 *.otf
 unity__building_worlds_misc
 trystanandmattswedding
+_todo
 
 # Some general ignore patterns
 build/

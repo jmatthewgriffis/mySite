@@ -778,7 +778,8 @@ span.highlight {
 	margin: 0 5px 10px;
 	vertical-align: top;
 	/*height: 245px;*/
-	width: 326px;
+	/*width: 326px;*/
+	width: 450px;
 }
 
 .og-grid li > a {
@@ -853,7 +854,7 @@ span.highlight {
 .og-grid li > a:hover img {
 	/*opacity: 0.7;*/
 	/*-webkit-filter: grayscale(100%);*/
-	top: -5px;
+	/*top: -5px;*/
 }
 
 .og-grid li.og-expanded > a:hover img {
@@ -862,7 +863,7 @@ span.highlight {
 }
 
 .og-grid li > a:hover h3 {
-	bottom: 5px;
+	/*bottom: 5px;*/
 }
 
 .og-grid li.og-expanded > a img {

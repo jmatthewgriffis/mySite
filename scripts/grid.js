@@ -14,9 +14,23 @@ function resetvalues() {
 	totalHeight = winHeight + (panelHeight - whoiam);
 	extraMargin = parseInt($('.og-grid li').css('margin-bottom'));
 	diff = (winHeight - whoiam) - ( $('#og-grid').height());
+	
+	var gridWidth = $('#og-grid').width();
+	var mysteryMargin = 5; // Inexplicable space between items.
+	var itemWidth = $('#og-grid li').outerWidth() + parseInt($('#og-grid li').css('margin-left')) + parseInt($('#og-grid li').css('margin-right'));
+
+	var itemsInRow = 1;
+	function calcGridWidth() {
+		if (gridWidth - (itemWidth * itemsInRow) - (mysteryMargin * (itemsInRow - 1)) >= itemWidth + mysteryMargin) {
+			itemsInRow++;
+			calcGridWidth();
+		} else return
+	}
+	calcGridWidth();
 
 	$('#wrapper').css('height', totalHeight);
 	$('#games').css('max-height', winHeight);
+	$('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
 	if (diff > 0) {
 		$('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
 	} else {
