@@ -740,6 +740,7 @@ h1#whoiam img {
 	display: inline-block;
 	font-family: gothamLight;
 	padding: 10px;
+	font-size: 0.97em;
 }
 
 #whoiam span#myname {
