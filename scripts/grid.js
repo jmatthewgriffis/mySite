@@ -638,10 +638,10 @@ var Grid = (function() {
 			var heightPreview = (winHeight - whoiam) - this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = (winHeight - whoiam); // Find me
 
-			if( heightPreview < settings.minHeight ) {
+			//if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
 				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-			}
+			//}
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;
