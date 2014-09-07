@@ -918,7 +918,7 @@ span.highlight {
 	z-index: 2;
 }
 
-#about .og-close {
+/*#about .og-close {
 	width: 30px;
 	height: 30px;
 	top: -30px;
@@ -926,7 +926,7 @@ span.highlight {
 	z-index: 7;
 	background-color: rgba(255,255,255,0.8);
 	border: solid;
-}
+}*/
 
 .og-close::before,
 .og-close::after {
@@ -941,9 +941,9 @@ span.highlight {
 	transform: rotate(45deg);
 }
 
-#about .og-close::before, #about .og-close::after {
+/*#about .og-close::before, #about .og-close::after {
 	left: 0;
-}
+}*/
 
 .og-close::after {
 	-webkit-transform: rotate(-45deg);

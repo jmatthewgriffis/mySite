@@ -52,6 +52,19 @@ $(window).on('beforeunload', function() {
     // $(window).scrollTop(scrollDefault);
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
+function controlScroll() {
+	if ($(window).scrollTop() < scrollDefault) {
+		$('#games').css('overflow', 'hidden');
+		$('.og-details p').css('overflow', 'hidden');
+	} else {
+		$('#games').css("overflow", 'auto');
+		$('.og-details p').css('overflow', 'auto');
+	}
+}
+$(window).scroll(controlScroll);
+$('#games').scroll(controlScroll);
+$('.og-details p').scroll(controlScroll);
+
 // -----------------------------
 
 /*
