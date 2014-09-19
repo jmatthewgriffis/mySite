@@ -338,7 +338,7 @@ var Grid = (function() {
 			getWinSize();
 			var preview = $.data( this, 'preview' );
 			if( typeof preview != 'undefined' ) {
-				hidePreview();
+				//hidePreview();
 			}
 
 		} );
