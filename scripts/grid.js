@@ -437,10 +437,11 @@ var Grid = (function() {
 			this.$downloadMac = $( '<a class="myButtons" href="#">Get It (Mac)</a>' );
 			this.$downloadWin = $( '<a class="myButtons" href="#">Get It (PC)</a>' );
 			this.$video = $( '<a class="myButtons" target="_blank" href="#">Video</a>' );
+			this.$gallery = $( '<a class="myButtons" target="_blank" href="#">Gallery</a>' );
 			this.$about = $( '<a class="myButtons" target="_blank" href="#">More</a>' );
 			this.$code = $( '<a class="myButtons" target="_blank" href="#">Code</a>' );
 			
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$play, this.$website, this.$downloadWin, this.$downloadMac, this.$video, this.$code, this.$about );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$play, this.$website, this.$downloadWin, this.$downloadMac, this.$video, this.$gallery, this.$code, this.$about );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -481,6 +482,7 @@ var Grid = (function() {
 					downloadMac : $itemEl.data( 'downloadmac' ),
 					downloadWin : $itemEl.data( 'downloadwin' ),
 					video : $itemEl.data( 'video' ),
+					gallery: $itemEl.data( 'gallery' ),
 					about : $itemEl.data( 'about' ),
 					code : $itemEl.data( 'code' ),
 
@@ -497,6 +499,7 @@ var Grid = (function() {
 			this.$downloadMac.attr( 'href', eldata.downloadMac );
 			this.$downloadWin.attr( 'href', eldata.downloadWin );
 			this.$video.attr( 'href', eldata.video );
+			this.$gallery.attr( 'href', eldata.gallery );
 			this.$about.attr( 'href', eldata.about );
 			this.$code.attr( 'href', eldata.code );
 
@@ -545,6 +548,15 @@ var Grid = (function() {
 				// this.$video.show();
 				this.$video.css('display', 'inline-block');
 				// this.$video.addClass('myButtons');
+			}
+
+			if( typeof eldata.gallery == 'undefined' ) {
+				// this.$gallery.hide();
+				this.$gallery.css('display', 'none');
+			} else {
+				// this.$gallery.show();
+				this.$gallery.css('display', 'inline-block');
+				// this.$gallery.addClass('myButtons');
 			}
 			
 			if( typeof eldata.about == 'undefined' ) {
