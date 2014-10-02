@@ -543,6 +543,19 @@ section#about article#domain p {
 	vertical-align: middle;
 }
 
+#sitesLink {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	padding: 5px 20px;
+	border: 1px solid gray;
+	border-left: none;
+	border-bottom: none;
+	opacity: 0.9;
+	font-family: gothamMed;
+}
+
 #about #imageholder {
 	width: 16%;
 	position: relative;
