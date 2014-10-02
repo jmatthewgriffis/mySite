@@ -20,41 +20,41 @@ and then, using the blue as a new base:
 
 @font-face {
     font-family: gothamLight;
-    src: url(fonts/gotham_rounded/gotham_rnd-light.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-light.otf);
 }
 @font-face {
 	font-family: gothamLight;
-    src: url(fonts/gotham_rounded/gotham_rnd-light_ita.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-light_ita.otf);
     font-style: italic;
 }
 
 @font-face {
     font-family: gothamMed;
-    src: url(fonts/gotham_rounded/gotham_rnd-medium.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-medium.otf);
 }
 @font-face {
 	font-family: gothamMed;
-    src: url(fonts/gotham_rounded/gotham_rnd-med_ita.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-med_ita.otf);
     font-style: italic;
 }
 
 @font-face {
 	font-family: gothamBold;
-    src: url(fonts/gotham_rounded/gotham_rnd-bold.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-bold.otf);
 }
 @font-face {
 	font-family: gothamBold;
-    src: url(fonts/gotham_rounded/gotham_rnd-bold_ita.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-bold_ita.otf);
     font-style: italic;
 }
 
 @font-face {
     font-family: gothamBook;
-    src: url(fonts/gotham_rounded/gotham_rnd-book.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-book.otf);
 }
 @font-face {
 	font-family: gothamBook;
-    src: url(fonts/gotham_rounded/gotham_rnd-book_ita.otf);
+    src: url(../fonts/gotham_rounded/gotham_rnd-book_ita.otf);
     font-style: italic;
 }
 
@@ -74,7 +74,7 @@ body{
 }
 
 body{
-	background: url("images/background/background.png");
+	background: url("../images/background/background.png");
 	font-family: gothamBold, Arial, Helvetica, sans-serif;
 	font-style: normal;
 }
@@ -394,7 +394,7 @@ section#index a div#indexWritingLink:hover{
 /* games.php */
 
 section#games div#gamesPic{
-	background: url("images/background/games.png") no-repeat center center;
+	background: url("../images/background/games.png") no-repeat center center;
 	background-size: contain;
 }
 
