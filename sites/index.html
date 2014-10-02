@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset=utf-8 />
-		<title>S.W.I.M. - J. Matthew Griffis</title>
+		<title>Sites - J. Matthew Griffis</title>
 		<link href="../style.css" rel="stylesheet" />
 		<style>
 			body {
@@ -22,13 +22,13 @@
 				max-width: 100%;
 				max-height: 600px;
 				margin-top: 100px;
-			}
+			}  
 
 			h1,
 			#linkBack
 			{
 				position: fixed;
-				border: 1px solid black;
+				border: 1px solid gray;
 				background-color: white;
 			}
 
@@ -46,8 +46,17 @@
 			}
 
 			.blurb {
-				padding: 50px 0;
+				padding: 50px;
+				padding-top: 25px;
 				border-bottom: 1px solid gray;
+			}
+
+			.blurb:last-child {
+				border-bottom: none;
+			}
+
+			.blurb a {
+				text-decoration: underline;
 			}
 
 			#linkBack {
@@ -55,7 +64,7 @@
 				right: 15px;
 				padding: 5px 20px;
 				border-bottom: none;
-				opacity: 0.3;
+				opacity: 0.5;
 			}
 
 			#linkBack:hover {
@@ -65,19 +74,39 @@
 	</head>
 	<body>
 		<div id="imageHolder">
-			<h1>Sites Which I've Made (S.W.I.M.)</h1>
+			<h1>Sites That I've Made</h1>
+			<a id="linkBack" href="../">&larr; home</a>
 			
-			<!-- BP -->
-			<a href="browserpong"><img src="../images/sites/browserpong.png" /></a>
+			<a target="_blank" href="../"><img src="../images/sites/portfolio.png" /></a>
 			<div class="blurb">
-				<h2>Browser Pong</h2>
-				<p>Play Pong in your browser. Control it with W/S and UP/DOWN. Made with jQuery.</p>
+				<h2>Portfolio</h2>
+				<p>It's my portfolio Web site!</p>
+				<p>Responsive, mobile-friendly design, hand-coded with HTML/CSS/JS and jQuery.</p>
+				<p>Read about the development <a target="_blank" href="http://blog.jmatthewgriffis.com/search/label/portfolio">here</a> and see the code <a target="_blank" href="https://github.com/jmatthewgriffis/mySite">here</a>.</p>
 			</div>
 
-			<a href=""><img src="../images/sites/portfolio.png" /></a>
-			<img src="../images/sites/rifftide.png" />
-			<img src="../images/sites/template.png" />
-			<a id="linkBack" href="http://jmatthewgriffis.com">&larr; home</a>
+			<a target="_blank" href="browserpong"><img src="../images/sites/browserpong.png" /></a>
+			<div class="blurb">
+				<h2>Browser Pong</h2>
+				<p>Play the classic game Pong in your browser. Control it with W/S and UP/DOWN.</p>
+				<p>Sure, one could use generic HTML elements to assemble a traditional Web page. Or one could make Pong, using nothing but some divs and jQuery, just to prove it could be done.</p>
+				<p>Built with HTML/CSS/JS and jQuery. Sound effects created with <a target="_blank" href="http://www.bfxr.net/">Bfxr</a>.</p>
+			</div>
+			
+			<a target="_blank" href="rifftide"><img src="../images/sites/rifftide.png" /></a>
+			<div class="blurb">
+				<h2>Rifftide</h2>
+				<p>I put this site together for the Parsons MFA Design and Technology <a target="_blank" href="http://mfadt.parsons.edu/2014/">2014 Thesis Show</a>, to promote my thesis project, <a target="_blank" href="http://mfadt.parsons.edu/2014/project/rifftide">Rifftide</a>.</p>
+				<p>Assembled with HTML/CSS/JS and jQuery, the site features a responsive design, and is mobile-friendly with a separate optimized layout.</p>
+			</div>
+			
+			<a target="_blank" href="template"><img src="../images/sites/template.png" /></a>
+			<div class="blurb">
+				<h2>Template</h2>
+				<p>A single-page, multi-tab Web site template.</p>
+				<p>I created this early HTML/CSS/JS template as an experiment into one-page site design using jQuery-powered tabs, and put it to use promptly for my wedding (not pictured).</p>
+				<p></p>
+			</div>
 		</div>
 	</body>
 </html>
