@@ -2,21 +2,23 @@ body {
 	background: none;
 }
 
-#imageHolder {
+#wrap {
 	width: 100%;
 	max-width: 1024px;
 	margin: auto;
 	text-align: center;
 	background-color: white;
 	padding: 0 10px;
+	padding-top: 100px;
 	font-family: gothamLight;
 }
 
 img {
 	max-width: 100%;
 	max-height: 600px;
-	margin-top: 100px;
-}  
+	display: block;
+	margin: 20px auto;
+} 
 
 h1,
 #linkBack
@@ -39,20 +41,6 @@ h1 {
 	text-transform: uppercase;
 }
 
-.blurb {
-	padding: 50px;
-	padding-top: 25px;
-	border-bottom: 1px solid gray;
-}
-
-.blurb:last-child {
-	border-bottom: none;
-}
-
-.blurb a {
-	text-decoration: underline;
-}
-
 #linkBack {
 	bottom: 0;
 	right: 15px;
@@ -63,4 +51,20 @@ h1 {
 
 #linkBack:hover {
 	opacity: 1;
+}
+
+.blurb {
+	padding: 50px;
+	padding-top: 25px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 100px;
+}
+
+.blurb:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.blurb a {
+	text-decoration: underline;
 }
