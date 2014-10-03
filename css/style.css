@@ -543,17 +543,33 @@ section#about article#domain p {
 	vertical-align: middle;
 }
 
-#sitesLink {
+ul#myLinks {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: gothamBook;
+	text-transform: uppercase;
+}
+
+#myLinks li {
+	display: inline-block;
+	padding: 10px;
 	background-color: white;
-	padding: 5px 20px;
-	border: 1px solid gray;
-	border-left: none;
-	border-bottom: none;
-	opacity: 0.9;
-	font-family: gothamMed;
+	opacity: 0.7;
+	box-shadow: 2px 2px 2px #aaa;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+#myLinks li:hover {
+	opacity: 1;
+}
+
+#myLinks a::before {
+	/*content: "\2192\ ";*/
 }
 
 #about #imageholder {
