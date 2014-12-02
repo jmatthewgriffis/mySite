@@ -7,6 +7,7 @@
 unity__building_worlds_misc
 sites
 _todo
+tge_starter_game
 
 # Some general ignore patterns
 build/
