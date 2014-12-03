@@ -1,0 +1,125 @@
+body {
+	background-color: #00B8AE;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 2px 2px #00FFF1;
+}
+
+#wrapper {
+	position: relative;
+	top: 200px;
+	width: 640px;
+	height: 480px;
+	background-color: #FF5700;
+	margin: auto;
+	border-radius: 10px;
+}
+
+#ball {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: #00B8AE;
+	border-radius: 10px;
+	border: 5px dashed white;
+}
+
+.line {
+	width: 3px;
+	height: 10px;
+	background-color: #00B8AE;
+	margin: auto;
+	margin-bottom: 10px;
+	z-index: -1;
+	border: solid #00FFF1 1px;
+}
+
+.ui {
+	position: absolute;
+	top: 20px;
+	color: #00B8AE;
+	font-size: 4em;
+	font-weight: bolder;
+}
+
+#scoreL,
+#scoreR {
+	font-size: 7em;
+}
+
+#scoreL {
+	left: 25%;
+}
+
+#scoreR {
+	right: 25%;
+}
+
+#pause {
+	right: 50px;
+	font-size: 1.5em;
+}
+
+#paused {
+	top: 30%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	text-transform: lowercase;
+	visibility: hidden;
+	z-index: 2;
+}
+
+#goal,
+#restart {
+	position: absolute;
+	bottom: -75px;
+	font-size: 0.5em;
+}
+
+#goal {
+	left: 20px;
+}
+
+#restart {
+	right: 20px;
+}
+
+#winner {
+	top: 42%;
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+}
+
+.paddle {
+	width: 17px;
+	height: 85px;
+	background-color: #00B8AE;
+	position: absolute;
+	border: solid #00FFF1 3px;
+}
+
+#left {
+	top: 50%;
+	left: 20px;
+}
+
+#right {
+	bottom: 50%;
+	right: 20px;
+}
+
+#mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: 1;
+	visibility: hidden;
+	border-radius: 10px;
+}

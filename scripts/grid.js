@@ -14,9 +14,23 @@ function resetvalues() {
 	totalHeight = winHeight + (panelHeight - whoiam);
 	extraMargin = parseInt($('.og-grid li').css('margin-bottom'));
 	diff = (winHeight - whoiam) - ( $('#og-grid').height());
+	
+	var gridWidth = $('#og-grid').width();
+	var mysteryMargin = 5; // Inexplicable space between items.
+	var itemWidth = $('#og-grid li').outerWidth() + parseInt($('#og-grid li').css('margin-left')) + parseInt($('#og-grid li').css('margin-right'));
+
+	var itemsInRow = 1;
+	function calcGridWidth() {
+		if (gridWidth - (itemWidth * itemsInRow) - (mysteryMargin * (itemsInRow - 1)) >= itemWidth + mysteryMargin) {
+			itemsInRow++;
+			calcGridWidth();
+		} else return
+	}
+	calcGridWidth();
 
 	$('#wrapper').css('height', totalHeight);
 	$('#games').css('max-height', winHeight);
+	$('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
 	if (diff > 0) {
 		$('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
 	} else {
@@ -37,6 +51,19 @@ $(window).on('beforeunload', function() {
 	// Run when page reloads.
     // $(window).scrollTop(scrollDefault);
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
+
+function controlScroll() {
+	if ($(window).scrollTop() < scrollDefault) {
+		$('#games').css('overflow', 'hidden');
+		$('.og-details p').css('overflow', 'hidden');
+	} else {
+		$('#games').css("overflow", 'auto');
+		$('.og-details p').css('overflow', 'auto');
+	}
+}
+$(window).scroll(controlScroll);
+$('#games').scroll(controlScroll);
+$('.og-details p').scroll(controlScroll);
 
 // -----------------------------
 
@@ -311,7 +338,7 @@ var Grid = (function() {
 			getWinSize();
 			var preview = $.data( this, 'preview' );
 			if( typeof preview != 'undefined' ) {
-				hidePreview();
+				//hidePreview();
 			}
 
 		} );
@@ -405,19 +432,20 @@ var Grid = (function() {
 			this.$description = $( '<p></p>' );
 
 			// My buttons:
-			this.$website = $( '<a class="myButtons" target="_blank" href="#">Website</a>' );
-			this.$play = $( '<a class="myButtons" target="_blank" href="#">Play Now</a>' );
+			this.$website = $( '<a class="myButtons" target="_blank" href="#">Site</a>' );
+			this.$play = $( '<a class="myButtons" target="_blank" href="#">Play</a>' );
 			this.$downloadMac = $( '<a class="myButtons" href="#">Get It (Mac)</a>' );
 			this.$downloadWin = $( '<a class="myButtons" href="#">Get It (PC)</a>' );
 			this.$video = $( '<a class="myButtons" target="_blank" href="#">Video</a>' );
+			this.$gallery = $( '<a class="myButtons" target="_blank" href="#">Gallery</a>' );
 			this.$about = $( '<a class="myButtons" target="_blank" href="#">More</a>' );
 			this.$code = $( '<a class="myButtons" target="_blank" href="#">Code</a>' );
 			
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$website, this.$play, this.$downloadWin, this.$downloadMac, this.$video, this.$code, this.$about );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$play, this.$website, this.$downloadWin, this.$downloadMac, this.$video, this.$gallery, this.$code, this.$about );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
-			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$details, this.$fullimage );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
 			// append preview element to the item
 			this.$item.append( this.getEl() );
@@ -454,6 +482,7 @@ var Grid = (function() {
 					downloadMac : $itemEl.data( 'downloadmac' ),
 					downloadWin : $itemEl.data( 'downloadwin' ),
 					video : $itemEl.data( 'video' ),
+					gallery: $itemEl.data( 'gallery' ),
 					about : $itemEl.data( 'about' ),
 					code : $itemEl.data( 'code' ),
 
@@ -470,6 +499,7 @@ var Grid = (function() {
 			this.$downloadMac.attr( 'href', eldata.downloadMac );
 			this.$downloadWin.attr( 'href', eldata.downloadWin );
 			this.$video.attr( 'href', eldata.video );
+			this.$gallery.attr( 'href', eldata.gallery );
 			this.$about.attr( 'href', eldata.about );
 			this.$code.attr( 'href', eldata.code );
 
@@ -518,6 +548,15 @@ var Grid = (function() {
 				// this.$video.show();
 				this.$video.css('display', 'inline-block');
 				// this.$video.addClass('myButtons');
+			}
+
+			if( typeof eldata.gallery == 'undefined' ) {
+				// this.$gallery.hide();
+				this.$gallery.css('display', 'none');
+			} else {
+				// this.$gallery.show();
+				this.$gallery.css('display', 'inline-block');
+				// this.$gallery.addClass('myButtons');
 			}
 			
 			if( typeof eldata.about == 'undefined' ) {
@@ -624,10 +663,10 @@ var Grid = (function() {
 			var heightPreview = (winHeight - whoiam) - this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = (winHeight - whoiam); // Find me
 
-			if( heightPreview < settings.minHeight ) {
+			//if( heightPreview < settings.minHeight ) {
 				heightPreview = settings.minHeight;
 				itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-			}
+			//}
 
 			this.height = heightPreview;
 			this.itemHeight = itemHeight;

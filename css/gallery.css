@@ -1,0 +1,70 @@
+body {
+	background: none;
+}
+
+#wrap {
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+	text-align: center;
+	background-color: white;
+	padding: 0 10px;
+	padding-top: 100px;
+	font-family: gothamLight;
+}
+
+img {
+	max-width: 100%;
+	max-height: 600px;
+	display: block;
+	margin: 20px auto;
+} 
+
+h1,
+#linkBack
+{
+	position: fixed;
+	border: 1px solid gray;
+	background-color: white;
+}
+
+h1 {
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 20px 10px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	opacity: 0.9;
+	text-transform: uppercase;
+}
+
+#linkBack {
+	bottom: 0;
+	right: 15px;
+	padding: 5px 20px;
+	border-bottom: none;
+	opacity: 0.5;
+}
+
+#linkBack:hover {
+	opacity: 1;
+}
+
+.blurb {
+	padding: 50px;
+	padding-top: 25px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 100px;
+}
+
+.blurb:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.blurb a {
+	text-decoration: underline;
+}

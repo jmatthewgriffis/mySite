@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background-color: #00f;
+}
+
+img {
+	max-width: 100%;
+}
+
+#wrapper {
+	position: relative;
+	background-color: #FFFFF0;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	width: 1014px;
+}
+
+header img {
+	max-height: 100%;
+}
+
+header {
+	background-color: #00f;
+	color: #FFFFF0;
+	text-shadow: 3px 3px black;
+	height: 300px;
+}
+
+header h1 {
+	font-size: 3em;
+}
+
+header h2 {
+	font-size: 1.5em;
+	margin-top: 1em;
+	text-align: center;
+}
+
+header div {
+	display: inline-block;
+	position: relative;
+	bottom: 15px;
+	left: 10px;
+}
+
+nav {
+	clear: both;
+	margin: 16px 0;
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+nav li {
+	display: inline-block;
+	width: 6.9em;
+	margin: 0 10px;
+	padding: 5px;
+	color: #FFFFF0;
+	background-color: black;
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+nav li.highlight,
+nav li:hover {
+	color: #FFFFF0;
+	background-color: #00f;
+}
+
+nav li:hover {
+	opacity: 0.5;
+}
+
+nav li.highlight:hover {
+	cursor: default;
+	opacity: 1.0;
+}
+
+#content section {
+	display: none;
+}
+
+#content section.active {
+	display: block;
+}
+
+#content section {
+	text-align: center;
+}
+
+#content li {
+	margin: 5px 0 5px 20px;
+}
+
+h3 {
+	margin: 15px 0;
+}
+
+h3:first-child{
+	margin-top: 0px;
+}
+
+h3:last-child{
+	margin-bottom: 0px;
+}
+
+h4 {
+	margin: 10px 0;
+}
+
+p.caption {
+	font-size: 0.8em;
+	color: #00f;
+}
+
+.italic {
+	font-style:italic;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+#copyright {
+	clear: both;
+	text-align: center;
+	font-size: 0.75em;
+}
+
+footer {
+	border-top: 1px black solid;
+	margin-top: 16px;
+	padding-top: 5px;
+}
+
+#tab2 div.text {
+	position: relative;
+	width: 294px;
+	padding: 0 5px;
+	min-height: 400px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+#tab2 div.pic {
+	width: 350px;
+	text-align: center;
+	display: inline-block;
+}
+
+#tab3 img {
+	width: 75%;
+	margin: 10px 0;
+}
+
+#tab4 p {
+	margin: 10px 0;
+}
+
+#tab5 img,
+#tab6 img,
+#tab5 p,
+#tab6 p {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#tab7 img {
+	-ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}

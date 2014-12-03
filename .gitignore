@@ -5,7 +5,9 @@
 *.ogg
 *.otf
 unity__building_worlds_misc
-trystanandmattswedding
+sites
+_todo
+tge_starter_game
 
 # Some general ignore patterns
 build/
