@@ -5,214 +5,260 @@
 		<title>PETLab presents: Activate! - J. Matthew Griffis</title>
 		<link href="../../css/style.css" rel="stylesheet" />
 		<link href="../../css/gallery.css" rel="stylesheet" />
+		<style>
+			nav {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+			}
+
+			nav ul {
+				width: 100%;
+				max-width: 1024px;
+				float: none;
+				border-top: 2px solid white;
+				padding: 0 10px;
+			}
+
+			nav ul li {
+				position: relative;
+				float: left;
+				width: 16.66666666%;
+			}
+
+			nav ul img {
+				margin: 0;
+			}
+
+			nav div.preview {
+				display: none;
+			}
+
+			nav li:hover div.preview {
+				display: block;
+			}
+
+			nav div.preview, nav div.preview p {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			nav div.preview div.mask {
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				opacity: 0.7;
+			}
+
+			nav div.preview p {
+				color: white;
+			}
+
+			#linkBack {
+				z-index: 4;
+			}
+
+			div#myLast {
+				margin-bottom: 10px;
+			}
+
+			img.activate {
+				width: 100%;
+			}
+
+			img.spacer {
+				margin: 0;
+				padding: 0 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="wrap">
 
-			<h1>Activate!</h1>
+			<h1>PETLab presents: Activate!</h1>
 			<a id="linkBack" href="../../">&larr; home</a>
+
+			<nav>
+				<ul>
+					<li>
+						<a href="#dropcycle">
+							<img src="pics/dropcycle.png">
+							<div class="preview">
+								<div class="mask"></div>
+								<p>[Beginner]<br><br>Dropcycle</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#water">
+							<img src="pics/water_saver_sprint.png">
+							<div class="preview">
+								<div class="mask"></div>
+								<p>[Beginner]<br><br>Water Saver Sprint</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#solarball">
+							<img src="pics/solarball.png">
+							<div class="preview">
+								<div class="mask"></div>
+								<p>[Beginner]<br><br>Solarball</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#smog">
+							<img src="pics/smog_cloud_madness.png">
+							<div class="preview">
+								<div class="mask"></div>
+								<p>[Intermediate]<br><br>Smog Cloud Madness</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#green">
+							<img src="pics/operation_green_clean.png">
+							<div class="preview">
+								<div class="mask"></div>
+								<p>[Intermediate]<br><br>Operation Green Clean</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#lights">
+							<img src="pics/lights_off.png">
+							<div class="preview">
+								<div class="mask"></div>
+								<p>[Expert]<br><br>Lights Off</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
 
 			<div id="itemHolder">
 
-				<div class="blurb" style="text-align:left;">
+				<img src="pics/all.png">
+
+				<div class="blurb" id="aboutActivate">
 
 					<h2>About this Project</h2>
 
 					<p>In the summer and fall of 2013, I did some work for Parsons' own Prototyping, Education and Technology Lab (<a target="_blank" href="http://petlab.parsons.edu/">PETLab</a>) on an update to their "Activate!" project. Activate! is a Web site and curriculum about learning to make games, with a focus on social issues. From <a target="_blank" href="http://activategames.org/">the Web site</a>: "The games on Activate! celebrate getting active and solving problems on your street, in your town, and around the world."</p>
 
-					<p>When I came to the project, the curriculum consisted of a series of written <a target="_blank" href="http://activategames.org/challenges/game-design-challenges">game design challenges</a>, starting at a beginner level and increasing in sophistication, which students would take on using the no-programming-required application <a target="_blank" href="https://www.yoyogames.com/studio">GameMaker</a>. My task was to update the curriculum using a new application: the (also) no-programming-required <a target="_blank" href="http://gamesalad.com/">GameSalad</a>. This involved "porting" the games from GameMaker to GameSalad (i.e. recreating them in the new application), writing new tutorials, and also (brand new to the curriculum) recording video versions of the tutorials.</p>
+					<p>When I came to Activate!, the curriculum consisted of a series of written <a target="_blank" href="http://activategames.org/challenges/game-design-challenges">game design challenges</a>, starting at a beginner level and increasing in sophistication, which students would take on using the no-programming-required application <a target="_blank" href="https://www.yoyogames.com/studio">GameMaker</a>.</p>
 
-					<p>This page presents the results.</p>
+					<p>My task was to update the curriculum using a new application: the (also) no-programming-required <a target="_blank" href="http://gamesalad.com/">GameSalad</a>. This involved "porting" the games from GameMaker to GameSalad (i.e. recreating them in the new application), writing new tutorials, and also (brand new to the curriculum) recording video versions of the tutorials. This page presents the results.</p>
+
+					<p>Before diving into the lessons, consider <a href="docs/gamesalad_basics.pdf">reading up on the basics of GameSalad</a>.</p>
+
+					<p>(And <a href="docs/tutorial_leftovers.pdf">here are some leftovers</a> that I cut from the first tutorial.)</p>
 
 					<h3>Some Notes</h3>
 
-					<p>Due to time constraints, I was not able to finish the tutorial (written and video) for the final game, Lights Off. This is very annoying. However, I did finish recreating the game itself, so at least you can check that out, which is something considering how difficult that particular game was to port. (It turned out well, though!)</p>
-
 					<p>I was not involved in the creation of the original Activate! curriculum. I did not come up with the designs for these games, or build the original versions (or write the original tutorials); neither did I create the assets used in the games, such as the images. I have linked in each entry to the old curriculum's corresponding page, where you can find the original resources. I did write the new tutorials, and the video scripts, and I made the videos (so any hint of amateur videography is my fault and 100% accurate).</p>
 
-					<p>And, of course, I built the GameSalad versions of these games. I have reproduced the original GameMaker games as faithfully as I could, but GameSalad is a different program, and some differences were insurmountable and required design changes to the games. Mostly this had to do with the smaller screen size GameSalad imposed so the games would be playable in a Web browser. The larger levels of the GameMaker originals simply wouldn't work in the smaller layout, so I had to redesign the levels in Solarball, Smog Cloud Madness, and Operation Green Clean (this was actually a lot of fun, so there's that smog cloud's silver lining). Lights Off was a whole other kettle of fish; I discuss that in the game's entry on this page. The whole porting experience was the genesis of an essay I wrote later for my Game Studies class, <a href="../../writing/Griffis_Game_Studies_Research_Paper.pdf">a critical study of GameSalad</a>.</p>
+					<p>And, of course, I built the GameSalad versions of these games. I have reproduced the original GameMaker games as faithfully as I could, but GameSalad is a different program, and some differences were insurmountable and required design changes to the games. Mostly this had to do with the smaller screen size GameSalad imposed so the games would be playable in a Web browser. The larger levels of the GameMaker originals simply wouldn't work in the smaller layout, so I had to redesign the levels in Solarball, Smog Cloud Madness, Operation Green Clean, and Lights Off (in general this was a lot of fun, so there's that smog cloud's silver lining). Lights Off presented a special challenge and I wasn't able to finish creating the tutorial materials, which I discuss in the game's entry on this page. The whole porting experience was the genesis of an essay I wrote later for my Game Studies class, <a href="../../writing/Griffis_Game_Studies_Research_Paper.pdf">a critical study of GameSalad</a>.</p>
 
 					<h3>A Caveat</h3>
 
-					<p>This Activate! update hasn't been tested out or officially gone live (the unfinished nature of Lights Off surely doesn't help), and the work I did on it belongs to PETLab. Many thanks to them for granting me permission to present it here. This was a fun project and I worked hard on it.</p>
-
-					<h3>Some Technical Notes</h3>
-
-					<h4>Is this Game Broken?</h4>
-
-					<p>The games are embedded in this page, so you can play them! They may run a little funny over time (or simply end); click the gear icon underneath any game to make a menu appear, which includes an option to reload the game.</p>
-
-					<h4>What's With that Sound?</h4>
-
-					<p>You may notice a sporadic sound effect; that's <a href="#solarball">Solarball</a>. The games are all silent, except that one, because part of the lesson is how to use sound effects (as you can hear, the lesson was successful!). The embedded games play automatically, and unfortunately I don't know of a way to mute them. Sorry about that. I prefer to think of this as a feature: if you get drowsy while reading the lessons, Solarball will wake you up and make you pay attention.</p>
+					<p>This Activate! update hasn't been tested or gone live (the unfinished Lights Off entry doesn't help), and the work I did on it belongs to PETLab. Many thanks to Colleen and John for granting me permission to present it here.</p>
 
 				</div>
 
-				<div class="blurb">
-
-					<h2>Table of Contents</h2>
-
-					<p>Before diving into the first lesson, <a href="docs/gamesalad_basics.pdf">read up on the basics</a>. [Optional: here are some <a href="docs/tutorial_leftovers.pdf">leftovers</a> that I cut from the tutorials.]</p>
-
-					<ul>
-						<li>
-							Beginner
-							<ul>
-								<li><a href="#dropcycle">Dropcycle</a></li>
-								<li><a href="#water">Water Saver Sprint</a></li>
-								<li><a href="#solarball">Solarball</a></li>
-							</ul>
-						</li>
-						<li>
-							Intermediate
-							<ul>
-								<li><a href="#smog">Smog Cloud Madness</a></li>
-								<li><a href="#green">Operation Green Clean</a></li>
-							</ul>
-						</li>
-						<li>
-							Expert
-							<ul>
-								<li><a href="#lights">Lights Off</a></li>
-							</ul>
-						</li>
-					</ul>
-
-				</div>
-
-				<h2 id="dropcycle">Dropcycle</h2>
 				<!-- Game -->
-				<iframe src='http://e.gsrca.de/112915?s=560&mode=embed' width='480' height='353' allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe>
+				<!-- <iframe src='http://e.gsrca.de/112915?s=560&mode=embed' width='480' height='353' allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe> -->
 				<!-- Video -->
-				<iframe width="480" height="353" src="//www.youtube.com/embed/0kw5Zi_WS6A?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe>
+				<!-- <iframe width="480" height="353" src="//www.youtube.com/embed/0kw5Zi_WS6A?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe> -->
+				<img id="dropcycle" class="activate" src="pics/dropcycle.png">
 				<div class="blurb">
-
-					<!-- Source: video -->
-					<a href="vids/dropcycle.mov">Orig vid.</a> (944 × 736 | 246.3 MB)
-					<!-- Source: game -->
-					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/112915">Play on GameSalad Arcade</a> -->
-					<a target="_blank" href="http://gsrca.de/112915">Play on GameSalad Arcade</a>
-					<!-- Source: overall -->
-					<a target="_blank" href="http://activategames.org/challenges/dropcycle">Ported from</a>
-					<!-- Title -->
-					
-					<!-- PDF -->
-					<a href="docs/dropcycle.pdf">PDF</a>
-					<a href="assets/dropcycle.zip">Resource Files</a>
-					<img src="pics/dropcycle.png">
+					<h2>Dropcycle</h2>
 					<p>[Original description] "In this mini-game, recyclable garbage falls from the top of the screen. Your goal is to click recyclables before they reach the bottom of the screen and disappear forever. If you are fast enough, you can make the recyclable goods reappear at the top of the screen."</p>
 					<p>[Controls] Click the falling things!</p>
+					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/112915">Play on GameSalad Arcade</a> -->
+					<p><a target="_blank" href="http://gsrca.de/112915">Play the game on GameSalad Arcade</a>, then learn to make it yourself by downloading the <a href="assets/dropcycle.zip">resource files</a> and working through the <a href="docs/dropcycle.pdf">written tutorial</a> and/or <a target="_blank" href="https://www.youtube.com/watch?v=0kw5Zi_WS6A&list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo">video tutorial</a> (for full-quality video <a href="vids/dropcycle.mov">click here</a> [944 × 736 | 246.3 MB]).</p>
+					<p>Converted and updated from <a target="_blank" href="http://activategames.org/challenges/dropcycle">the original curriculum entry</a>.</p>
 				</div>
 
 				<!-- Game -->
-				<iframe src='http://e.gsrca.de/115563?s=560&mode=embed' width='480' height='353' allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe>
+				<!-- <iframe src='http://e.gsrca.de/115563?s=560&mode=embed' width='480' height='353' allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe> -->
 				<!-- Video -->
-				<iframe width="480" height="353" src="//www.youtube.com/embed/9D9P0U_smZc?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe>
+				<!-- <iframe width="480" height="353" src="//www.youtube.com/embed/9D9P0U_smZc?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe> -->
+				<img id="water" class="activate" src="pics/water_saver_sprint.png">
 				<div class="blurb">
-					<!-- Source: video -->
-					<a href="vids/water_saver_sprint.mov">Orig vid.</a> (944 × 736 | 140.6 MB)
-					<!-- Source: game -->
-					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/115563">Play on GameSalad Arcade</a> -->
-					<a target="_blank" href="http://gsrca.de/115563">Play on GameSalad Arcade</a>
-					<!-- Source: overall -->
-					<a target="_blank" href="http://activategames.org/challenges/water-saver-sprint">Ported from</a>
-					<!-- Title -->
-					<h2 id="water">Water Saver Sprint</h2>
-					<!-- PDF -->
-					<a href="docs/water_saver_sprint.pdf">PDF</a>
-					<a href="assets/water_saver_sprint.zip">Resource Files</a>
-					<img src="pics/water_saver_sprint.png">
+					<h2>Water Saver Sprint</h2>
 					<p>[Original description] "In this mini-game, a garden hose has been left on and it is threatening to flood your yard. It is up to you and a friend to see who can get to the hose first and turn it off. Who is faster, you or your friend?"</p>
 					<p>[Controls] Player 1: Tap the Right Arrow key to move the racer on the left. Player 2: Tap the 'A' key to move the racer on the right.</p>
+					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/115563">Play on GameSalad Arcade</a> -->
+					<p><a target="_blank" href="http://gsrca.de/115563">Play the game on GameSalad Arcade</a>, then learn to make it yourself by downloading the <a href="assets/water_saver_sprint.zip">resource files</a> and working through the <a href="docs/water_saver_sprint.pdf">written tutorial</a> and/or <a target="_blank" href="https://www.youtube.com/watch?v=9D9P0U_smZc&list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo">video tutorial</a> (for full-quality video <a href="vids/water_saver_sprint.mov">click here</a> [944 × 736 | 140.6 MB]).</p>
+					<p>Converted and updated from <a target="_blank" href="http://activategames.org/challenges/water-saver-sprint">the original curriculum entry</a>.</p>
 				</div>
 
 				<!-- Game -->
-				<iframe src='http://e.gsrca.de/116514?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe>
+				<!-- <iframe src='http://e.gsrca.de/116514?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe> -->
 				<!-- Video -->
-				<iframe width="480" height="353" src="//www.youtube.com/embed/zlV7GJQB0Uo?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe>
+				<!-- <iframe width="480" height="353" src="//www.youtube.com/embed/zlV7GJQB0Uo?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe> -->
+				<img id="solarball" class="activate" src="pics/solarball.png">
 				<div class="blurb">
-					<!-- Source: video -->
-					<a href="vids/solarball.mov">Orig vid.</a> (944 × 736 | 302.2 MB)
-					<!-- Source: game -->
-					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/116514">Play on GameSalad Arcade</a> -->
-					<a target="_blank" href="http://gsrca.de/116514">Play on GameSalad Arcade</a>
-					<!-- Source: overall -->
-					<a target="_blank" href="http://activategames.org/challenges/solarball">Ported from</a>
-					<!-- Title -->
-					<h2 id="solarball">Solarball</h2>
-					<!-- PDF -->
-					<a href="docs/solarball.pdf">PDF</a>
-					<a href="assets/solarball.zip">Resource Files</a>
-					<img src="pics/solarball.png">
+					<h2>Solarball</h2>
 					<p>[Original description] "In this game a solarball is bouncing around in the sky above and it is up to you to use your solar panel to keep it in play. Be careful though every time the solarball bounces off the solar panel it becomes faster and faster. If it gets past you the game is over. How long can you keep the solarball bouncing?"</p>
 					<p>[Controls] Use the Left and Right Arrow keys to move the solar panel.</p>
+					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/116514">Play on GameSalad Arcade</a> -->
+					<p><a target="_blank" href="http://gsrca.de/116514">Play the game on GameSalad Arcade</a>, then learn to make it yourself by downloading the <a href="assets/solarball.zip">resource files</a> and working through the <a href="docs/solarball.pdf">written tutorial</a> and/or <a target="_blank" href="https://www.youtube.com/watch?v=zlV7GJQB0Uo&list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo">video tutorial</a> (for full-quality video <a href="vids/solarball.mov">click here</a> [944 × 736 | 302.2 MB]).</p>
+					<p>Converted and updated from <a target="_blank" href="http://activategames.org/challenges/solarball">the original curriculum entry</a>.</p>
 				</div>
 
 				<!-- Game -->
-				<iframe src='http://e.gsrca.de/113284?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe>
+				<!-- <iframe src='http://e.gsrca.de/113284?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe> -->
 				<!-- Video -->
-				<iframe width="480" height="353" src="//www.youtube.com/embed/wrjEiQ-44ik?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe>
+				<!-- <iframe width="480" height="353" src="//www.youtube.com/embed/wrjEiQ-44ik?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe> -->
+				<img id="smog" class="activate" src="pics/smog_cloud_madness.png">
 				<div class="blurb">
-					<!-- Source: video -->
-					<a href="vids/smog_cloud_madness.mov">Orig vid.</a> (946 × 736 | 806.7 MB)
-					<!-- Source: game -->
-					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/113284">Play on GameSalad Arcade</a> -->
-					<a target="_blank" href="http://gsrca.de/113284">Play on GameSalad Arcade</a>
-					<!-- Source: overall -->
-					<a target="_blank" href="http://activategames.org/challenges/smog-cloud">Ported from</a>
-					<!-- Title -->
-					<h2 id="smog">Smog Cloud Madness</h2>
-					<!-- PDF -->
-					<a href="docs/smog_cloud_madness.pdf">PDF</a>
-					<a href="assets/smog_cloud_madness.zip">Resource Files</a>
-					<img src="pics/smog_cloud_madness.png">
+					<h2>Smog Cloud Madness</h2>
 					<p>[Original description] "In this game, raindrops are desperately trying to find their way out of the cloud and to the ground. They want to water plants, refill rivers and streams, and provide a cool refreshing shower to the earth below. Unfortunately, they are trapped in the cloud, and deadly smog clouds from factories below are threatening to destroy them. Can you help the raindrops escape the cloud unharmed?"</p>
 					<p>[Controls] Use the Arrow keys to move all the raindrops simultaneously.</p>
+					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/113284">Play on GameSalad Arcade</a> -->
+					<p><a target="_blank" href="http://gsrca.de/113284">Play the game on GameSalad Arcade</a>, then learn to make it yourself by downloading the <a href="assets/smog_cloud_madness.zip">resource files</a> and working through the <a href="docs/smog_cloud_madness.pdf">written tutorial</a> and/or <a target="_blank" href="https://www.youtube.com/watch?v=wrjEiQ-44ik&list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo">video tutorial</a> (for full-quality video <a href="vids/smog_cloud_madness.mov">click here</a> [946 × 736 | 806.7 MB]).</p>
+					<p>Converted and updated from <a target="_blank" href="http://activategames.org/challenges/smog-cloud">the original curriculum entry</a>.</p>
 				</div>
 
 				<!-- Game -->
-				<iframe src='http://e.gsrca.de/113976?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe>
+				<!-- <iframe src='http://e.gsrca.de/113976?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe> -->
 				<!-- Video -->
-				<iframe width="480" height="353" src="//www.youtube.com/embed/JeG75FoGZZM?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe>
+				<!-- <iframe width="480" height="353" src="//www.youtube.com/embed/JeG75FoGZZM?list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo" frameborder="0" allowfullscreen></iframe> -->
+				<img id="green" class="activate" src="pics/operation_green_clean.png">
 				<div class="blurb">
-					<!-- Source: video -->
-					<a href="vids/operation_green_clean.mov">Orig vid.</a> (944 × 736 | 865.8 MB)
-					<!-- Source: game -->
-					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/113976">Play on GameSalad Arcade</a> -->
-					<a target="_blank" href="http://gsrca.de/113976">Play on GameSalad Arcade</a>
-					<!-- Source: overall -->
-					<a target="_blank" href="http://activategames.org/challenges/green-clean">Ported from</a>
-					<!-- Title -->
-					<h2 id="green">Operation Green Clean</h2>
-					<!-- PDF -->
-					<a href="docs/operation_green_clean.pdf">PDF</a>
-					<a href="assets/operation_green_clean.zip">Resource Files</a>
-					<img src="pics/operation_green_clean.png">
+					<h2>Operation Green Clean</h2>
 					<p>[Original description] "In this game a local neighborhood park is littered with garbage. The garbage is starting to stink and it is attracting vermin, like rats, roaches and flies making the park unusable. Clean up the park by picking up the garbage. Be careful though, the vermin are everywhere and you want to avoid them at all costs."</p>
 					<p>[Controls] Click where you want your character to go.</p>
+					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/113976">Play on GameSalad Arcade</a> -->
+					<p><a target="_blank" href="http://gsrca.de/113976">Play the game on GameSalad Arcade</a>, then learn to make it yourself by downloading the <a href="assets/operation_green_clean.zip">resource files</a> and working through the <a href="docs/operation_green_clean.pdf">written tutorial</a> and/or <a target="_blank" href="https://www.youtube.com/watch?v=JeG75FoGZZM&list=PL76NnXYvCmcQn2S7Ui9V2qRwh8Mt7mVzo">video tutorial</a> (for full-quality video <a href="vids/operation_green_clean.mov">click here</a> [944 × 736 | 865.8 MB]).</p>
+					<p>Converted and updated from <a target="_blank" href="http://activategames.org/challenges/green-clean">the original curriculum entry</a>.</p>
 				</div>
 
 				<!-- Game -->
-				<iframe src='http://e.gsrca.de/117191?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe>
+				<!-- <iframe src='http://e.gsrca.de/117191?s=560&mode=embed' width="480" height="353" allowtransparency='true' scrolling='no' style='border:none;' mozallowfullscreen  webkitallowfullscreen allowfullscreen /></iframe> -->
 				<!-- Video -->
 				<!-- n/a -->
-				<div class="blurb">
-					<!-- Source: video -->
-					<!-- <a href="">Orig vid.</a> (? × ? | ? MB) -->
-					<!-- Source: game -->
-					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/117191">Play on GameSalad Arcade</a> -->
-					<a target="_blank" href="http://gsrca.de/117191">Play on GameSalad Arcade</a>
-					<!-- Source: overall -->
-					<a target="_blank" href="http://activategames.org/lights">Ported from</a>
-					<!-- Title -->
-					<h2 id="lights">Lights Off</h2>
-					<!-- PDF -->
-					<a href="docs/lights_off.pdf">PDF</a>
-					<a href="assets/lights_off.zip">Resource Files</a>
-					<img src="pics/lights_off.png">
+				<img id="lights" class="activate" src="pics/lights_off.png">
+				<div id="myLast" class="blurb">
+					<h2>Lights Off</h2>
 					<p>[Original description] "In this game, your neighbors have become used to leaving their lights on all day long, so it is up to you to help them change their behavior and learn how to use energy more efficiently. In order to do this, you must spread the word through meeting houses your neighbors visit. But be careful! As you walk around the neighborhood you must avoid the neighbors who are still using too much energy. Their bad habits have transformed them into monsters who cannot control their desire to keep using energy. Can you save your neighbors by convincing them to act more responsibly and turn off all the light"</p>
 					<p>[Controls] Use the Arrow keys to move your character. Touch the gray meeting houses to spread the word about turning lights off. Your neighbors are monstrous and must be avoided, but if they bump into a house with lights off, they'll come to their senses and help spread the word!</p>
+					<!-- <a target="_blank" href="http://arcade.gamesalad.com/game/117191">Play on GameSalad Arcade</a> -->
+					<p><a target="_blank" href="http://gsrca.de/117191">Play the game on GameSalad Arcade</a>, then learn to make it yourself by downloading the <a href="assets/lights_off.zip">resource files</a> and working through the <a href="docs/lights_off.pdf">written tutorial</a> and/or video tutorial...</p>
+					<p>Oh, wait, you can't because there's no video tutorial and the written one is only partially complete. Yeah, I didn't finish this entry. Lights Off turned out to be as monstrous as its hero's power-crazed neighbors, at least to recreate in GameSalad. This isn't entirely surprising--it is the most complex game of the curriculum--but the primary challenge had less to do with the game itself than with a big difference between GameMaker and GameSalad.</p>
+					<p>Put simply, in GameMaker you could align things in your game to a grid, making it easy to control placement and movement very precisely. GameSalad doesn't have that (or it didn't when I did this project; maybe it does now). Unfortunately, Lights Off was designed to rely on this feature; there is zero unnecessary space in the original version's level layouts. For example, the character sprites are 32px wide, and the paths down which they move are also 32px wide. Movement is restricted so the characters never get out of alignment with the paths. But in GameSalad, without that feature (and with a rather loose collision-detection system), reliably moving a 32px-wide character down a 32px-wide path is virtually impossible, because it's too easy to get even 1px out of alignment and get stuck. Consequently, I had to make all the paths significantly wider, and that necessitated completely redesigning the levels. The lack of a grid system also made it extremely tedious to lay out level elements with any degree of symmetry (making sure a path is perfectly straight, for example).</p>
+					<p>Ultimately I was able to finish the GameSalad version, which you can play in all its hard-earned glory using the link above. But I ran out of time to finish making the written and video tutorials. This really bothers me, but that's the situation. I've included here what I did produce for the written tutorial, which covers setting up the moving camera. The resource files folder includes the complete GameSalad project.</p>
+					<p>Converted and updated (but only partially documented) from <a target="_blank" href="http://activategames.org/lights">the original curriculum entry</a>.</p>
 				</div>
+
+				<img class="spacer" src="pics/all_row.png">
 
 			</div> <!-- End itemHolder -->
 
