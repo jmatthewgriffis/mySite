@@ -419,10 +419,10 @@ section#writing div#writingPic{
 
 section#about {
 	/*margin: 0 10px;*/
-	width: 97%;
-	margin: auto;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	/*width: 97%;*/
+	/*margin: auto;*/
+	/*border-bottom-left-radius: 5px;*/
+	/*border-bottom-right-radius: 5px;*/
 }
 
 section#about article#whatPage {
@@ -801,15 +801,23 @@ span.highlight {
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
+	display: flex;
+	display: -webkit-box;
+	/* display: -moz-box; */
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	-webkit-flex-flow: wrap row;
+	flex-flow: wrap row;
 }
 
 .og-grid li {
-	display: inline-block;
-	margin: 0 5px 10px;
-	vertical-align: top;
+	/*display: inline-block;*/
+	/*margin: 0 5px 10px;*/
+	/*vertical-align: top;*/
 	/*height: 245px;*/
 	/*width: 326px;*/
-	width: 450px;
+	/*width: 450px;*/
+	width: 25%;
 }
 
 .og-grid li > a {
@@ -1135,7 +1143,8 @@ span.highlight {
  
 #about { 
 	position: relative;
-	top: 0px;
+	top: 0;
+	left: 0;
 	background-color: white;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);

@@ -30,7 +30,7 @@ function resetvalues() {
 
 	$('#wrapper').css('height', totalHeight);
 	$('#games').css('max-height', winHeight);
-	$('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
+	// $('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
 	if (diff > 0) {
 		$('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
 	} else {
