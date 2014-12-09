@@ -244,7 +244,8 @@ var Grid = (function() {
 		// extra amount of pixels to scroll the window
 		scrollExtra = 0,
 		// extra margin when expanded (between preview overlay and the next items)
-		marginExpanded = 10,
+		//marginExpanded = 10,
+		marginExpanded = 0,
 		$window = $( window ), winsize,
 		$body = $( 'html, body' ),
 		// transitionend events
@@ -612,6 +613,8 @@ var Grid = (function() {
 			$('.og-details p').css('padding-top', myPaddingT);
 			var myPaddingB = $('.og-details div.myButtonsDiv').outerHeight();
 			$('.og-details p').css('padding-bottom', myPaddingB);
+			$('.og-expander').scrollTop(0);
+			$('.og-details p').scrollTop(0);
 		},
 		open : function() {
 
