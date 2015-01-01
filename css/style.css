@@ -794,6 +794,10 @@ span.highlight {
 	font-size: 2em;
 }
 
+.hideCategory, .hideMadeWith {
+	display: none;
+}
+
 
 /*Thumbnail grid stuff*/
 
@@ -1144,6 +1148,7 @@ span.highlight {
 #games {
 	position: fixed;
 	overflow: auto;
+	width: 100%;
 }
  
 #about { 

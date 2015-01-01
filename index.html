@@ -6,7 +6,7 @@
 		<link href="css/style.css" rel="stylesheet" />
 
 		<!--Add Google Web Font-->
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+		<!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css"> -->
 
 		<!--[if lt IE 7]>
 		<style media="screen" type="text/css">
@@ -42,6 +42,24 @@
 						Games I've made<br>on my own and with others</h2>
 				</article>
 
+				<div id="filters">
+					<ul id="categories">
+						<li id="cat_all">All</li>
+						<li id="cat_games">Games</li>
+						<li id="cat_web">Web</li>
+						<li id="cat_vr">Virtual Reality</li>
+						<li id="cat_education">Education</li>
+						<li id="cat_installations">Installations</li>
+						<li id="cat_hardware">Hardware</li>
+					</ul>
+					<ul id="madeWith">
+						<li id="tool_all">All</li>
+						<li id="tool_Unity">Unity3D</li>
+						<li id="tool_openFrameworks">openFrameworks</li>
+						<li id="tool_JavaScript">JavaScript</li>
+					</ul>
+				</div>
+
 				<!--the work-->
 
 				<!-- Start thumbnail grid (credit: http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/) -->
@@ -65,7 +83,7 @@
 				            <img src="images/projects/thumbs/tresensa.png" alt="TreSensa logo" />
 				        </a>
 				    </li>
-					<li>
+					<li data-category="games web" data-madeWith="HTML/CSS JavaScript jQuery">
 				        <a
 				        data-title="jQuery demo: Browser Pong"
 				        data-largesrc="images/projects/browser_pong/browser_pong2.png"
@@ -88,7 +106,7 @@
 				            <img src="images/projects/thumbs/browser_pong.png" alt="jQuery demo: Browser Pong" />
 				        </a>
 				    </li>
-				    <li>
+				    <li data-category="games" data-madeWith="openFrameworks">
 				        <a
 				        data-title="Rifftide"
 				        data-largesrc="images/projects/rifftide/rifftide3.jpg"

@@ -232,6 +232,56 @@ $.fn.imagesLoaded = function( callback ) {
 
 var Grid = (function() {
 
+	//--------Matt's custom filtering system, tum-te-dum!--------
+	$('#filters li').click(function() {
+		// Close any open preview.
+		var preview = $.data( window, 'preview' );
+		if( typeof preview != 'undefined' ) {
+			hidePreview();
+		}
+
+		var chose;
+		var itemList = $('#og-grid li');
+		
+		if ($(this).parent().attr('id') === 'categories') {
+			//console.log("it's a category, captain!");
+			chose = this.id.replace("cat_", "");
+
+			if (chose === "all") {
+				itemList.removeClass('hideCategory');
+			} else {
+				$.each(itemList, function(index, obj) {
+					var myItem = $(obj);
+					if (!myItem.hasClass('hideCategory')) {
+						myItem.addClass('hideCategory');
+						//console.log("class removed from " + obj + " " + index);
+					}
+				});
+				itemList = $("li[data-category *= " + chose + "]");
+				itemList.removeClass('hideCategory');
+			}
+		} else if ($(this).parent().attr('id') === 'madeWith') {
+			//console.log("it's a tool, captain!");
+			chose = this.id.replace("tool_", "");
+			
+			if (chose === "all") {
+				itemList.removeClass('hideMadeWith');
+			} else {
+				$.each(itemList, function(index, obj) {
+					var myItem = $(obj);
+					if (!myItem.hasClass('hideMadeWith')) {
+						myItem.addClass('hideMadeWith');
+						//console.log("class removed from " + obj + " " + index);
+					}
+				});
+				itemList = $("li[data-madeWith *= " + chose + "]");
+				itemList.removeClass('hideMadeWith');
+			}
+		}
+		saveItemInfo();
+	})
+	//--------End of Matt's custom filtering system!--------
+
 		// list of items
 	var $grid = $( '#og-grid' ),
 		// the items
