@@ -245,6 +245,9 @@ var Grid = (function() {
 		
 		if ($(this).parent().attr('id') === 'categories') {
 			//console.log("it's a category, captain!");
+			$('#categories li').removeClass('selectedCategory');
+			$(this).addClass('selectedCategory');
+
 			chose = this.id.replace("cat_", "");
 
 			if (chose === "all") {
@@ -262,6 +265,9 @@ var Grid = (function() {
 			}
 		} else if ($(this).parent().attr('id') === 'madeWith') {
 			//console.log("it's a tool, captain!");
+			$('#madeWith li').removeClass('madeWithThis');
+			$(this).addClass('madeWithThis');
+
 			chose = this.id.replace("tool_", "");
 			
 			if (chose === "all") {

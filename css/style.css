@@ -74,7 +74,8 @@ body{
 }
 
 body{
-	background: url("../images/background/background.png");
+	/*background: url("../images/background/background.png");*/
+	background-color: #2e2e2e;
 	font-family: gothamBold, Arial, Helvetica, sans-serif;
 	font-style: normal;
 }
@@ -792,6 +793,66 @@ p.jumbo {
 span.highlight {
 	color: blue;
 	font-size: 2em;
+}
+
+#filters {
+	width: 100%;
+	padding: 5px;
+	/*background-color: #2e2e2e;*/
+	color: white;
+	font-family: gothamLight;
+}
+
+#filters ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#filters ul li {
+	display: inline-block;
+	margin: 5px 2px;
+	padding: 5px 10px;
+}
+
+#filters ul li:hover {
+	cursor: default;
+}
+
+#filters ul li:first-child {
+	margin-right: 20px;
+}
+
+#categories li {
+	font-size: 1.75em;
+	background-color: #00a8df;
+	border: 3px solid #00a8df;
+}
+
+#categories li:hover {
+	background-color: transparent;
+}
+
+#categories li.selectedCategory {
+	background-color: #eb1313;
+	border: 3px solid #eb1313;
+}
+
+#categories li.selectedCategory:hover {}
+
+#madeWith li {
+	border: 3px solid #00a8df;
+}
+
+#madeWith li:hover {
+	background-color: #00a8df;
+}
+
+#madeWith li.madeWithThis {
+	border: 3px solid #eb1313;
+}
+
+#madeWith li.madeWithThis:hover {
+	background-color: transparent;
 }
 
 .hideCategory, .hideMadeWith {
