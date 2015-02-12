@@ -797,13 +797,32 @@ span.highlight {
 	font-size: 2em;
 }
 
+#cueFilters {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	padding: 5px 20px;
+	padding-top: 9px;
+	background-color: #2e2e2e;
+	z-index: 100;
+	cursor: pointer;
+	text-transform: uppercase;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
 #filters {
+	position: fixed;
+	top: -10000px;
+	left: 0;
 	width: 100%;
 	padding: 5px;
-	/*background-color: #2e2e2e;*/
+	background-color: #2e2e2e;
 	color: white;
 	font-family: gothamLight;
-	display: none;
+	z-index: 100;
+	-webkit-transition: top 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: top 0.5s;
 }
 
 #filters ul {

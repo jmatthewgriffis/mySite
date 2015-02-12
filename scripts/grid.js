@@ -248,7 +248,25 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
 	//--------Matt's custom filtering system, tum-te-dum!--------
+	$('#cueFilters').css('bottom', -$('#cueFilters').outerHeight() + 3 + 'px');
+	var filtersH = $('#filters').outerHeight();
+	$('#filters').css('top', -filtersH + 'px');
+	$('#cueFilters').click(function() {
+		if (!$('#cueFilters').hasClass('show')) {
+			$('#filters').css('top', '0px');
+			$('#cueFilters').addClass('show');
+			$('#cueFilters').text('Hide filters');
+		} else {
+			$('#filters').css('top', -filtersH + 'px');
+			$('#cueFilters').removeClass('show');
+			$('#cueFilters').text('Show filters');
+		}
+	});
+
 	$('#filters li').click(function() {
+
+		$body.animate( { scrollTop : scrollDefault }, settings.speed );
+
 		// Close any open preview.
 		var preview = $.data( window, 'preview' );
 		if( typeof preview != 'undefined' ) {
@@ -300,6 +318,7 @@ var Grid = (function() {
 			}
 		}
 		saveItemInfo();
+		controlScroll();
 	})
 	//--------End of Matt's custom filtering system!--------
 
