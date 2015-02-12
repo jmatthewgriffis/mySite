@@ -626,8 +626,9 @@ ul#myLinks {
 }
 
 #contact a img:hover{
-	position: relative;
-	top: -5px;
+	/*position: relative;*/
+	/*top: -5px;*/
+	opacity: 0.7;
 }
 
 #imageholder footer {
@@ -646,8 +647,8 @@ p#copyright {
 }
 
 p#copyright:hover {
-	opacity: 1.0;
-	cursor: default;
+	/*opacity: 1.0;*/
+	/*cursor: default;*/
 }
 
 #about #summary {
@@ -725,7 +726,7 @@ p#workisabout {
 #buttons ul {
 	text-align: left;
 	position: absolute;
-	top: 10px;
+	top: -10px;
 	right: 105%; /* Same as width of buttons div? */
 	width: 300%;
 	min-height: 100%;
@@ -762,7 +763,8 @@ p#workisabout {
 
 h1#whoiam img {
 	position: absolute;
-	top: 0;
+	/*top: 0;*/
+	bottom: 0;
 	left: 600px;
 	width: 30px;
 	z-index: -1;
@@ -801,6 +803,7 @@ span.highlight {
 	/*background-color: #2e2e2e;*/
 	color: white;
 	font-family: gothamLight;
+	display: none;
 }
 
 #filters ul {
@@ -1239,19 +1242,26 @@ span.highlight {
 
 /*Parallax-esque (sorta) stuff*/
 #games {
-	position: fixed;
+	/*position: fixed;*/
 	overflow: auto;
 	width: 100%;
 }
  
-#about { 
+#about,
+#about #whoiam.fixed { 
 	position: relative;
-	top: 0;
 	left: 0;
 	background-color: white;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	z-index: 5;  
+}
+#about {
+	top: 0;
+}
+#about #whoiam.fixed {
+	position: fixed;
+	bottom: 0;
 }
 
 /* Check for less than an iPad in landscape, or a computer browser smaller than an iPad in landscape. */

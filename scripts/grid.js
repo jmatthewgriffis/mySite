@@ -1,14 +1,16 @@
 // Find me. [Some custom stuff I added--search for others.]
 var panelHeight,
 	whoiam,
+	keepOnscreen,
 	scrollDefault,
 	winHeight,
 	totalHeight,
 	extraMargin,
 	diff;
 function resetvalues() {
-	panelHeight = $('#about').height();
-	whoiam = $('#whoiam').outerHeight();
+	panelHeight = /*$('#about').height()*/0;
+	whoiam = /*$('#whoiam').outerHeight()*/0;
+	keepOnscreen = $('#whoiam').outerHeight();
 	scrollDefault = panelHeight - whoiam;
 	winHeight = $(window).height();
 	totalHeight = winHeight + (panelHeight - whoiam);
@@ -28,14 +30,15 @@ function resetvalues() {
 	}
 	calcGridWidth();
 
-	$('#wrapper').css('height', totalHeight);
-	$('#games').css('max-height', winHeight);
+	//$('#wrapper').css('height', totalHeight);
+	// $('#games').css('max-height', winHeight);
 	// $('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
 	if (diff > 0) {
-		$('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
+		// $('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
 	} else {
-		$('#games').css('padding-top', whoiam + extraMargin);
+		// $('#games').css('padding-top', whoiam + extraMargin);
 	}
+	controlScroll();
 }
 
 // Run when page loads.
@@ -44,7 +47,7 @@ resetvalues();
 $(window).load( function() {
 	resetvalues();
 	// $(window).scrollTop(scrollDefault);
-	$('body').animate( { scrollTop : scrollDefault }, 350 );
+	// $('body').animate( { scrollTop : scrollDefault }, 350 );
 });
 
 $(window).on('beforeunload', function() {
@@ -59,6 +62,18 @@ function controlScroll() {
 	} else {
 		$('#games').css("overflow", 'auto');
 		$('.og-details p').css('overflow', 'auto');
+	}
+
+	if ($('body').scrollTop() < $('#wrapper').height() - $('#mydetails').height() - winHeight) { // Find me yo
+		if (!$('#whoiam').hasClass('fixed')) {
+			$('#whoiam').addClass('fixed');
+			$('#about').css('padding-top', keepOnscreen);
+		}
+	} else {
+		if ($('#whoiam').hasClass('fixed')) {
+			$('#whoiam').removeClass('fixed');
+			$('#about').css('padding-top', 0);
+		}
 	}
 }
 $(window).scroll(controlScroll);
@@ -385,7 +400,7 @@ var Grid = (function() {
 		$window.on( 'debouncedresize', function() {
 			// Run when page resizes.
 			resetvalues();
-			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 			// $('#games').animate( { scrollTop : 0 }, settings.speed); // Find me.
 
 			scrollExtra = 0;
@@ -512,7 +527,7 @@ var Grid = (function() {
 			}
 		},
 		update : function( $item ) {
-			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			//$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			if( $item ) {
 				this.$item = $item;
@@ -761,11 +776,13 @@ var Grid = (function() {
 				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
 				previewOffsetT = this.$previewEl.position().top + $('#games').scrollTop() - scrollExtra, // Find me.
 				// scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= (winHeight - whoiam) ? position : this.height < (winHeight - whoiam) ? previewOffsetT - whoiam - (winHeight - whoiam - this.height) : previewOffsetT; // Find me
+				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= (winHeight - /*whoiam*/keepOnscreen) ? position : this.height < (winHeight - /*whoiam*/keepOnscreen) ? previewOffsetT - whoiam - (winHeight - /*whoiam*/keepOnscreen - this.height) : previewOffsetT; // Find me
 				// scrollVal = previewOffsetT - whoiam - (winsize.height - whoiam - this.height);
 //yoyo
 			// $body.animate( { scrollTop : scrollVal }, settings.speed );
-			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
+			
+			$('body').animate( { scrollTop : scrollVal }, settings.speed ); // Find me. // Find me yo
+			
 		},
 		setTransition  : function() {
 			this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
