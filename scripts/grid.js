@@ -250,7 +250,7 @@ var Grid = (function() {
 	//--------Matt's custom filtering system, tum-te-dum!--------
 	$('#cueFilters').css('bottom', -$('#cueFilters').outerHeight() + 3 + 'px');
 	var filtersH = $('#filters').outerHeight();
-	$('#filters').css('top', -filtersH + 'px');
+	$('#filters').css({'top': -filtersH + 'px', 'max-height': winHeight});
 	$('#cueFilters').click(function() {
 		if (!$('#cueFilters').hasClass('show')) {
 			$('#filters').css('top', '0px');
