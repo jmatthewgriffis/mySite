@@ -972,6 +972,7 @@ span.highlight {
 	background-color: black;
 	position: absolute;
 	padding: 5px 10px;
+	opacity: 0; /* Find me */
 }
 .desc,
 .tool {
