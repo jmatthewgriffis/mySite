@@ -803,6 +803,7 @@ span.highlight {
 	/*left: 0;*/
 	width: 100%;
 	padding: 20px;
+	padding-top: 6em;
 	background-color: #2e2e2e;
 	color: white;
 	font-family: gothamLight;
@@ -931,15 +932,19 @@ span.highlight {
 }
 
 #writing {
-	position: relative;
+	position: absolute;
+	width: 97%;
+	margin-left: 1.5%;
 	background-color: white;
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
-	z-index: 1;
+	z-index: 100;
 	opacity: 0.5;
 	height: 4.25em;
 	overflow: hidden;
 	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
     transition: 0.5s;
+    /*border-bottom-left-radius: 2px;*/
+    /*border-bottom-right-radius: 2px;*/
 }
 #writing:hover {
 	opacity: 1;
@@ -1094,21 +1099,22 @@ span.highlight {
 .tool {
 	display: block;
 	z-index: 1;
-	-webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
-    transition: opacity 1s;
-    -webkit-transition-delay: 0.25s; /* Safari */
-    transition-delay: 0.25s;
+	opacity: 0;
+	-webkit-transition: 0s; /* For Safari 3.1 to 6.0 */
+    transition: 0s;
+    -webkit-transition-delay: 0s; /* Safari */
+    transition-delay: 0s;
 }
 .name,
-.year {
+.year,
+.desc {
 	background-color: black;
 	position: absolute;
 	padding: 5px 10px;
-	opacity: 0; /* Find me */
 }
 .desc,
 .tool {
-	opacity: 0;
+	/*opacity: 0;*/
 }
 .name {
 	font-size: 1.25em;
@@ -1135,11 +1141,12 @@ span.highlight {
 }
 .desc {
 	/*margin-bottom: 1em;*/
-	font-size: 2.5em;
-	height: 90%;
+	/*font-size: 2.5em;*/
+	/*height: 90%;*/
 }
 .tool {
 	/*margin-top: 10px;*/
+	display: none;
 }
 
 /* end hover h3 stuff*/
@@ -1147,15 +1154,17 @@ span.highlight {
 .og-grid li > a:hover h3 {
 	/*bottom: 5px;*/
 	/*opacity: 1;*/
-	background-color: rgba(0, 0, 0, 0.8);
+	/*background-color: rgba(0, 0, 0, 0.8);*/
 }
 
 .og-grid li > a:hover h3 .name,
 .og-grid li > a:hover h3 .year {
-	opacity: 0;
+	/*opacity: 0;*/
 }
+.og-grid li > a:hover h3 .name,
 .og-grid li > a:hover h3 .desc,
-.og-grid li > a:hover h3 .tool {
+.og-grid li > a:hover h3 .tool,
+.og-grid li > a:hover h3 .year {
 	opacity: 1;
 }
 
@@ -1181,6 +1190,7 @@ span.highlight {
 
 .og-grid li.og-expanded > a::after {
 	top: auto;
+	bottom: -1%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -1201,7 +1211,7 @@ span.highlight {
 	top: auto;
 	left: 0;
 	width: 100%;
-	/*margin-top: 10px;*/
+	margin: 0.2% 0;
 	text-align: left;
 	height: 0;
 	overflow: hidden;

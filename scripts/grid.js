@@ -10,7 +10,7 @@ var panelHeight,
 function resetvalues() {
 	panelHeight = /*$('#about').height()*/0;
 	whoiam = /*$('#whoiam').outerHeight()*/0;
-	keepOnscreen = $('#whoiam').outerHeight();
+	keepOnscreen = /*$('#whoiam').outerHeight()*/0;
 	scrollDefault = panelHeight - whoiam;
 	winHeight = $(window).height();
 	totalHeight = winHeight + (panelHeight - whoiam);
