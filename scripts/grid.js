@@ -17,6 +17,9 @@ function resetvalues() {
 	extraMargin = parseInt($('.og-grid li').css('margin-bottom'));
 	diff = (winHeight - whoiam) - ( $('#og-grid').height());
 	
+	$('#madeWith').css('width', 'auto');
+	$('#madeWith').css('width', $('#madeWith').outerWidth() + $('#madeWith ul').outerWidth() + 10);
+
 	var gridWidth = $('#og-grid').width();
 	var mysteryMargin = 5; // Inexplicable space between items.
 	var itemWidth = $('#og-grid li').outerWidth() + parseInt($('#og-grid li').css('margin-left')) + parseInt($('#og-grid li').css('margin-right'));
@@ -56,7 +59,7 @@ $(window).on('beforeunload', function() {
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
 function controlScroll() {
-	if ($(window).scrollTop() < scrollDefault) {
+	/*if ($(window).scrollTop() < scrollDefault) {
 		$('#games').css('overflow', 'hidden');
 		$('.og-details p').css('overflow', 'hidden');
 	} else {
@@ -74,7 +77,7 @@ function controlScroll() {
 			$('#whoiam').removeClass('fixed');
 			$('#about').css('padding-top', 0);
 		}
-	}
+	}*/
 }
 $(window).scroll(controlScroll);
 $('#games').scroll(controlScroll);
@@ -247,6 +250,17 @@ $.fn.imagesLoaded = function( callback ) {
 
 var Grid = (function() {
 
+	// Expand and contract the writing section.
+	$('#writing div.expand').click(function() {
+		if (!$('#writing').hasClass('expanded')) {
+			$('#writing').addClass('expanded');
+			$('#writing div.expand').text('less');
+		} else {
+			$('#writing').removeClass('expanded');
+			$('#writing div.expand').text('more');
+		}
+	});
+
 	//--------Matt's custom filtering system, tum-te-dum!--------
 	$('#cueFilters').css('bottom', -$('#cueFilters').outerHeight() + 3 + 'px');
 	var filtersH = $('#filters').outerHeight();
@@ -296,10 +310,12 @@ var Grid = (function() {
 				itemList = $("li[data-category *= " + chose + "]");
 				itemList.removeClass('hideCategory');
 			}
-		} else if ($(this).parent().attr('id') === 'madeWith') {
+		} else if ($(this).parent().parent().attr('id') === 'madeWith' && !$(this).hasClass('duplicate')) {
 			//console.log("it's a tool, captain!");
 			$('#madeWith li').removeClass('madeWithThis');
 			$(this).addClass('madeWithThis');
+			$('.duplicate').text($(this).text());
+			$(this).parent().addClass('collapsed');
 
 			chose = this.id.replace("tool_", "");
 			
@@ -315,6 +331,12 @@ var Grid = (function() {
 				});
 				itemList = $("li[data-madeWith *= " + chose + "]");
 				itemList.removeClass('hideMadeWith');
+			}
+		} else if ($(this).hasClass('duplicate')) {
+			if ($(this).parent().hasClass('collapsed')) {
+				$(this).parent().removeClass('collapsed');
+			} else {
+				$(this).parent().addClass('collapsed');
 			}
 		}
 		saveItemInfo();
