@@ -75,7 +75,7 @@ body{
 
 body{
 	/*background: url("../images/background/background.png");*/
-	background-color: #2e2e2e;
+	background-color: burlywood;
 	font-family: gothamBold, Arial, Helvetica, sans-serif;
 	font-style: normal;
 }
@@ -87,11 +87,11 @@ p {
 div#wrapper{
 	position: relative;
 	min-height: 100%;
-	/*border: 1px solid blue;*/ /*Make wrapper visible.*/
+	overflow-x: hidden;
 }
 
 section.content{
-	clear:both;
+	/*clear:both;*/
 	margin:auto;
 	padding: 0;
 	text-align: center;
@@ -770,22 +770,26 @@ h1#whoiam img {
 	z-index: -1;
 }
 
+#whoiam {
+	/*border-bottom: 1px solid;*/
+	margin: 20px 0 10px 0;
+	padding: 10px;
+}
+#whoiam span#myname {
+	display: inline-block;
+	/*float: left;*/
+	text-align: left;
+	font-family: gothamLight;
+	font-size: 1.75em;
+	letter-spacing: 11px;
+	padding-left: 10px;
+}
 #whoiam span#whatido {
 	display: inline-block;
 	font-family: gothamLight;
 	padding: 10px;
 	/*font-size: 0.97em;*/
 	font-size: 0.65em;
-}
-
-#whoiam span#myname {
-	display: inline-block;
-	float: left;
-	text-align: left;
-	font-family: gothamLight;
-	font-size: 1.75em;
-	letter-spacing: 11px;
-	padding-left: 10px;
 }
 
 p.jumbo {
@@ -802,9 +806,8 @@ span.highlight {
 	/*top: -10000px;*/
 	/*left: 0;*/
 	width: 100%;
-	padding: 20px;
-	padding-top: 6em;
-	background-color: #2e2e2e;
+	/*padding: 20px;*/
+	/*padding-top: 6em;*/
 	color: white;
 	font-family: gothamLight;
 	font-size: 0.9em;
@@ -832,6 +835,9 @@ span.highlight {
 #filters ul li:first-child {
 	margin-right: 20px;
 }
+#filters #categories #madeWith {
+	margin-left: 40px;
+}
 
 #filters #categories,
 #filters #madeWith {
@@ -845,10 +851,13 @@ span.highlight {
 }
 
 #categories li.selectedCategory,
-#filters div#madeWith li.madeWithThis,
+#filters #madeWith li.madeWithThis,
 #categories li:hover,
-#filters div#madeWith li:hover {
+#filters #madeWith li:hover {
 	background-color: #eb1313;
+}
+#categories #madeWith:hover {
+	background-color: transparent;
 }
 
 #categories li:hover {
@@ -864,11 +873,9 @@ span.highlight {
 
 #categories li.selectedCategory:hover {}
 
-#filters #categories {
-	margin-right: 30px;
-}
+#filters #categories {}
 
-#filters div#madeWith {
+#filters #madeWith {
 	text-align: left;
 	position: relative;
 	margin: 5px 0;
@@ -876,21 +883,21 @@ span.highlight {
 	font-size: 0.8em;
 }
 
-#filters div#madeWith ul {
+#filters #madeWith ul {
 	text-align: left;
 	border-bottom: 1px solid white;
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 10000;
+	z-index: 10;
 	background-color: rgba(46, 46, 46, 1.0);
 }
 
-#filters div#madeWith ul.collapsed {
+#filters #madeWith ul.collapsed {
 	visibility: hidden;
 }
 
-#filters div#madeWith ul li {
+#filters #madeWith ul li {
 	/*border: 3px solid #00a8df;*/
 	display: block;
 	margin: 0;
@@ -898,133 +905,137 @@ span.highlight {
 	border-right: 1px solid white;
 }
 
-#filters div#madeWith ul li:first-child {
+#filters #madeWith ul li:first-child {
 	/*margin: 0;*/
-	background-color: transparent;
+	background-color: inherit;
 	visibility: visible;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
 	cursor: pointer;
 }
 
-#filters div#madeWith ul.collapsed li:first-child {
-	/*border: 1px solid white;*/
-}
-
-#filters div#madeWith ul li:last-child {
-	/*border-bottom: 1px solid white;*/
-}
-
-#filters div#madeWith li:hover {
-	/*background-color: #00a8df;*/
-}
-
-#filters div#madeWith li.madeWithThis {
-	/*border: 3px solid #eb1313;*/
-}
-
-#filters div#madeWith li.madeWithThis:hover {
-	/*background-color: transparent;*/
-}
-
 .hideCategory, .hideMadeWith {
 	display: none;
 }
 
-#writing {
-	position: absolute;
-	width: 97%;
-	margin-left: 1.5%;
-	background-color: white;
-	box-shadow: 0 0 50px rgba(0,0,0,0.8);
-	z-index: 100;
-	opacity: 0.5;
-	height: 4.25em;
-	overflow: hidden;
-	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: 0.5s;
-    /*border-bottom-left-radius: 2px;*/
-    /*border-bottom-right-radius: 2px;*/
+#writing a:link,
+#writing a:visited,
+#writing a:hover,
+#writing a:active {
+	color: inherit;
+	background-color: gainsboro;
 }
-#writing:hover {
-	opacity: 1;
-}
+
 #writing.expanded {
-	height: 100em;/*Find me*/
+	left: 20%;
 }
 #writing div.expand {
 	position: absolute;
-	right: 0;
-}
-#writing div.expand.first {
-	top: 0;
+	top: 50px;
+	left: -1em;
+	width: 1.5em;
+	height: 9em;
+	padding: 4em 0.25em;
+	background-color: inherit;
+	color: white;
+	cursor: pointer;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 #writing div.expand.second {
-	bottom: 0;
-	display: none;
+	top: inherit;
+	bottom: 50px;
 }
-#writing.expanded div.expand.second {
-	display: block;
+#writing h2,
+#writing div {
+	color: white;
 }
-#writing div.fade {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 1.5em;
-	background: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax */
+#writing h2 {
+	margin: 0;
+	font-size: 0.75em;
 }
-#writing.expanded div.fade {
-	display: none;
+#writing h3 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
 }
 #writing ul {
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	text-align: left;
+	float: left;
 }
 #writing ul li {
-	margin: 10px;
-	/*padding: 10px;*/
-	border: 1px solid;
+	margin: 0;
+	margin-top: 30px;
+	padding: 10px;
+	background-color: #99fca5;
+	box-shadow: 1px 1px 2px 2px #aaa;
+}
+#writing h2 + a li {
+	margin-top: 20px;
+}
+#writing ul li img {
+	width: 100%;
+	margin: 10px 0;
 }
 #writing ul.featured {
+	width: 12.5%; /* Parent's visible width percent / parent's width percent
+	 = same computed width as parent's computed visible width. */
 	text-align: center;
 }
-#writing ul.featured div {
-	height: 100px;
-	border: 1px solid;
+#writing ul.remainder {
+	width: 87.5%; /* 100% - featured section's width. */
+	text-align: left;
+	padding-left: 20px;
 }
-#writing ul.featured h1,
-#writing ul.featured h2 {
+#writing ul.featured li p:last-child {
 	margin: 0;
+}
+#writing ul.remainder li p:last-child {
+	margin-bottom: 0;
+}
+#writing li#blog {
+	padding: 30px inherit;
+}
+#writing li#blog h3 {
 	padding: 0;
+	border: none;
 }
-#writing ul.featured h1 {}
-#writing ul.featured h2 {
-	font-size: 0.75em;
+#writing ul div {
+	color: #99fca5;
+	margin-top: 5px;
+	padding: 5px 10px;
+	border: 1px solid;
+	border-top: none;
 }
-#writing ul.featured img {
-	width: 25px;
-	float: right;
-}
-#writing ul.featured li {
+#writing ul div a {
+	margin: 5px 0;
 	display: inline-block;
-	width: 20%;
-	/*text-align: left;*/
-	vertical-align: top;
 }
-
+#writing ul.remainder h3,
+#writing ul.remainder h3 + p,
+#writing ul.remainder h3 + p + p {
+	display: inline;
+}
+#writing ul.remainder h3 + p {
+	margin: 0 5px;
+	padding: 0 10px;
+	border: 1px solid;
+	border-top: none;
+	border-bottom: none;
+}
+#writing ul.remainder h3 {
+	border: none;
+}
 
 /*Thumbnail grid stuff*/
 
 .og-grid {
 	list-style: none;
-	/*padding: 20px 0;*/
-	padding: 0.2%;
+	padding: 0 1%;
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
@@ -1044,8 +1055,9 @@ span.highlight {
 	/*height: 245px;*/
 	/*width: 326px;*/
 	/*width: 450px;*/
-	width: 24.5%;
-	margin: 0.2%;
+	width: 23%;
+	margin: 10px 1%;
+	box-shadow: 1px 1px 2px 2px #aaa;
 }
 
 .og-grid li > a {
@@ -1211,7 +1223,7 @@ span.highlight {
 	top: auto;
 	left: 0;
 	width: 100%;
-	margin: 0.2% 0;
+	margin: 0;
 	text-align: left;
 	height: 0;
 	overflow: hidden;
@@ -1414,35 +1426,57 @@ span.highlight {
 
 
 /*Parallax-esque (sorta) stuff*/
-section#games {
-	/*position: fixed;*/
-	position: relative;
-	overflow: visible;
-	width: 85%;
-	margin: 0;
-	margin-left: auto;
-}
- 
 #about,
-#about #whoiam.fixed { 
-	position: relative;
-	left: 0;
+#games,
+#writing {
+	float: left;
+}
+
+#games,
+#writing {
+	width: 80%;
+}
+
+#about {
+	width: 10%;
 	background-color: white;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
-	z-index: 5;  
-}
-#about {
-	/*top: 0;*/
-	width: 15%;
-	position: absolute;
-	top: 0;
-	left: 0;
+	z-index: 5;
 	overflow: hidden;
 }
+
+/* Games and Writing sections have the same width.
+Writing section's left position is offset so that
+what's visible onscreen initially is the same width
+as About section, all fitting on the same line. */
+
+#writing {
+	position: absolute;
+	left: 90%;
+	background-color: #c54648;
+	color: #c54648;
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	z-index: 100;
+	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: 0.5s;
+    font-family: GothamBook;
+}
+
+#games {
+	position: relative;
+	margin: 0;
+}
+
 #about #whoiam.fixed {
 	/*position: fixed;*/
 	/*bottom: 0;*/
+}
+
+#about,
+#games {
+	/*display: inline-block;*/
+	/*vertical-align: top;*/
 }
 
 /* Check for less than an iPad in landscape, or a computer browser smaller than an iPad in landscape. */
