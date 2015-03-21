@@ -20,6 +20,9 @@ function resetvalues() {
 	$('#madeWith').css('width', 'auto');
 	$('#madeWith').css('width', $('#madeWith').outerWidth() + $('#madeWith ul').outerWidth() + 10);
 
+	var myWidth = parseInt($('#wrapper').css('width')) * 0.56; // Pixels left that featured writing moves.
+	$('#writing ul.remainder').css('width', myWidth);
+
 	// var minWorkH = $('#writing').outerHeight();
 	// $('#games').css('minHeight', minWorkH);
 
@@ -267,71 +270,95 @@ var Grid = (function() {
 
 	//--------Matt's custom filtering system, tum-te-dum!--------
 	$('#filters li').click(function() {
+		
+		/* I need to show only the filtered selections and hide the rest.
+		This is accomplished instantaneously. However, if a preview window
+		is open at the time, it should close first; unfortunately the instant
+		filter cuts off the closing effect before it can finish, resulting
+		in ugly preview remnants left onscreen (which also cause problems
+		when trying to open the next preview). I need a way to make the filter
+		wait until the preview window has been closed. This is simple using
+		JavaScript's setTimeout function.
+		 */
 
-		$body.animate( { scrollTop : scrollDefault }, settings.speed );
+		var timer = 0; // Start by assuming there is nothing to close, so there should be no delay.
 
-		// Close any open preview.
-		var preview = $.data( window, 'preview' );
-		if( typeof preview != 'undefined' ) {
-			hidePreview();
+		// If we clicked any button other than the one to make the tools menu pop open...
+		if ($(this).attr('id') !== 'madeWith' && !$(this).hasClass('duplicate')) {
+			
+			// Check to see if there's a preview open.
+			var preview = $.data( window, 'preview' );
+			if( typeof preview != 'undefined' ) {
+				hidePreview(); // Start hiding the preview.
+				timer = settings.speed + 100; /* Set the timer to the speed of the closing animation,
+				plus a safety margin (ms) to make sure it finishes. */
+			}
 		}
 
-		var chose;
-		var itemList = $('#og-grid li');
-		
-		if ($(this).parent().attr('id') === 'categories' && $(this).attr('id') !== 'madeWith') {
-			//console.log("it's a category, captain!");
-			$('#categories li').removeClass('selectedCategory');
-			$(this).addClass('selectedCategory');
+		setTimeout(filter, timer); // The filter function only runs once the delay time has elapsed.
 
-			chose = this.id.replace("cat_", "");
+		var that = this;
+		function filter() {
 
-			if (chose === "all") {
-				itemList.removeClass('hideCategory');
-			} else {
-				$.each(itemList, function(index, obj) {
-					var myItem = $(obj);
-					if (!myItem.hasClass('hideCategory')) {
-						myItem.addClass('hideCategory');
-						//console.log("class removed from " + obj + " " + index);
-					}
-				});
-				itemList = $("li[data-category *= " + chose + "]");
-				itemList.removeClass('hideCategory');
-			}
-		} else if ($(this).parent().parent().attr('id') === 'madeWith') {
-			if (!$(this).hasClass('duplicate')) {
-				//console.log("it's a tool, captain!");
-				$('#madeWith li').removeClass('madeWithThis');
-				$(this).addClass('madeWithThis');
-				$('.duplicate').text($(this).text());
-				$(this).parent().addClass('collapsed');
+			$body.animate( { scrollTop : scrollDefault }, settings.speed );
+			
+			var chose;
+			var itemList = $('#og-grid li');
+			
+			if ($(that).parent().attr('id') === 'filters' && $(that).attr('id') !== 'madeWith') {
+				//console.log("it's a category, captain!");
+				$('#filters li').removeClass('selectedCategory');
+				$(that).addClass('selectedCategory');
 
-				chose = this.id.replace("tool_", "");
-				
+				chose = that.id.replace("cat_", "");
+
 				if (chose === "all") {
-					itemList.removeClass('hideMadeWith');
+					itemList.removeClass('hideCategory');
 				} else {
 					$.each(itemList, function(index, obj) {
 						var myItem = $(obj);
-						if (!myItem.hasClass('hideMadeWith')) {
-							myItem.addClass('hideMadeWith');
+						if (!myItem.hasClass('hideCategory')) {
+							myItem.addClass('hideCategory');
 							//console.log("class removed from " + obj + " " + index);
 						}
 					});
-					itemList = $("li[data-madeWith *= " + chose + "]");
-					itemList.removeClass('hideMadeWith');
+					itemList = $("li[data-category *= " + chose + "]");
+					itemList.removeClass('hideCategory');
 				}
-			} else {
-				if ($(this).parent().hasClass('collapsed')) {
-					$(this).parent().removeClass('collapsed');
+			} else if ($(that).parent().parent().attr('id') === 'madeWith') {
+				if (!$(that).hasClass('duplicate')) {
+					//console.log("it's a tool, captain!");
+					$('#madeWith li').removeClass('madeWithThis');
+					$(that).addClass('madeWithThis');
+					$('.duplicate').text($(that).text());
+					$(that).parent().addClass('collapsed');
+
+					chose = that.id.replace("tool_", "");
+					
+					if (chose === "all") {
+						itemList.removeClass('hideMadeWith');
+					} else {
+						$.each(itemList, function(index, obj) {
+							var myItem = $(obj);
+							if (!myItem.hasClass('hideMadeWith')) {
+								myItem.addClass('hideMadeWith');
+								//console.log("class removed from " + obj + " " + index);
+							}
+						});
+						itemList = $("li[data-madeWith *= " + chose + "]");
+						itemList.removeClass('hideMadeWith');
+					}
 				} else {
-					$(this).parent().addClass('collapsed');
+					if ($(that).parent().hasClass('collapsed')) {
+						$(that).parent().removeClass('collapsed');
+					} else {
+						$(that).parent().addClass('collapsed');
+					}
 				}
 			}
+			saveItemInfo();
+			controlScroll();
 		}
-		saveItemInfo();
-		controlScroll();
 	})
 	//--------End of Matt's custom filtering system!--------
 
@@ -412,8 +439,8 @@ var Grid = (function() {
 	function saveItemInfo( saveheight ) {
 		$items.each( function() {
 			var $item = $( this );
-			// $item.data( 'offsetTop', $item.offset().top );
-			$item.data( 'offsetTop', $item.position().top ); // Find me
+			$item.data( 'offsetTop', $item.offset().top );
+			// $item.data( 'offsetTop', $item.position().top ); // Find me
 			if( saveheight ) {
 				$item.data( 'height', $item.height() );
 			}
@@ -805,8 +832,8 @@ var Grid = (function() {
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
 			// var position = this.$item.data( 'offsetTop' ),
 			var position = this.$item.data( 'offsetTop' ) - whoiam, // Find me
-				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-				previewOffsetT = this.$previewEl.position().top + $('#games').scrollTop() - scrollExtra, // Find me.
+				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+				// previewOffsetT = this.$previewEl.position().top + $('#games').scrollTop() - scrollExtra, // Find me.
 				// scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= (winHeight - /*whoiam*/keepOnscreen) ? position : this.height < (winHeight - /*whoiam*/keepOnscreen) ? previewOffsetT - whoiam - (winHeight - /*whoiam*/keepOnscreen - this.height) : previewOffsetT; // Find me
 				// scrollVal = previewOffsetT - whoiam - (winsize.height - whoiam - this.height);

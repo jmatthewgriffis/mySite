@@ -86,6 +86,7 @@ p {
 
 div#wrapper{
 	position: relative;
+	width: 100%;
 	min-height: 100%;
 	overflow-x: hidden;
 }
@@ -534,9 +535,10 @@ section#about article#domain p {
 	visibility: visible;
 }
 
-#about #mydetails {
-	position: relative;
-	text-align: center;
+#mydetails,
+#contact {
+	padding: 10px;
+	text-align: left;
 }
 
 #about #mydetails div {
@@ -639,16 +641,10 @@ p#copyright {
 	font-size: 0.8em;
 	margin: 0;
 	margin-top: 10px;
-	border: solid 1px gray;
+	border-top: solid 1px gray;
 	padding: 5px;
-	display: inline-block;
 	opacity: 0.5;
 	font-family: gothamLight;
-}
-
-p#copyright:hover {
-	/*opacity: 1.0;*/
-	/*cursor: default;*/
 }
 
 #about #summary {
@@ -805,7 +801,7 @@ span.highlight {
 	/*position: fixed;*/
 	/*top: -10000px;*/
 	/*left: 0;*/
-	width: 100%;
+	/*width: 100%;*/
 	/*padding: 20px;*/
 	/*padding-top: 6em;*/
 	color: white;
@@ -814,73 +810,50 @@ span.highlight {
 	/*z-index: 100;*/
 	/*-webkit-transition: top 0.5s; /* For Safari 3.1 to 6.0 */*/
     /*transition: top 0.5s;*/
-}
-
-#filters ul {
-	list-style-type: none;
+    list-style-type: none;
 	padding: 0;
 	margin: 0;
+	font-size: 0.8em;
 }
 
-#filters ul li {
+#filters li {
 	display: inline-block;
-	margin: 5px 2px;
-	padding: 10px 15px;
+	margin: 5px 10px;
+	padding: 5px;
 }
 
-#filters ul li:hover {
+#filters li:hover {
 	cursor: default;
 }
 
-#filters ul li:first-child {
-	margin-right: 20px;
+#filters li:first-child {
+	/*margin-right: 15px;*/
 }
-#filters #categories #madeWith {
-	margin-left: 40px;
-}
-
-#filters #categories,
 #filters #madeWith {
-	display: inline-block;
+	/*margin-left: 40px;*/
 }
-
-#categories li {
+#filters li {
 	/*font-size: 1.75em;*/
 	/*background-color: #00a8df;*/
 	/*border: 3px solid #00a8df;*/
 }
 
-#categories li.selectedCategory,
-#filters #madeWith li.madeWithThis,
-#categories li:hover,
-#filters #madeWith li:hover {
+#filters li.selectedCategory,
+#madeWith li.madeWithThis,
+#filters li:hover,
+#madeWith li:hover {
 	background-color: #eb1313;
 }
-#categories #madeWith:hover {
+#filters #madeWith:hover {
 	background-color: transparent;
 }
-
-#categories li:hover {
-	/*background-color: transparent;*/
-	/*background-color: #eb1313;*/
-}
-
-#categories li.selectedCategory {
-	/*background-color: #eb1313;*/ /* red */
-	/*background-color: #00a8df;*/ /* blue */
-	/*border: 3px solid #eb1313;*/
-}
-
-#categories li.selectedCategory:hover {}
-
-#filters #categories {}
 
 #filters #madeWith {
 	text-align: left;
 	position: relative;
-	margin: 5px 0;
-	padding: 10px 0;
-	font-size: 0.8em;
+	/*margin: 5px 0;*/
+	/*padding: 10px 0;*/
+	/*font-size: 0.8em;*/
 }
 
 #filters #madeWith ul {
@@ -889,12 +862,14 @@ span.highlight {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 10;
+	padding: 0;
+	z-index: 10003;
 	background-color: rgba(46, 46, 46, 1.0);
 }
 
 #filters #madeWith ul.collapsed {
 	visibility: hidden;
+	z-index: 10;
 }
 
 #filters #madeWith ul li {
@@ -914,7 +889,8 @@ span.highlight {
 	cursor: pointer;
 }
 
-.hideCategory, .hideMadeWith {
+.og-grid .hideCategory,
+.og-grid .hideMadeWith {
 	display: none;
 }
 
@@ -924,10 +900,6 @@ span.highlight {
 #writing a:active {
 	color: inherit;
 	background-color: gainsboro;
-}
-
-#writing.expanded {
-	left: 20%;
 }
 #writing div.expand {
 	position: absolute;
@@ -981,15 +953,34 @@ span.highlight {
 	width: 100%;
 	margin: 10px 0;
 }
+#writing ul li img + p {
+	margin-top: 0;
+}
 #writing ul.featured {
-	width: 12.5%; /* Parent's visible width percent / parent's width percent
+	/*width: 12.5%;*/
+	/* Parent's visible width percent / parent's width percent
 	 = same computed width as parent's computed visible width. */
+	width: 100%;
 	text-align: center;
 }
 #writing ul.remainder {
-	width: 87.5%; /* 100% - featured section's width. */
+	/*width: 87.5%;*/
+	/* 100% - featured section's width. */
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
 	text-align: left;
 	padding-left: 20px;
+	display: none;
+	background-color: inherit;
+}
+#writing.expanded {
+	left: -56%;
+}
+#writing.expanded .remainder {
+	display: block;
 }
 #writing ul.featured li p:last-child {
 	margin: 0;
@@ -1038,25 +1029,26 @@ span.highlight {
 	padding: 0 1%;
 	margin: 0 auto;
 	text-align: center;
-	width: 100%;
-	display: flex;
-	display: -webkit-box;
+	/*width: 100%;*/
+	/*display: flex;*/
+	/*display: -webkit-box;*/
 	/* display: -moz-box; */
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	-webkit-flex-flow: wrap row;
-	flex-flow: wrap row;
+	/*display: -ms-flexbox;*/
+	/*display: -webkit-flex;*/
+	/*-webkit-flex-flow: wrap row;*/
+	/*flex-flow: wrap row;*/
 }
 
 .og-grid li {
-	/*display: inline-block;*/
+	display: inline-block;
 	/*margin: 0 5px 10px;*/
-	/*vertical-align: top;*/
+	vertical-align: top;
 	/*height: 245px;*/
 	/*width: 326px;*/
 	/*width: 450px;*/
-	width: 23%;
-	margin: 10px 1%;
+	/*width: 23%;*/
+	width: 230px;
+	margin: 5px;
 	box-shadow: 1px 1px 2px 2px #aaa;
 }
 
@@ -1202,7 +1194,6 @@ span.highlight {
 
 .og-grid li.og-expanded > a::after {
 	top: auto;
-	bottom: -1%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -1214,7 +1205,7 @@ span.highlight {
 	left: 50%;
 	/*margin: -20px 0 0 -15px;*/
 	margin: -30px 0 0 -15px;
-	z-index: 2;
+	z-index: 10001;
 }
 
 .og-expander {
@@ -1227,6 +1218,8 @@ span.highlight {
 	text-align: left;
 	height: 0;
 	overflow: hidden;
+	box-shadow: 1px 1px 2px 2px #aaa;
+	z-index: 10000;
 }
 
 .og-expander-inner {
@@ -1428,22 +1421,22 @@ span.highlight {
 /*Parallax-esque (sorta) stuff*/
 #about,
 #games,
-#writing {
-	float: left;
-}
+#writing {}
 
-#games,
+#about,
 #writing {
-	width: 80%;
+	width: 14em;
 }
 
 #about {
-	width: 10%;
+	/*width: 10%;*/
 	background-color: white;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	z-index: 5;
-	overflow: hidden;
+	/*word-wrap: break-word;*/
+	float: left;
+	margin-right: 5px;
 }
 
 /* Games and Writing sections have the same width.
@@ -1452,8 +1445,8 @@ what's visible onscreen initially is the same width
 as About section, all fitting on the same line. */
 
 #writing {
-	position: absolute;
-	left: 90%;
+	position: relative;
+	left: 0;
 	background-color: #c54648;
 	color: #c54648;
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
@@ -1461,11 +1454,16 @@ as About section, all fitting on the same line. */
 	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
     transition: 0.5s;
     font-family: GothamBook;
+    float: right;
+    margin-left: 5px;
 }
 
 #games {
 	position: relative;
 	margin: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #about #whoiam.fixed {
