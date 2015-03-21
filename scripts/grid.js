@@ -261,6 +261,9 @@ var Grid = (function() {
 		if (!$('#writing').hasClass('expanded')) {
 			$('#writing').addClass('expanded');
 			$('#writing div.expand').html('&rarr;');
+			// Close any open preview.
+			var preview = $.data( window, 'preview' );
+			if( typeof preview != 'undefined' ) hidePreview();
 		} else {
 			$('#writing').removeClass('expanded');
 			$('#writing div.expand').html('&larr;');
@@ -269,6 +272,18 @@ var Grid = (function() {
 	});
 
 	//--------Matt's custom filtering system, tum-te-dum!--------
+	function hideToolsMenu() {
+		if (!$('#madeWith ul').hasClass('collapsed')) {
+			$('#madeWith ul').addClass('collapsed');
+		}
+	}
+
+	$(document).click(function() {
+		if (!$(event.target).closest('#madeWith ul').length) {
+			hideToolsMenu();
+		}
+	});
+
 	$('#filters li').click(function() {
 		
 		/* I need to show only the filtered selections and hide the rest.
@@ -282,10 +297,10 @@ var Grid = (function() {
 		 */
 
 		var timer = 0; // Start by assuming there is nothing to close, so there should be no delay.
-
+		var bScrollUp = false;
 		// If we clicked any button other than the one to make the tools menu pop open...
 		if ($(this).attr('id') !== 'madeWith' && !$(this).hasClass('duplicate')) {
-			
+			bScrollUp = true;
 			// Check to see if there's a preview open.
 			var preview = $.data( window, 'preview' );
 			if( typeof preview != 'undefined' ) {
@@ -300,7 +315,7 @@ var Grid = (function() {
 		var that = this;
 		function filter() {
 
-			$body.animate( { scrollTop : scrollDefault }, settings.speed );
+			if (bScrollUp) $body.animate( { scrollTop : scrollDefault }, settings.speed );
 			
 			var chose;
 			var itemList = $('#og-grid li');
@@ -586,6 +601,7 @@ var Grid = (function() {
 			}
 		},
 		update : function( $item ) {
+			hideToolsMenu();
 			//$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			if( $item ) {
@@ -747,7 +763,8 @@ var Grid = (function() {
 			$('.og-details p').scrollTop(0);
 		},
 		open : function() {
-
+			// Hide the writing section.
+			if ($('#writing').hasClass('expanded')) $('#writing').removeClass('expanded');
 			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			setTimeout( $.proxy( function() {	
@@ -758,7 +775,7 @@ var Grid = (function() {
 			}, this ), 25 );
 		},
 		close : function() {
-
+			hideToolsMenu();
 			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			var self = this,
