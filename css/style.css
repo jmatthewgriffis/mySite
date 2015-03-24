@@ -76,7 +76,7 @@ body{
 body{
 	/*background: url("../images/background/background.png");*/
 	background-color: burlywood;
-	font-family: gothamBold, Arial, Helvetica, sans-serif;
+	font-family: gothamBook, Arial, Helvetica, sans-serif;
 	font-style: normal;
 }
 
@@ -535,12 +535,6 @@ section#about article#domain p {
 	visibility: visible;
 }
 
-#mydetails,
-#contact {
-	padding: 10px;
-	text-align: left;
-}
-
 #about #mydetails div {
 	display: inline-block;
 	vertical-align: middle;
@@ -585,26 +579,50 @@ ul#myLinks {
 	padding-right: 0;
 }
 
-#imageholder div#picsofme {
+#picsofme {
 	width: 100%;
+	background-color: black;
+	overflow: hidden;
+}
+
+span#verytalltext {
+	position: absolute;
+	top: 0.5em;
+	right: -10px;
+	text-align: center;
+	color: black;
+	font-variant: small-caps;
+	font-family: GothamBold;
+	font-size: 1.5em;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid black;
+	padding: 5px 10px;
+	-ms-transform: rotate(26deg);
+	-webkit-transform: rotate(26deg);
+	transform: rotate(26deg)
+}
+span#verytalltext img {
+	position: absolute;
+	bottom: -1em;
+	left: 0;
+	width: 20px;
+	-ms-transform: rotate(-172deg);
+	-webkit-transform: rotate(-172deg);
+	transform: rotate(-172deg)
 }
 
 #picsofme img {
+	width: 50%;
 	display: block;
-	width: 100%;
+	float: right;
 }
 
-#picsofme img#headshot {
-	/*-webkit-filter: grayscale(100%);*/
-}
-
-#picsofme img#funnyhat,
-#picsofme:hover img#headshot
-{
+#picsofme #funnyhat {
+	float: left;
 	display: none;
 }
 
-#picsofme:hover img#funnyhat {
+#picsofme #headshot:hover + #funnyhat {
 	display: block;
 }
 
@@ -614,17 +632,27 @@ ul#myLinks {
 	margin-bottom: 15px;
 }
 
-#contact h3 {
+#contact h2 {
 	margin: 0;
-	margin-bottom: 5px;
-	font-size: 1em;
-	text-transform: uppercase;
-	font-family: gothamLight;
+	letter-spacing: 17px;
+	font-variant: small-caps;
+	font-size: 2em;
+	background-color: rgba(0, 0, 0, 1.0);
+	color: white;
+	padding: 10px 0;
+}
+
+#contact h2 + p {
+	font-size: 0.95em;
 }
 
 #contact img{
 	display: inline;
 	width: 30%;
+}
+
+#contact a {
+	
 }
 
 #contact a img:hover{
@@ -638,13 +666,16 @@ ul#myLinks {
 }
 
 p#copyright {
-	font-size: 0.8em;
+	font-size: 0.7em;
 	margin: 0;
-	margin-top: 10px;
+	padding: 10px;
 	border-top: solid 1px gray;
-	padding: 5px;
 	opacity: 0.5;
 	font-family: gothamLight;
+	text-align: center;
+}
+#copyright span {
+	font-size: 0.9em;
 }
 
 #about #summary {
@@ -979,7 +1010,7 @@ span.highlight {
 #writing.expanded {
 	left: -56%;
 }
-#writing.expanded .remainder {
+#writing ul.remainder.expanded {
 	display: block;
 }
 #writing ul.featured li p:last-child {
@@ -1420,8 +1451,10 @@ span.highlight {
 
 /*Parallax-esque (sorta) stuff*/
 #about,
-#games,
-#writing {}
+#writing,
+#games {
+	position: relative;
+}
 
 #about,
 #writing {
@@ -1429,14 +1462,13 @@ span.highlight {
 }
 
 #about {
-	/*width: 10%;*/
 	background-color: white;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	z-index: 5;
-	/*word-wrap: break-word;*/
 	float: left;
-	margin-right: 5px;
+	margin-right: 10px;
+	text-align: left;
 }
 
 /* Games and Writing sections have the same width.
@@ -1445,7 +1477,6 @@ what's visible onscreen initially is the same width
 as About section, all fitting on the same line. */
 
 #writing {
-	position: relative;
 	left: 0;
 	background-color: #c54648;
 	color: #c54648;
@@ -1453,28 +1484,20 @@ as About section, all fitting on the same line. */
 	z-index: 100;
 	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
     transition: 0.5s;
-    font-family: GothamBook;
     float: right;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 #games {
-	position: relative;
 	margin: 0;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#about #whoiam.fixed {
-	/*position: fixed;*/
-	/*bottom: 0;*/
-}
-
-#about,
-#games {
-	/*display: inline-block;*/
-	/*vertical-align: top;*/
+#about #aboutText {
+	font-size: 0.8em;
+	padding: 10px;
 }
 
 /* Check for less than an iPad in landscape, or a computer browser smaller than an iPad in landscape. */

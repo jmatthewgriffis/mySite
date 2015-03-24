@@ -261,13 +261,17 @@ var Grid = (function() {
 		if (!$('#writing').hasClass('expanded')) {
 			$('#writing').addClass('expanded');
 			$('#writing div.expand').html('&rarr;');
+			$('#writing ul.remainder').addClass('expanded');
 			// Close any open preview.
 			var preview = $.data( window, 'preview' );
 			if( typeof preview != 'undefined' ) hidePreview();
 		} else {
 			$('#writing').removeClass('expanded');
 			$('#writing div.expand').html('&larr;');
-			// $('body').animate( { scrollTop : 0 }, 350 );
+			var timer = parseFloat($('#writing').css('transition-duration')) * 1000;
+			setTimeout(function() {
+				$('#writing ul.remainder').removeClass('expanded');
+			}, timer);
 		}
 	});
 
