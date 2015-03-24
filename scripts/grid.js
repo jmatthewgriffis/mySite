@@ -18,7 +18,7 @@ function resetvalues() {
 	diff = (winHeight - whoiam) - ( $('#og-grid').height());
 	
 	$('#madeWith').css('width', 'auto');
-	$('#madeWith').css('width', $('#madeWith').outerWidth() + $('#madeWith ul').outerWidth() + 10);
+	$('#madeWith').css('width', $('#madeWith').outerWidth() + $('#madeWith ul').outerWidth() + 5);
 
 	var myWidth = parseInt($('#wrapper').css('width')) * 0.56; // Pixels left that featured writing moves.
 	$('#writing ul.remainder').css('width', myWidth);
@@ -257,6 +257,14 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
 	// Expand and contract the writing section.
+	function hideWriting() {
+		$('#writing').removeClass('expanded');
+		$('#writing div.expand').html('&larr;');
+		var timer = parseFloat($('#writing').css('transition-duration')) * 1000;
+		setTimeout(function() {
+			$('#writing ul.remainder').removeClass('expanded');
+		}, timer);
+	}
 	$('#writing div.expand').click(function() {
 		if (!$('#writing').hasClass('expanded')) {
 			$('#writing').addClass('expanded');
@@ -266,12 +274,7 @@ var Grid = (function() {
 			var preview = $.data( window, 'preview' );
 			if( typeof preview != 'undefined' ) hidePreview();
 		} else {
-			$('#writing').removeClass('expanded');
-			$('#writing div.expand').html('&larr;');
-			var timer = parseFloat($('#writing').css('transition-duration')) * 1000;
-			setTimeout(function() {
-				$('#writing ul.remainder').removeClass('expanded');
-			}, timer);
+			hideWriting();
 		}
 	});
 
@@ -768,7 +771,7 @@ var Grid = (function() {
 		},
 		open : function() {
 			// Hide the writing section.
-			if ($('#writing').hasClass('expanded')) $('#writing').removeClass('expanded');
+			if ($('#writing').hasClass('expanded')) hideWriting();
 			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			setTimeout( $.proxy( function() {	
