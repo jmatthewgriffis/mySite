@@ -74,8 +74,9 @@ body{
 }
 
 body{
-	background: url("../images/background/background.png");
-	font-family: gothamBold, Arial, Helvetica, sans-serif;
+	/*background: url("../images/background/background.png");*/
+	background-color: burlywood;
+	font-family: gothamBook, Arial, Helvetica, sans-serif;
 	font-style: normal;
 }
 
@@ -85,12 +86,13 @@ p {
 
 div#wrapper{
 	position: relative;
+	width: 100%;
 	min-height: 100%;
-	/*border: 1px solid blue;*/ /*Make wrapper visible.*/
+	overflow-x: hidden;
 }
 
 section.content{
-	clear:both;
+	/*clear:both;*/
 	margin:auto;
 	padding: 0;
 	text-align: center;
@@ -291,31 +293,48 @@ header h1{
 /* Nav (contained in Header) */
 
 nav{
-	display:inline-block;
-	width:34%;
-	z-index: 3;
-	/*border: 1px solid red;*/
+	width:100%;
+	z-index: 10000;
+	margin-bottom: 10px;
+	text-align: center;
+	display: none;
+	font-family: GothamLight;
+	text-transform: uppercase;
 }
 
 nav ul{
-	float:right;
-	padding-left: 0;
-	margin: auto;
-	/*border: 1px solid black;*/
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 nav ul li{
-	width: 4em;
-	display: inline-block;
+	float: left;
 	list-style-type: none;
-	text-align: center;
-	/*border: 1px solid black;*/
+	width: 32%;
+	margin: 0 0.5%;
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+nav ul li:first-child {
+	margin-left: 1%;
+}
+nav ul li:last-child {
+	margin-right: 1%;
+}
+nav li:hover {
+	color: white;
+}
+nav li.displayed {
+	border-color: white;
+	cursor: default;
+}
+nav li.displayed:hover {
+	color: black;
 }
 
-nav ul li a h2{
-	margin:auto;
-	font-size: 1.15em;
-	/*border: 1px solid black;*/
+nav ul li h2{
+	font-size: 1.5em;
 }
 
 /*__________________________________________________________*/
@@ -394,7 +413,7 @@ section#index a div#indexWritingLink:hover{
 /* games.php */
 
 section#games div#gamesPic{
-	background: url("../images/background/games.png") no-repeat center center;
+	/*background: url("../images/background/games.png") no-repeat center center;*/
 	background-size: contain;
 }
 
@@ -419,10 +438,10 @@ section#writing div#writingPic{
 
 section#about {
 	/*margin: 0 10px;*/
-	width: 97%;
-	margin: auto;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	/*width: 97%;*/
+	/*margin: auto;*/
+	/*border-bottom-left-radius: 5px;*/
+	/*border-bottom-right-radius: 5px;*/
 }
 
 section#about article#whatPage {
@@ -533,11 +552,6 @@ section#about article#domain p {
 	visibility: visible;
 }
 
-#about #mydetails {
-	position: relative;
-	text-align: center;
-}
-
 #about #mydetails div {
 	display: inline-block;
 	vertical-align: middle;
@@ -552,12 +566,14 @@ ul#myLinks {
 	list-style-type: none;
 	font-family: gothamBook;
 	text-transform: uppercase;
+	background-color: white;
+	border-top-right-radius: 2px;
 }
 
 #myLinks li {
 	display: inline-block;
 	padding: 10px;
-	background-color: white;
+	/*background-color: white;*/
 	opacity: 0.7;
 	box-shadow: 2px 2px 2px #aaa;
 	border-top-left-radius: 2px;
@@ -580,26 +596,56 @@ ul#myLinks {
 	padding-right: 0;
 }
 
-#imageholder div#picsofme {
+#picsofme {
+	position: relative;
 	width: 100%;
+	background-color: black;
+	overflow: visible;
+	margin: 10px 0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+span#verytalltext {
+	position: absolute;
+	top: -2em;
+	right: -20px;
+	text-align: center;
+	color: black;
+	font-variant: small-caps;
+	font-family: GothamBold;
+	font-size: 1.5em;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid black;
+	padding: 5px 10px;
+	-ms-transform: rotate(26deg);
+	-webkit-transform: rotate(26deg);
+	transform: rotate(26deg);
+}
+span#verytalltext img {
+	position: absolute;
+	bottom: -1.2em;
+	left: 0;
+	width: 20px;
+	-ms-transform: rotate(-172deg);
+	-webkit-transform: rotate(-172deg);
+	transform: rotate(-172deg);
 }
 
 #picsofme img {
+	width: 50%;
 	display: block;
-	width: 100%;
+	float: right;
 }
 
-#picsofme img#headshot {
-	/*-webkit-filter: grayscale(100%);*/
-}
-
-#picsofme img#funnyhat,
-#picsofme:hover img#headshot
-{
+#picsofme #funnyhat {
+	float: left;
 	display: none;
 }
 
-#picsofme:hover img#funnyhat {
+#picsofme #headshot:hover + #funnyhat {
 	display: block;
 }
 
@@ -609,12 +655,18 @@ ul#myLinks {
 	margin-bottom: 15px;
 }
 
-#contact h3 {
+#contact h2 {
 	margin: 0;
-	margin-bottom: 5px;
-	font-size: 1em;
-	text-transform: uppercase;
-	font-family: gothamLight;
+	letter-spacing: 15px;
+	font-variant: small-caps;
+	font-size: 2em;
+	background-color: rgba(0, 0, 0, 1.0);
+	color: white;
+	padding: 10px 0;
+}
+
+#contact h2 + p {
+	font-size: 0.95em;
 }
 
 #contact img{
@@ -622,9 +674,14 @@ ul#myLinks {
 	width: 30%;
 }
 
+#contact a {
+	
+}
+
 #contact a img:hover{
-	position: relative;
-	top: -5px;
+	/*position: relative;*/
+	/*top: -5px;*/
+	opacity: 0.7;
 }
 
 #imageholder footer {
@@ -632,19 +689,16 @@ ul#myLinks {
 }
 
 p#copyright {
-	font-size: 0.8em;
+	font-size: 0.7em;
 	margin: 0;
-	margin-top: 10px;
-	border: solid 1px gray;
-	padding: 5px;
-	display: inline-block;
+	padding: 10px;
+	border-top: solid 1px gray;
 	opacity: 0.5;
 	font-family: gothamLight;
+	text-align: center;
 }
-
-p#copyright:hover {
-	opacity: 1.0;
-	cursor: default;
+#copyright span {
+	font-size: 0.9em;
 }
 
 #about #summary {
@@ -722,7 +776,7 @@ p#workisabout {
 #buttons ul {
 	text-align: left;
 	position: absolute;
-	top: 10px;
+	top: -10px;
 	right: 105%; /* Same as width of buttons div? */
 	width: 300%;
 	min-height: 100%;
@@ -759,27 +813,41 @@ p#workisabout {
 
 h1#whoiam img {
 	position: absolute;
-	top: 0;
+	/*top: 0;*/
+	bottom: 0;
 	left: 600px;
 	width: 30px;
 	z-index: -1;
 }
 
-#whoiam span#whatido {
-	display: inline-block;
-	font-family: gothamLight;
+#whoiam {
+	/*border-bottom: 1px solid;*/
+	margin: 20px 0 10px 0;
 	padding: 10px;
-	font-size: 0.97em;
 }
-
 #whoiam span#myname {
 	display: inline-block;
-	float: left;
+	/*float: left;*/
 	text-align: left;
 	font-family: gothamLight;
 	font-size: 1.75em;
 	letter-spacing: 11px;
 	padding-left: 10px;
+	text-shadow: 1px 1px #fff;
+}
+#whoiam span#whatido {
+	position: relative;
+	top: -0.5em;
+	left: 1em;
+	display: inline-block;
+	font-family: gothamLight;
+	padding: 10px;
+	/*font-size: 0.97em;*/
+	font-size: 0.65em;
+	background-color: white;
+	-ms-transform: rotate(-2deg);
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg)
 }
 
 p.jumbo {
@@ -791,25 +859,278 @@ span.highlight {
 	font-size: 2em;
 }
 
+#filters {
+	/*position: fixed;*/
+	/*top: -10000px;*/
+	/*left: 0;*/
+	/*width: 100%;*/
+	/*padding: 20px;*/
+	/*padding-top: 6em;*/
+	color: white;
+	font-family: gothamLight;
+	font-size: 0.9em;
+	/*z-index: 100;*/
+	/*-webkit-transition: top 0.5s; /* For Safari 3.1 to 6.0 */*/
+    /*transition: top 0.5s;*/
+    list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+	font-size: 0.8em;
+}
+
+#filters li {
+	display: inline-block;
+	margin: 5px 10px;
+	padding: 5px;
+	background-color: black;
+}
+
+#filters li:hover {
+	cursor: default;
+}
+
+#filters li:first-child {
+	/*margin-right: 15px;*/
+}
+#filters #madeWith {
+	/*margin-left: 40px;*/
+}
+#filters li {
+	/*font-size: 1.75em;*/
+	/*background-color: #00a8df;*/
+	/*border: 3px solid #00a8df;*/
+}
+
+#filters li.selectedCategory,
+#madeWith li.madeWithThis,
+#filters li:hover,
+#madeWith li:hover {
+	background-color: #eb1313;
+}
+#filters #madeWith,
+#filters #madeWith:hover {
+	background-color: transparent;
+}
+
+#filters #madeWith {
+	text-align: left;
+	position: relative;
+	/*margin: 5px 0;*/
+	/*padding: 10px 0;*/
+	/*font-size: 0.8em;*/
+}
+
+#filters #madeWith span {
+	color: black;
+	font-family: GothamBook;
+}
+
+#filters #madeWith ul {
+	text-align: left;
+	border-bottom: 1px solid white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	z-index: 10003;
+	background-color: rgba(46, 46, 46, 1.0);
+}
+
+#filters #madeWith ul.collapsed {
+	visibility: hidden;
+	z-index: 10;
+}
+
+#filters #madeWith ul li {
+	/*border: 3px solid #00a8df;*/
+	display: block;
+	margin: 0;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+#filters #madeWith ul li:first-child {
+	/*margin: 0;*/
+	background-color: inherit;
+	visibility: visible;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+}
+
+.og-grid .hideCategory,
+.og-grid .hideMadeWith {
+	display: none;
+}
+
+section#about a:link,
+section#about a:visited {
+	color: blue;
+}
+
+#writing a:link,
+#writing a:visited {
+	color: inherit;
+	background-color: gainsboro;
+}
+section#about a:hover,
+#writing a:hover,
+section#about a:active,
+#writing a:active {
+	background-color: black;
+	color: white;
+}
+
+#writing div.expand {
+	position: absolute;
+	top: 50px;
+	left: -1em;
+	width: 1.5em;
+	height: 9em;
+	padding: 4em 0.25em;
+	background-color: inherit;
+	/*color: white;*/
+	cursor: pointer;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#writing div.expand.second {
+	top: inherit;
+	bottom: 50px;
+}
+#writing h2,
+#writing div {}
+#writing h2 {
+	margin: 0;
+	font-size: 1em;
+	/*font-variant: small-caps;*/
+	text-transform: uppercase;
+}
+#writing h3 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
+}
+#writing ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	text-align: left;
+	float: left;
+}
+#writing ul li {
+	margin: 0;
+	margin-top: 30px;
+	padding: 10px;
+	background-color: #99fca5;
+	box-shadow: 1px 1px 2px 2px #aaa;
+}
+#writing ul li:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: inherit;
+}
+#writing h2 + a li {
+	margin-top: 20px;
+}
+#writing ul li img {
+	width: 100%;
+	margin: 10px 0;
+}
+#writing ul li img + p {
+	margin-top: 0;
+}
+#writing ul.featured {
+	/*width: 12.5%;*/
+	/* Parent's visible width percent / parent's width percent
+	 = same computed width as parent's computed visible width. */
+	width: 100%;
+	text-align: center;
+}
+#writing ul.remainder {
+	/*width: 87.5%;*/
+	/* 100% - featured section's width. */
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	text-align: left;
+	padding-left: 20px;
+	display: none;
+	background-color: inherit;
+}
+#writing.expanded {
+	left: -56%;
+}
+#writing ul.remainder.expanded {
+	display: block;
+}
+#writing ul.featured li p:last-child {
+	margin: 0;
+}
+#writing ul.remainder li p:last-child {
+	margin-bottom: 0;
+}
+#writing li#blog {
+	padding: 30px inherit;
+}
+#writing li#blog h3 {
+	padding: 0;
+	border: none;
+}
+#writing ul div {
+	margin-top: 5px;
+	padding: 5px 10px;
+	border: 1px solid;
+	border-top: none;
+}
+#writing ul div a {
+	margin: 5px 0;
+	display: inline-block;
+}
+#writing ul.remainder h3,
+#writing ul.remainder h3 + p,
+#writing ul.remainder h3 + p + p {
+	display: inline;
+}
+#writing ul.remainder h3 + p {
+	margin: 0 5px;
+	padding: 0 10px;
+	border: 1px solid;
+	border-top: none;
+	border-bottom: none;
+}
+#writing ul.remainder h3 {
+	border: none;
+}
 
 /*Thumbnail grid stuff*/
 
 .og-grid {
 	list-style: none;
-	/*padding: 20px 0;*/
-	padding: 0;
+	padding: 0 1%;
 	margin: 0 auto;
 	text-align: center;
-	width: 100%;
+	/*width: 100%;*/
+	/*display: flex;*/
+	/*display: -webkit-box;*/
+	/* display: -moz-box; */
+	/*display: -ms-flexbox;*/
+	/*display: -webkit-flex;*/
+	/*-webkit-flex-flow: wrap row;*/
+	/*flex-flow: wrap row;*/
 }
 
 .og-grid li {
 	display: inline-block;
-	margin: 0 5px 10px;
+	/*margin: 0 5px 10px;*/
 	vertical-align: top;
-	/*height: 245px;*/
-	/*width: 326px;*/
-	width: 450px;
+	width: 16%;
+	/*width: 230px;*/
+	margin: 5px;
+	box-shadow: 1px 1px 2px 2px #aaa;
 }
 
 .og-grid li > a {
@@ -826,7 +1147,7 @@ span.highlight {
 }
 
 .og-grid li > a img, .og-expander {
-	box-shadow: 5px 5px 2.5px #aaa;
+	/*box-shadow: 5px 5px 2.5px #aaa;*/
 }
 
 #buttons ul {
@@ -837,17 +1158,22 @@ span.highlight {
 	position: absolute;
 	bottom: 0;
 	margin: 0;
-	padding: 1em;
-	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	/*background-color: rgba(0, 0, 0, 0.7);*/
 	color: white;
 	font-size: 0.75em;
 	width: 100%;
-	min-height: 100%;
-	opacity: 0;
+	/*min-height: 100%;*/
+	height: 100%;
+	/*opacity: 0;*/
 	text-align: left;
 	font-family: gothamLight;
 	font-style: normal;
 	z-index: 1;
+	-webkit-transition: background-color 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.5s;
+    -webkit-transition-delay: 0s; /* Safari */
+    transition-delay: 0s;
 }
 
 /* hover h3 stuff */
@@ -857,27 +1183,74 @@ span.highlight {
 .desc,
 .tool {
 	display: block;
+	z-index: 1;
+	opacity: 0;
+	-webkit-transition: 0s; /* For Safari 3.1 to 6.0 */
+    transition: 0s;
+    -webkit-transition-delay: 0s; /* Safari */
+    transition-delay: 0s;
+}
+.name,
+.year,
+.desc {
+	background-color: black;
+	position: absolute;
+	padding: 5px 10px;
+}
+.desc,
+.tool {
+	/*opacity: 0;*/
 }
 .name {
-	font-size: 1.5em;
-	margin-top: 0.5em;
-	margin-bottom: 2em;
-	font-style: italic;
+	/*font-size: 1.25em;*/
+	/*margin-top: 0;*/
+	/*margin-bottom: 1.5em;*/
+	/*font-style: italic;*/
+	bottom: 10px;
+	right: 0;
+	width: 80%;
+	font-family: gothamBook;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 2px;
+	padding-left: 20px;
 }
 .year {
-	margin-bottom: 1em;
+	/*margin-bottom: 1em;*/
+	/*bottom: 12px;*/
+	bottom: 0;
+	/*left: 10px;*/
+	left: 0;
+	height: 2.5em;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	padding-left: 15px;
 }
 .desc {
-	margin-bottom: 1em;
-	font-size: 2em;
+	/*margin-bottom: 1em;*/
+	/*font-size: 2.5em;*/
+	/*height: 90%;*/
 }
 .tool {
 	/*margin-top: 10px;*/
+	display: none;
 }
 
 /* end hover h3 stuff*/
 
 .og-grid li > a:hover h3 {
+	/*bottom: 5px;*/
+	/*opacity: 1;*/
+	/*background-color: rgba(0, 0, 0, 0.8);*/
+}
+
+.og-grid li > a:hover h3 .name,
+.og-grid li > a:hover h3 .year {
+	/*opacity: 0;*/
+}
+.og-grid li > a:hover h3 .name,
+.og-grid li > a:hover h3 .desc,
+.og-grid li > a:hover h3 .tool,
+.og-grid li > a:hover h3 .year {
 	opacity: 1;
 }
 
@@ -890,10 +1263,6 @@ span.highlight {
 .og-grid li.og-expanded > a:hover img {
 	/*opacity: 0.7;*/
 	-webkit-filter: grayscale(100%);
-}
-
-.og-grid li > a:hover h3 {
-	/*bottom: 5px;*/
 }
 
 .og-grid li.og-expanded > a img {
@@ -916,7 +1285,9 @@ span.highlight {
 	border-bottom-color: #ddd;
 	border-width: 15px;
 	left: 50%;
-	margin: -20px 0 0 -15px;
+	/*margin: -20px 0 0 -15px;*/
+	margin: -30px 0 0 -15px;
+	z-index: 10001;
 }
 
 .og-expander {
@@ -925,10 +1296,12 @@ span.highlight {
 	top: auto;
 	left: 0;
 	width: 100%;
-	margin-top: 10px;
+	margin: 0;
 	text-align: left;
 	height: 0;
 	overflow: hidden;
+	box-shadow: 1px 1px 2px 2px #aaa;
+	z-index: 10000;
 }
 
 .og-expander-inner {
@@ -1128,65 +1501,183 @@ span.highlight {
 
 
 /*Parallax-esque (sorta) stuff*/
+#about,
+#writing,
 #games {
-	position: fixed;
-	overflow: auto;
-}
- 
-#about { 
 	position: relative;
-	top: 0px;
+}
+
+#about,
+#writing {
+	width: 14em;
+}
+
+#about {
 	background-color: white;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
-	z-index: 5;  
+	z-index: 5;
+	float: left;
+	margin-right: 10px;
+	text-align: left;
 }
 
+/* Games and Writing sections have the same width.
+Writing section's left position is offset so that
+what's visible onscreen initially is the same width
+as About section, all fitting on the same line. */
+
+#writing {
+	left: 0;
+	background-color: #86DEB8;
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	z-index: 100;
+	-webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: 0.5s;
+    float: right;
+    margin-left: 10px;
+}
+
+#games {
+	margin: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#about #aboutText {
+	font-size: 0.8em;
+	padding: 10px;
+}
+
+/* iPad and smaller devices */
+@media only screen and (max-device-width: 1024px) {
+	.name {
+		/*position: static;*/
+		opacity: 1;
+		/*font-size: 0.8em;*/
+		width: auto;
+		/*margin: 0;*/
+		padding: 5px;
+		border-radius: 0;
+		text-align: right;
+		/*background-color: rgba(0, 0, 0, 0.7);*/
+	}
+	.year,
+	.desc {
+		visibility: hidden;
+	}
+	.og-grid li a h3 {
+		padding: 0;
+	}
+}
 /* Check for less than an iPad in landscape, or a computer browser smaller than an iPad in landscape. */
-/* Actally, include a landscape iPad too here.*/
-@media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (max-device-width: 1024px), only screen and (min-device-width: 769px) and (max-width: 1023px) {
+@media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 1023px) {
 	/*, only screen and (min-device-width: 768px) and (orientation: portrait)*/
 	/*, only screen and (min-device-width: 769px) and (max-height: 650px)*/
-	
-	.og-grid li {
-		width: 30%;
-		margin-bottom: 20px;
+	nav {
+		display: block;
 	}
-
-	.og-grid li > a h3 {
+	#wrapper > section {
+		display: none;
+	}
+	#wrapper > section.displayed {
+		display: block;
+	}
+	#about,
+	#writing,
+	#games {
+		width: 100%;
+		box-shadow: none;
+	}
+	#writing div.expand {
+		display: none;
+	}
+	#writing ul.featured {
+		width: 25%;
+	}
+	#writing ul.remainder {
+		display: block;
 		position: static;
-		font-size: 0.5em;
-		height: 19em;
-		opacity: 1;
+		width: 75%;
 	}
-
-	.og-grid li.og-expanded > a h3 {
-		opacity: 1;
+	#about span#prePic {
+		display: inline-block;
+	}
+	#picsofme {
+		max-width: 200px;
+		float: left;
+		margin: 30px;
+		margin-left: 0;
+	}
+	.og-grid {
+		padding-bottom: 10px;
+	}
+	.og-grid li {
+		width: 23%;
 	}
 }
 
 /* iPad in portrait view, small browser. */
-@media only screen and (min-device-width: 768px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 800px) {
+@media only screen and (max-device-width: 1024px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 800px) {
 	.og-grid li {
-		width: 45%;
+		width: 31%;
+	}
+	#writing ul.featured,
+	#writing ul.remainder {
+		width: 100%;
+		text-align: left;
+		padding: 10px;
+	}
+	#writing li#blog {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
 /* Less than an iPad in portrait view */
 @media only screen and (max-device-width: 767px), only screen and (min-device-width: 769px) and (max-width: 640px) {
 	.og-grid li {
-		width: 97%;
-		font-size: 3em;
+		width: 46%;
 	}
-
 	.og-details {
-		font-size: 0.4em;
 		text-align: left;
 	}
-
+	.og-fullimg {
+		display: none;
+	}
+}
+@media only screen and (max-device-width: 767px) {
+	#filters {
+		display: none;
+	}
+	.og-grid li {
+		font-size: 2em;
+	}
 	.og-details p {
 		line-height: 1em;
 	}
-
-	.og-fullimg { display: none; }
+	.og-details div.myButtonsDiv > a {
+		font-size: 1em;
+	}
+} 
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+	#prePic,
+	#contact a,
+	#writing ul div a {
+		font-size: 3em;
+	}
+	nav {
+		font-size: 2em;
+	}
+}
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+	#prePic,
+	#contact a {
+		font-size: 1.5em;
+	}
+	.og-grid li {
+		width: 31%;
+		font-size: 2em;
+	}
 }

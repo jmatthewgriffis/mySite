@@ -1,20 +1,40 @@
 // Find me. [Some custom stuff I added--search for others.]
 var panelHeight,
 	whoiam,
+	keepOnscreen,
 	scrollDefault,
 	winHeight,
 	totalHeight,
 	extraMargin,
 	diff;
 function resetvalues() {
-	panelHeight = $('#about').height();
-	whoiam = $('#whoiam').outerHeight();
+	panelHeight = /*$('#about').height()*/0;
+	whoiam = /*$('#whoiam').outerHeight()*/0;
+	keepOnscreen = /*$('#whoiam').outerHeight()*/0;
 	scrollDefault = panelHeight - whoiam;
 	winHeight = $(window).height();
 	totalHeight = winHeight + (panelHeight - whoiam);
 	extraMargin = parseInt($('.og-grid li').css('margin-bottom'));
 	diff = (winHeight - whoiam) - ( $('#og-grid').height());
 	
+	$('#madeWith').css('width', 'auto');
+	$('#madeWith').css('width', $('#madeWith').outerWidth() + $('#madeWith ul').outerWidth() + 5);
+
+	/*var aboutH = $('#about').height();
+	var writingH = $('#writing').height();
+	if (aboutH > writingH) $('#writing').css('height', aboutH);
+	else if (writingH > aboutH) $('#about').css('height', writingH);*/
+
+	if ($('nav').css('display') === 'none') {
+		var myWidth = parseInt($('#wrapper').css('width')) * 0.56; // Pixels left that featured writing moves.
+		$('#writing ul.remainder').css('width', myWidth);
+	} else {
+		$('#writing ul.remainder').css('width', '');
+	}
+
+	// var minWorkH = $('#writing').outerHeight();
+	// $('#games').css('minHeight', minWorkH);
+
 	var gridWidth = $('#og-grid').width();
 	var mysteryMargin = 5; // Inexplicable space between items.
 	var itemWidth = $('#og-grid li').outerWidth() + parseInt($('#og-grid li').css('margin-left')) + parseInt($('#og-grid li').css('margin-right'));
@@ -28,14 +48,15 @@ function resetvalues() {
 	}
 	calcGridWidth();
 
-	$('#wrapper').css('height', totalHeight);
-	$('#games').css('max-height', winHeight);
-	$('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
+	//$('#wrapper').css('height', totalHeight);
+	// $('#games').css('max-height', winHeight);
+	// $('#about').css('width', (itemWidth * itemsInRow) + (mysteryMargin * (itemsInRow - 1)) - 20);
 	if (diff > 0) {
-		$('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
+		// $('#games').css('padding-top', whoiam + (diff * 0.5) + (extraMargin * 0.5));
 	} else {
-		$('#games').css('padding-top', whoiam + extraMargin);
+		// $('#games').css('padding-top', whoiam + extraMargin);
 	}
+	controlScroll();
 }
 
 // Run when page loads.
@@ -44,7 +65,7 @@ resetvalues();
 $(window).load( function() {
 	resetvalues();
 	// $(window).scrollTop(scrollDefault);
-	$('body').animate( { scrollTop : scrollDefault }, 350 );
+	// $('body').animate( { scrollTop : scrollDefault }, 350 );
 });
 
 $(window).on('beforeunload', function() {
@@ -53,13 +74,25 @@ $(window).on('beforeunload', function() {
 }); // Credit: http://stackoverflow.com/questions/7035331/prevent-automatic-browser-scroll-on-refresh/18633915#18633915
 
 function controlScroll() {
-	if ($(window).scrollTop() < scrollDefault) {
+	/*if ($(window).scrollTop() < scrollDefault) {
 		$('#games').css('overflow', 'hidden');
 		$('.og-details p').css('overflow', 'hidden');
 	} else {
 		$('#games').css("overflow", 'auto');
 		$('.og-details p').css('overflow', 'auto');
 	}
+
+	if ($('body').scrollTop() < $('#wrapper').height() - $('#mydetails').height() - winHeight) { // Find me yo
+		if (!$('#whoiam').hasClass('fixed')) {
+			$('#whoiam').addClass('fixed');
+			$('#about').css('padding-top', keepOnscreen);
+		}
+	} else {
+		if ($('#whoiam').hasClass('fixed')) {
+			$('#whoiam').removeClass('fixed');
+			$('#about').css('padding-top', 0);
+		}
+	}*/
 }
 $(window).scroll(controlScroll);
 $('#games').scroll(controlScroll);
@@ -232,6 +265,143 @@ $.fn.imagesLoaded = function( callback ) {
 
 var Grid = (function() {
 
+	// Expand and contract the writing section.
+	function hideWriting() {
+		$('#writing').removeClass('expanded');
+		$('#writing div.expand').html('&larr;');
+		var timer = parseFloat($('#writing').css('transition-duration')) * 1000;
+		setTimeout(function() {
+			$('#writing ul.remainder').removeClass('expanded');
+		}, timer);
+	}
+	$('#writing div.expand').click(function() {
+		if (!$('#writing').hasClass('expanded')) {
+			$('#writing').addClass('expanded');
+			$('#writing div.expand').html('&rarr;');
+			$('#writing ul.remainder').addClass('expanded');
+			// Close any open preview.
+			var preview = $.data( window, 'preview' );
+			if( typeof preview != 'undefined' ) hidePreview();
+		} else {
+			hideWriting();
+		}
+	});
+
+	// Show and hide sections on smaller browsers.
+	$('nav li').click(function() {
+		$('nav li.displayed').removeClass('displayed');
+		$(this).addClass('displayed');
+		$('section.displayed').removeClass('displayed');
+		var chose = "section#" + this.id.replace("show_", "");
+		$(chose).addClass('displayed');
+	});
+
+	//--------Matt's custom filtering system, tum-te-dum!--------
+	function hideToolsMenu() {
+		if (!$('#madeWith ul').hasClass('collapsed')) {
+			$('#madeWith ul').addClass('collapsed');
+		}
+	}
+
+	$(document).click(function() {
+		if (!$(event.target).closest('#madeWith ul').length) {
+			hideToolsMenu();
+		}
+	});
+
+	$('#filters li').click(function() {
+		
+		/* I need to show only the filtered selections and hide the rest.
+		This is accomplished instantaneously. However, if a preview window
+		is open at the time, it should close first; unfortunately the instant
+		filter cuts off the closing effect before it can finish, resulting
+		in ugly preview remnants left onscreen (which also cause problems
+		when trying to open the next preview). I need a way to make the filter
+		wait until the preview window has been closed. This is simple using
+		JavaScript's setTimeout function.
+		 */
+
+		var timer = 0; // Start by assuming there is nothing to close, so there should be no delay.
+		var bScrollUp = false;
+		// If we clicked any button other than the one to make the tools menu pop open...
+		if ($(this).attr('id') !== 'madeWith' && !$(this).hasClass('duplicate')) {
+			bScrollUp = true;
+			// Check to see if there's a preview open.
+			var preview = $.data( window, 'preview' );
+			if( typeof preview != 'undefined' ) {
+				hidePreview(); // Start hiding the preview.
+				timer = settings.speed + 100; /* Set the timer to the speed of the closing animation,
+				plus a safety margin (ms) to make sure it finishes. */
+			}
+		}
+
+		setTimeout(filter, timer); // The filter function only runs once the delay time has elapsed.
+
+		var that = this;
+		function filter() {
+
+			if (bScrollUp) $body.animate( { scrollTop : scrollDefault }, settings.speed );
+			
+			var chose;
+			var itemList = $('#og-grid li');
+			
+			if ($(that).parent().attr('id') === 'filters' && $(that).attr('id') !== 'madeWith') {
+				//console.log("it's a category, captain!");
+				$('#filters li').removeClass('selectedCategory');
+				$(that).addClass('selectedCategory');
+
+				chose = that.id.replace("cat_", "");
+
+				if (chose === "all") {
+					itemList.removeClass('hideCategory');
+				} else {
+					$.each(itemList, function(index, obj) {
+						var myItem = $(obj);
+						if (!myItem.hasClass('hideCategory')) {
+							myItem.addClass('hideCategory');
+							//console.log("class removed from " + obj + " " + index);
+						}
+					});
+					itemList = $("li[data-category *= " + chose + "]");
+					itemList.removeClass('hideCategory');
+				}
+			} else if ($(that).parent().parent().attr('id') === 'madeWith') {
+				if (!$(that).hasClass('duplicate')) {
+					//console.log("it's a tool, captain!");
+					$('#madeWith li').removeClass('madeWithThis');
+					$(that).addClass('madeWithThis');
+					$('.duplicate').text($(that).text());
+					$(that).parent().addClass('collapsed');
+
+					chose = that.id.replace("tool_", "");
+					
+					if (chose === "all") {
+						itemList.removeClass('hideMadeWith');
+					} else {
+						$.each(itemList, function(index, obj) {
+							var myItem = $(obj);
+							if (!myItem.hasClass('hideMadeWith')) {
+								myItem.addClass('hideMadeWith');
+								//console.log("class removed from " + obj + " " + index);
+							}
+						});
+						itemList = $("li[data-madeWith *= " + chose + "]");
+						itemList.removeClass('hideMadeWith');
+					}
+				} else {
+					if ($(that).parent().hasClass('collapsed')) {
+						$(that).parent().removeClass('collapsed');
+					} else {
+						$(that).parent().addClass('collapsed');
+					}
+				}
+			}
+			saveItemInfo();
+			controlScroll();
+		}
+	})
+	//--------End of Matt's custom filtering system!--------
+
 		// list of items
 	var $grid = $( '#og-grid' ),
 		// the items
@@ -244,7 +414,8 @@ var Grid = (function() {
 		// extra amount of pixels to scroll the window
 		scrollExtra = 0,
 		// extra margin when expanded (between preview overlay and the next items)
-		marginExpanded = 10,
+		//marginExpanded = 10,
+		marginExpanded = 0,
 		$window = $( window ), winsize,
 		$body = $( 'html, body' ),
 		// transitionend events
@@ -308,8 +479,8 @@ var Grid = (function() {
 	function saveItemInfo( saveheight ) {
 		$items.each( function() {
 			var $item = $( this );
-			// $item.data( 'offsetTop', $item.offset().top );
-			$item.data( 'offsetTop', $item.position().top ); // Find me
+			$item.data( 'offsetTop', $item.offset().top );
+			// $item.data( 'offsetTop', $item.position().top ); // Find me
 			if( saveheight ) {
 				$item.data( 'height', $item.height() );
 			}
@@ -328,7 +499,7 @@ var Grid = (function() {
 		$window.on( 'debouncedresize', function() {
 			// Run when page resizes.
 			resetvalues();
-			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 			// $('#games').animate( { scrollTop : 0 }, settings.speed); // Find me.
 
 			scrollExtra = 0;
@@ -455,7 +626,8 @@ var Grid = (function() {
 			}
 		},
 		update : function( $item ) {
-			$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
+			hideToolsMenu();
+			//$body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			if( $item ) {
 				this.$item = $item;
@@ -612,9 +784,12 @@ var Grid = (function() {
 			$('.og-details p').css('padding-top', myPaddingT);
 			var myPaddingB = $('.og-details div.myButtonsDiv').outerHeight();
 			$('.og-details p').css('padding-bottom', myPaddingB);
+			$('.og-expander').scrollTop(0);
+			$('.og-details p').scrollTop(0);
 		},
 		open : function() {
-
+			// Hide the writing section.
+			if ($('#writing').hasClass('expanded')) hideWriting();
 			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			setTimeout( $.proxy( function() {	
@@ -625,7 +800,7 @@ var Grid = (function() {
 			}, this ), 25 );
 		},
 		close : function() {
-
+			hideToolsMenu();
 			// $body.animate( { scrollTop : scrollDefault }, settings.speed ); // Find me.
 
 			var self = this,
@@ -699,14 +874,16 @@ var Grid = (function() {
 			// case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
 			// var position = this.$item.data( 'offsetTop' ),
 			var position = this.$item.data( 'offsetTop' ) - whoiam, // Find me
-				// previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-				previewOffsetT = this.$previewEl.position().top + $('#games').scrollTop() - scrollExtra, // Find me.
+				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+				// previewOffsetT = this.$previewEl.position().top + $('#games').scrollTop() - scrollExtra, // Find me.
 				// scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= (winHeight - whoiam) ? position : this.height < (winHeight - whoiam) ? previewOffsetT - whoiam - (winHeight - whoiam - this.height) : previewOffsetT; // Find me
+				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= (winHeight - /*whoiam*/keepOnscreen) ? position : this.height < (winHeight - /*whoiam*/keepOnscreen) ? previewOffsetT - whoiam - (winHeight - /*whoiam*/keepOnscreen - this.height) : previewOffsetT; // Find me
 				// scrollVal = previewOffsetT - whoiam - (winsize.height - whoiam - this.height);
 //yoyo
 			// $body.animate( { scrollTop : scrollVal }, settings.speed );
-			$('#games').animate( { scrollTop : scrollVal }, settings.speed ); // Find me.
+			
+			$('body').animate( { scrollTop : scrollVal }, settings.speed ); // Find me. // Find me yo
+			
 		},
 		setTransition  : function() {
 			this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
