@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset=utf-8 />
-		<title>Tall Man, High Tech</title><!--1 Man. 3 Names. ∞ Humor.-->
+		<title>Tall Man, High Tech—J. Matthew Griffis</title>
+		<link rel="icon" href="images/icon.png?v=4" type="image/gif" sizes="16x16">
 		<link href="css/style.css" rel="stylesheet" />
 
 		<!--Add Google Web Font-->
@@ -19,19 +20,6 @@
 	<body>
 		<div id="wrapper">
 
-		  	<!--<a name="top">-->
-			<nav style="display:none;">
-				<ul>
-					<li>
-						<a target='_blank' href="http://blog.jmatthewgriffis.com">
-							<h2>blog</h2>
-						</a>
-					</li>
-				</ul>
-			</nav>
-
-			<!--<a id="jumpToTop" href="#top">top</a>-->
-
 			<h1 id="whoiam">
 				<!-- <img src="images/arrow.png" /> -->
 				<!-- <span class="og-close"></span> -->
@@ -40,9 +28,26 @@
 				<span id="whatido">Digital Interactive Works: Games, Storytelling, and More</span>
 			</h1>
 
-			<section id="about">
+			<!--<a name="top">-->
+			<nav>
+				<ul>
+					<li id="show_games" class="displayed">
+						<h2>Digital</h2>
+					</li>
+					<li id="show_writing">
+						<h2>Writing</h2>
+					</li>
+					<li id="show_about">
+						<h2>About</h2>
+					</li>
+				</ul>
+			</nav>
+
+			<!--<a id="jumpToTop" href="#top">top</a>-->
+
+			<section id="about" class="content">
 				<div id="aboutText">
-					My name is Matt.<br>I am a tall person.
+					<span id="prePic">My name is Matt.<br>I am a tall person.</span>
 					<!-- [pic, arrow with “very tall” scrawled] -->
 					<div id="picsofme">
 						<span id="verytalltext">very tall
@@ -50,6 +55,7 @@
 						</span>
 						<img id="headshot" src="images/people/headshot.png" alt="Headshot" />
 						<img id="funnyhat" src="images/people/funny_hat_cropped.png" alt="Funny Hat" />
+						<div class="clearfix"></div>
 					</div><!-- end picsofme -->
 					<div id="mydetails">
 						<p>I design and develop interactive experiences, mostly digital. Creating play, telling stories, and enabling others’ creativity are my aims. The funnier or more moving the experience, the better.</p>
@@ -79,7 +85,7 @@
 				</p>
 			</section><!-- end about -->
 
-			<section id="writing">
+			<section id="writing" class="content">
 					<div class="expand first">&larr;</div>
 					<div class="expand second">&larr;</div>
 					<ul class="featured">
@@ -164,7 +170,7 @@
 					</ul>
 				</section><!-- End writing -->
 
-			<section id="games" class="content">
+			<section id="games" class="content displayed">
 				
 				<div class="background" id="gamesPic">
 				</div><!--end background-->

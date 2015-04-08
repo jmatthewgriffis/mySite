@@ -20,8 +20,17 @@ function resetvalues() {
 	$('#madeWith').css('width', 'auto');
 	$('#madeWith').css('width', $('#madeWith').outerWidth() + $('#madeWith ul').outerWidth() + 5);
 
-	var myWidth = parseInt($('#wrapper').css('width')) * 0.56; // Pixels left that featured writing moves.
-	$('#writing ul.remainder').css('width', myWidth);
+	/*var aboutH = $('#about').height();
+	var writingH = $('#writing').height();
+	if (aboutH > writingH) $('#writing').css('height', aboutH);
+	else if (writingH > aboutH) $('#about').css('height', writingH);*/
+
+	if ($('nav').css('display') === 'none') {
+		var myWidth = parseInt($('#wrapper').css('width')) * 0.56; // Pixels left that featured writing moves.
+		$('#writing ul.remainder').css('width', myWidth);
+	} else {
+		$('#writing ul.remainder').css('width', '');
+	}
 
 	// var minWorkH = $('#writing').outerHeight();
 	// $('#games').css('minHeight', minWorkH);
@@ -276,6 +285,15 @@ var Grid = (function() {
 		} else {
 			hideWriting();
 		}
+	});
+
+	// Show and hide sections on smaller browsers.
+	$('nav li').click(function() {
+		$('nav li.displayed').removeClass('displayed');
+		$(this).addClass('displayed');
+		$('section.displayed').removeClass('displayed');
+		var chose = "section#" + this.id.replace("show_", "");
+		$(chose).addClass('displayed');
 	});
 
 	//--------Matt's custom filtering system, tum-te-dum!--------

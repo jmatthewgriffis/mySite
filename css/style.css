@@ -293,31 +293,48 @@ header h1{
 /* Nav (contained in Header) */
 
 nav{
-	display:inline-block;
-	width:34%;
-	z-index: 3;
-	/*border: 1px solid red;*/
+	width:100%;
+	z-index: 10000;
+	margin-bottom: 10px;
+	text-align: center;
+	display: none;
+	font-family: GothamLight;
+	text-transform: uppercase;
 }
 
 nav ul{
-	float:right;
-	padding-left: 0;
-	margin: auto;
-	/*border: 1px solid black;*/
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 nav ul li{
-	width: 4em;
-	display: inline-block;
+	float: left;
 	list-style-type: none;
-	text-align: center;
-	/*border: 1px solid black;*/
+	width: 32%;
+	margin: 0 0.5%;
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+nav ul li:first-child {
+	margin-left: 1%;
+}
+nav ul li:last-child {
+	margin-right: 1%;
+}
+nav li:hover {
+	color: white;
+}
+nav li.displayed {
+	border-color: white;
+	cursor: default;
+}
+nav li.displayed:hover {
+	color: black;
 }
 
-nav ul li a h2{
-	margin:auto;
-	font-size: 1.15em;
-	/*border: 1px solid black;*/
+nav ul li h2{
+	font-size: 1.5em;
 }
 
 /*__________________________________________________________*/
@@ -580,15 +597,21 @@ ul#myLinks {
 }
 
 #picsofme {
+	position: relative;
 	width: 100%;
 	background-color: black;
-	overflow: hidden;
+	overflow: visible;
+	margin: 10px 0;
+}
+
+.clearfix {
+	clear: both;
 }
 
 span#verytalltext {
 	position: absolute;
-	top: 0.5em;
-	right: -10px;
+	top: -2em;
+	right: -20px;
 	text-align: center;
 	color: black;
 	font-variant: small-caps;
@@ -603,7 +626,7 @@ span#verytalltext {
 }
 span#verytalltext img {
 	position: absolute;
-	bottom: -1em;
+	bottom: -1.2em;
 	left: 0;
 	width: 20px;
 	-ms-transform: rotate(-172deg);
@@ -634,7 +657,7 @@ span#verytalltext img {
 
 #contact h2 {
 	margin: 0;
-	letter-spacing: 17px;
+	letter-spacing: 15px;
 	font-variant: small-caps;
 	font-size: 2em;
 	background-color: rgba(0, 0, 0, 1.0);
@@ -1527,95 +1550,134 @@ as About section, all fitting on the same line. */
 	padding: 10px;
 }
 
+/* iPad and smaller devices */
+@media only screen and (max-device-width: 1024px) {
+	.name {
+		/*position: static;*/
+		opacity: 1;
+		/*font-size: 0.8em;*/
+		width: auto;
+		/*margin: 0;*/
+		padding: 5px;
+		border-radius: 0;
+		text-align: right;
+		/*background-color: rgba(0, 0, 0, 0.7);*/
+	}
+	.year,
+	.desc {
+		visibility: hidden;
+	}
+	.og-grid li a h3 {
+		padding: 0;
+	}
+}
 /* Check for less than an iPad in landscape, or a computer browser smaller than an iPad in landscape. */
-/* Actally, include a landscape iPad too here.*/
-@media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (max-device-width: 1024px), only screen and (min-device-width: 769px) and (max-width: 1023px) {
+@media only screen and (max-device-width: 767px), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 1023px) {
 	/*, only screen and (min-device-width: 768px) and (orientation: portrait)*/
 	/*, only screen and (min-device-width: 769px) and (max-height: 650px)*/
-	
-	.og-grid li {
-		width: 33.33333333333333%;
-		/*margin-bottom: 20px;*/
-		/*border: 1px solid #00a8df;*/
-		/*border-top: 10px solid #00a8df;*/
-		border-top: 1px solid white;
-		border-bottom: 1px solid white;
-		/*background-color: #2e2e2e;*/
+	nav {
+		display: block;
 	}
-
-	.og-grid li > a h3 {
-		position: static;
-		font-size: 0.5em;
-		/*height: 19em;*/
-		height: 14em;
-		text-align: center;
-		opacity: 1;
-		padding-top: 3em;
-		background-color: #eb1313;
-	}
-
-	.name,
-	.year,
-	.desc,
-	.tool,
-	.og-grid li > a:hover h3 .name,
-	.og-grid li > a:hover h3 .year {
-		opacity: 1;
-	}
-	.name,
-	.year {
-		text-align: left;
-		font-size: 200%;
-	}
-	.tool {
+	#wrapper > section {
 		display: none;
 	}
-
-	.og-grid li.og-expanded > a h3 {
-		opacity: 1;
+	#wrapper > section.displayed {
+		display: block;
+	}
+	#about,
+	#writing,
+	#games {
+		width: 100%;
+		box-shadow: none;
+	}
+	#writing div.expand {
+		display: none;
+	}
+	#writing ul.featured {
+		width: 25%;
+	}
+	#writing ul.remainder {
+		display: block;
+		position: static;
+		width: 75%;
+	}
+	#about span#prePic {
+		display: inline-block;
+	}
+	#picsofme {
+		max-width: 200px;
+		float: left;
+		margin: 30px;
+		margin-left: 0;
+	}
+	.og-grid {
+		padding-bottom: 10px;
+	}
+	.og-grid li {
+		width: 23%;
 	}
 }
 
 /* iPad in portrait view, small browser. */
-@media only screen and (min-device-width: 768px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 800px) {
+@media only screen and (max-device-width: 1024px) and (orientation: portrait), only screen and (min-device-width: 769px) and (max-width: 800px) {
 	.og-grid li {
-		width: 50%;
-		/*border: 1px solid white;*/
+		width: 31%;
+	}
+	#writing ul.featured,
+	#writing ul.remainder {
+		width: 100%;
+		text-align: left;
+		padding: 10px;
+	}
+	#writing li#blog {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
 /* Less than an iPad in portrait view */
 @media only screen and (max-device-width: 767px), only screen and (min-device-width: 769px) and (max-width: 640px) {
-	/*#filters {
-		font-size: 150%;
-		overflow-y: auto;
-	}
-
-	#filters ul li {
-		width: 90%;
-	}
-	#filters ul li:first-child {
-		margin-right: inherit;
-	}*/
-
 	.og-grid li {
-		width: 100%;
-		font-size: 2em;
-		/*border: 1px solid white;*/
+		width: 46%;
 	}
-
-	h1#whoiam img {
-		left: 0;
-	}
-
 	.og-details {
-		font-size: 0.4em;
 		text-align: left;
 	}
-
+	.og-fullimg {
+		display: none;
+	}
+}
+@media only screen and (max-device-width: 767px) {
+	#filters {
+		display: none;
+	}
+	.og-grid li {
+		font-size: 2em;
+	}
 	.og-details p {
 		line-height: 1em;
 	}
-
-	.og-fullimg { display: none; }
+	.og-details div.myButtonsDiv > a {
+		font-size: 1em;
+	}
+} 
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+	#prePic,
+	#contact a,
+	#writing ul div a {
+		font-size: 3em;
+	}
+	nav {
+		font-size: 2em;
+	}
+}
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+	#prePic,
+	#contact a {
+		font-size: 1.5em;
+	}
+	.og-grid li {
+		width: 31%;
+		font-size: 2em;
+	}
 }
