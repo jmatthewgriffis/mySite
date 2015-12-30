@@ -75,7 +75,8 @@
 						<a target="_blank" href="https://github.com/jmatthewgriffis">GitHub</a>, 
 						<a target="_blank" href="https://twitter.com/matticgreek">Twitter</a>, 
 						<a target="_blank" href="https://www.youtube.com/channel/UCZ-Y7AmRYAkd4CaEKVOjnIQ">YouTube</a>
-						<!-- <a target="_blank" href="http://www.openprocessing.org/user/20132">OpenProcessing</a> -->
+						<br><br>
+						Also <a target="_blank" href="http://www.openprocessing.org/user/20132">OpenProcessing</a> (not updated in a while)
 					</div><!-- end contact -->
 				</div>
 				<p id="copyright">
@@ -176,7 +177,7 @@
 				</div><!--end background-->
 
 				<article id="whatPage">
-					<h2><a href="about.php"><img src="images/people/me3.jpg" alt="This is the Games page." title="Check out my games!" /></a>
+					<h2><a href="about.php"><img src="images/people/headshot.png" alt="This is the Games page." title="Check out my games!" /></a>
 						Games I've made<br>on my own and with others</h2>
 				</article>
 
@@ -663,7 +664,7 @@
 
 				        data-downloadmac="games/What_Lies_Beyond__Matt_Griffis.zip"
 				        data-about="writing/what_lies_beyond_doc_list.html"
-				        data-code="https://github.com/jmatthewgriffis/MS2-2013/tree/master/of_v0.7.4_osx_release/apps/myApps/MS2_Final_Project"
+				        data-code="https://github.com/jmatthewgriffis/MS2-2013/tree/master/MS2_Final_Project"
 				        >
 				            <h3>
 				            	<span class="name">What Lies Beyond</span>
@@ -708,7 +709,7 @@
 				        I created Don't Play Me Bro for the class Humor and Code at Parsons. Made in May of 2013 and programmed in openFrameworks."
 
 				        data-downloadmac="games/Dont_Play_Me_Bro.zip"
-				        data-code="https://github.com/jmatthewgriffis/Humor-and-Code-2013/tree/master/of_v0.7.4_osx_release/apps/myApps/Dont_Play_Me_Bro"
+				        data-code="https://github.com/jmatthewgriffis/Humor-and-Code-2013/tree/master/projects/Dont_Play_Me_Bro"
 				        >
 				            <h3>
 				            	<span class="name">Don't Play Me Bro [prototype]</span>
@@ -886,7 +887,7 @@
 				</div><!--end background-->
 
 				<article id="whatPage">
-					<h2><a href="about.php"><img src="images/people/me3.jpg" alt="This is the Music page." title="Drop the beats!"/></a>
+					<h2><a href="about.php"><img src="images/people/headshot.png" alt="This is the Music page." title="Drop the beats!"/></a>
 						Music I've dreamed up<br>composed and performed</h2>
 				</article>
 
@@ -969,10 +970,15 @@
 			</section><!--end music-->
 
 		</div><!--end wrapper-->
-		<script src="scripts/jquery-1.11.0.min.js"></script>
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="scripts/modernizr.custom.js"></script>
-		<script src="scripts/grid.js"></script>
+		
+		<!-- Scripts -->
+		<!-- jQuery CDN with local fallback -->
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script>window.jQuery||document.write('<script src="js/import/jquery-1.11.0.min.js"><\/script>')</script>
+		<!-- Modernizr -->
+		<script src="js/import/modernizr.custom.js"></script>
+		<!-- My JS -->
+		<script src="js/grid.js"></script>
 		<script>
 			$(function() {
 				Grid.init();
