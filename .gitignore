@@ -2,12 +2,14 @@
 *.zip
 *.MOV
 *.mp4
+*.mp3
+*.ogg
 
 # Directories
-_to-do
-_archive
-fonts
-music
-sites
-tge_starter_game
-unity__building_worlds_misc
+_to-do/
+_archive/
+import/
+fonts/
+sites/
+tge_starter_game/
+unity__building_worlds_misc/
