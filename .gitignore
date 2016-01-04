@@ -1,15 +1,17 @@
 # File types
-*.zip
 *.MOV
-*.mp4
 *.mp3
+*.mp4
 *.ogg
+*.zip
 
 # Directories
-_to-do/
 _archive/
-import/
+_to-do/
 fonts/
-sites/
+import/
 tge_starter_game/
-unity__building_worlds_misc/
+
+# Subdirectories only (files permitted)
+games/building-worlds/*/**/
+sites/*/**/
