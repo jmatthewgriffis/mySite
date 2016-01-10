@@ -3,12 +3,14 @@
 *.mp3
 *.mp4
 *.ogg
+*.otf
+*.pdf
+*.rtf
 *.zip
 
 # Directories
 _archive/
 _to-do/
-fonts/
 import/
 tge_starter_game/
 
