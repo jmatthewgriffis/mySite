@@ -17,3 +17,6 @@ tge_starter_game/
 # Subdirectories only (files permitted)
 games/building-worlds/*/**/
 sites/*/**/
+
+# Exceptions
+!sites/portfolio-history/index.php
